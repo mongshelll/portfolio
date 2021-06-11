@@ -656,11 +656,6 @@ font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Nanum Myeongjo', serif;
 font-family: 'Quicksand', sans-serif;
 */
-@font-face {
-  font-family: 'KoreanFrenchTypewriter';
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
 #skipNavi a {
   display: block;
   width: 100%;
