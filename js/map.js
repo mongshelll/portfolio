@@ -29,7 +29,7 @@ var markerOptions = [{
   },
   {
   title: "지점1",
-  latlng: new kakao.maps.LatLng(37.507025, 126.7541541),
+  latlng: new kakao.maps.LatLng(37.507301759552675, 126.75455238897419),
   imgSrc: 'img/marker2.png',
   imgSize: new kakao.maps.Size(232, 99),
   imgPos: {
