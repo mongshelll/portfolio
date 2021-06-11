@@ -1,0 +1,413 @@
+@charset 'utf-8';
+@import "reset";
+@import "login";
+@import "community";
+@import "youtube";
+@import "location";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand:wght@500&display=swap');
+/*
+font-family: 'EB Garamond', serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Quicksand', sans-serif;
+*/
+@font-face {
+  font-family: 'KoreanFrenchTypewriter';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#skipNavi a {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: darkblue;
+  font: bold 14px/30px "맑은 고딕";
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: -30px;
+  left: 0;
+  z-index: 1;
+}
+
+#header {
+  width: 100%;
+  padding-top: 50px;
+  
+  .header_upper {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #eee;
+
+    >.inner {
+      width: 1180px;
+      height: 70px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+
+      .logo {
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+  
+        a {
+          font: bold 30px/1 'Nanum Gothic', sans-seri;
+          letter-spacing: 4px;
+          color: #222;
+        }
+      }
+
+      #gnb {
+        display: inline-block;
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        >li {
+          display: inline-block;
+          vertical-align: top;
+
+          >a {
+            display: inline-block;
+            padding: 0 20px;
+            font: 15px/70px 'Nanum Gothic', sans-seri;
+            color: #444;
+            box-sizing: border-box;
+            transition: 0.3s;
+
+            >span {
+              font-size: 18px;
+            }
+          }
+          &.on>a {
+            color: #f22c2d;
+          }
+          &:hover>a {
+            color: #f22c2d;
+          }
+          .sub {
+            position: absolute;
+            width: 1180px;
+            padding: 50px 0;
+            background: #fff;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-590px);
+            border-top: 1px solid #ccc;
+            z-index: 2;
+            display: none;
+
+            .depth2 {
+              display: inline-block;
+
+              &::after {
+                content: "";
+                display: block;
+                clear: both;
+              }
+              >h2 {
+                margin-bottom: 10px;
+                >a {
+                  font: bold 14px/1 'Nanum Gothic', sans-serif;
+                  color: #222;
+                }
+              }
+              >ul {
+                display: inline-block;
+                margin-right: 30px;
+
+                &:last-of-type {
+                  margin-right: 0;
+                }
+                >li {
+                  //depth2
+                  display: block;
+                  margin-bottom: 10px;
+                  a {
+                    font: 13px/1 'Nanum Gothic', sans-seri;
+                    color: #666;
+                  }
+                  &:hover>a {
+                    color: #f22c2d;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .login {
+        position: absolute;
+        bottom: 30px;
+        right: 0px;
+  
+        &::after {
+          content:'';
+          display: block;
+          clear: both;
+        }
+  
+        li {
+          position: relative;
+          float: left;
+          margin-left: 40px;
+  
+          &:nth-of-type(1)::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 50%;
+            background: #d1d1d1;
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            transform: translateY(-35%);
+          }
+          a {
+            font: 13px/1 'Nanum Gothic', sans-seri;
+            color: #555;
+          }
+        }
+      }
+      .util {
+        position: absolute;
+        top: -38px;
+        right: 0px;
+        .lang {
+          display: inline-block;
+          position: relative;
+          li {
+            display: inline-block;
+            position: relative;
+            margin: 0 5px;
+            &::after {
+              content: '.';
+              display: block;
+              position: absolute;
+              top: -3px;
+              right: -8px;
+            }
+            &:last-of-type::after {
+              display: none;
+            }
+            a {
+              font: 12px/1 'arial';
+              color: #888;
+            }
+            &.on a {
+              color: #222;
+            }
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 50%;
+            background: #d1d1d1;
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            transform: translateY(-35%);
+          }
+        }
+        .ssg {
+          margin-left: 30px;
+          a {
+            font-size: 12px;
+            color: #222;
+            .fa-link {
+              font-size: 11px;
+              color: #bbb;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header_lower {
+    width: 100%;
+    background: #2d2d2d;
+    text-align: center;
+    >.inner {
+      width: 1180px;
+      margin: 0 auto;
+      .fixed_menu {
+        display: inline-block;
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+
+        }
+        li {
+          float: left;
+          margin: 0 20px;
+
+          a {
+            display: block;
+            padding: 20px 0;
+            font-size: 15px;
+            line-height: 1;
+            font-family: 'Nanum Gothic', sans-serif;
+            color: #999;
+            position: relative;
+            transition: 0.3s;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+          &.on a {
+            color: #fff;
+
+            &::after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: #BEA26F;
+              position: absolute;
+              left: 0;
+              bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+  .site_map {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    
+    li {
+      display: inline-block;
+      &::after {
+        content: '/';
+        display: inline-block;
+        font-size: 12px;
+        color: #666;
+        padding-left: 5px;
+      }
+      a {
+        display: inline-block;
+        font: 12px/1 'arial';
+        color: #666;
+        position: relative;
+        
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          background: #666;
+        }
+      }
+      &:last-of-type a::after {
+        display: none;
+      }
+      &:last-of-type::after {
+        display: none;
+      }
+    }
+  }
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      font: 44px/1 'Nanum Myeongjo', serif;
+      color: #222;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  padding: 50px 0;
+  border-top: 1px solid #ddd;
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+
+    .upper {
+      border-bottom: 1px solid #232323;
+      margin-bottom: 30px;
+      
+      .logo {
+        display: inline-block;
+        vertical-align: top;
+        font: bold 30px/1 'Nanum Gothic', sans-seri;
+        letter-spacing: 4px;
+        color: #222;
+      }
+      .footer_links {
+        display: inline-block;
+        margin-left: 40px;
+
+        a {
+          font: 14px/1 'Nanum Gothic', sans-seri;
+          display: inline-block;
+          padding: 0 10px;
+          margin-bottom: 20px;
+          color: #232323;
+        }
+      }
+      .fam_site_sns {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 30px;
+        vertical-align: top;
+
+        #family_site {
+          display: inline-block;
+          padding: 10px;
+          border: 1px solid #222;
+        }
+        .sns {
+          display: inline-block;
+          margin-left: 30px;
+          li {
+            display: inline-block;
+            padding: 0 5px;
+            margin: 0 5px;
+
+            a {
+              font-size: 16px;
+              color: #666;
+              transition: 0.5s;
+            }
+
+            &:hover a {
+              color: #222;
+            }
+          }
+        }
+      }
+    }
+  }
+  .lower {
+    p {
+      font: 12px/1 'Nanum Gothic';
+      color: #232323;
+      margin-bottom: 10px;
+    }
+  }
+}

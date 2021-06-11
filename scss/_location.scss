@@ -1,0 +1,49 @@
+@charset 'utf-8';
+@import "sub_layout";
+
+#location{
+  .inner {
+    #map{
+      width:100%; 
+      height:500px; 
+      background:#000; 
+    }
+    
+    .traffic{
+      float:left;  margin-top:20px; 
+    
+      li{
+        float:left; margin-right:10px; 
+    
+        a{
+          display:block; width:200px; height:40px; 
+          background:#555; 
+          font:bold 12px/40px 'arial'; color:#fff; 
+          text-align:center; 
+        }
+    
+        &.on{
+          a{
+            background:#fff; 
+            color:#333; 
+            border:1px solid #333;
+          }
+        }
+      }
+    }
+    
+    .branch {
+      float:right; margin-top:20px; 
+      li{
+        float:left; margin-right:10px; 
+        a{
+          display:block; width:200px; height:40px; 
+          background:#555; 
+          font:bold 12px/40px 'arial'; color:#fff; 
+          text-align:center; 
+        }
+      }
+    }
+  }
+}
+

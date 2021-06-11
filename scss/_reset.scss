@@ -1,0 +1,16 @@
+@charset 'utf-8';
+*{
+  margin: 0;
+  padding: 0;
+}
+ol, ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.h {
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+}
