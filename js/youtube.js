@@ -49,7 +49,7 @@
       this.createPop(vidId);
     }.bind(this));
   
-    $("body").on("click", ".pop .close", function(e){
+    $("body").on("click", ".pop_youtube .close", function(e){
       e.preventDefault();
   
       this.removePop();
@@ -121,7 +121,7 @@
   MyYoutube.prototype.createPop = function(vidId){
     $("body")
     .append(
-      $("<aside class='pop'>")
+      $("<aside class='pop_youtube'>")
       .css({
         width: "100%",
         height: "100vh",
@@ -174,14 +174,14 @@
       ).fadeIn()
     )
     setTimeout(function(){
-      $(".pop .con").fadeIn(500, function(){
+      $(".pop_youtube .con").fadeIn(500, function(){
         $(".pop > img").remove();
       })
     }, 1000)
   }
   
   MyYoutube.prototype.removePop = function(){
-    $(".pop").fadeOut(500, function(){
+    $(".pop_youtube").fadeOut(500, function(){
       $(this).remove();
     });
   }
