@@ -1,9 +1,14 @@
 @charset 'utf-8';
 @import "reset";
 @import "login";
-@import "community";
+@import "join";
+@import "department";
+@import "gallery";
 @import "youtube";
+@import "community";
 @import "location";
+
+
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand:wght@500&display=swap');
 /*
 font-family: 'EB Garamond', serif;
@@ -136,7 +141,7 @@ font-family: 'Quicksand', sans-serif;
           }
         }
       }
-      .login {
+      .login_btn {
         position: absolute;
         bottom: 30px;
         right: 0px;

@@ -212,7 +212,7 @@
                 </ul>
               </div>
               <div class="depth2">
-                <h2><a href="#faq">자주하는 질문</a></h2>
+                <h2><a href="#faq">FAQ</a></h2>
                 <ul>
                   <li><a href="#">수간신청</a></li>
                   <li><a href="#">카탈로그</a></li>
@@ -224,7 +224,7 @@
             </div>
           </li>
         </ul>
-        <ul class="login">
+        <ul class="login_btn">
           <li class="on"><a href="login.html"><i class="far fa-user"></i> 로그인</a></li>
           <li><a href="#"><i class="fas fa-search"></i></a></li>
         </ul>
@@ -254,16 +254,32 @@
     </div>
   </header>
 
-  <section id="" class="content">
+  <section id="login" class="content">
     <div class="inner">
       <ul class="site_map">
         <li><a href="#">HOME</a></li>
-        <li><a href="#">고객 서비스</a></li>
-        <li><a href="#">고객 의견</a></li>
-        <li><a href="#">자주하는 질문</a></li>
+        <li><a href="#">로그인</a></li>
       </ul>
       <h1>Login</h1>
-
+      <article class="login_form">
+        <form action="/"  method="post">
+          <fieldset class="h">Login 양식</fieldset>
+          <article class="user_id">
+            <label for="user_id" class="h">아이디</label>
+            <input type="text" id="user_id" name="user_id" placeholder="아이디를 입력하세요.">
+          </article>
+          <article class="user_pw">
+            <label for="user_pw" class="h">비밀번호</label>
+            <input type="text" id="user_pw" name="user_pw" placeholder="비밀번호를 입력하세요.">
+          </article>
+          <input type="submit" value="로그인">
+        </form>
+        <ul class="login_info">
+          <li><a href="#">아이디 찾기</a></li>
+          <li><a href="#">비밀번호 찾기</a></li>
+          <li><a href="join.html">회원가입</a></li>
+        </ul>
+      </article>
     </div>
   </section>
 

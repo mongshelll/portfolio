@@ -4,7 +4,7 @@
 #header {
   .header_upper {
     >.inner {
-      .login {
+      .login_btn {
         li {
           &.on>a {
             font-weight: bold;
@@ -17,61 +17,63 @@
 }
 
 
-.content {
-  width: 100%;
-  padding: 100px 0;
-  position: relative;
-
+#login {
   .inner {
-    width: 1180px;
-    margin: 0 auto;
-    position: relative;
+    .login_form {
+      width: 40%;
+      margin: 0 auto;
 
-    .site_map {
-      position: absolute;
-      top: -80px;
-      right: 0px;
-      
-      li {
-        display: inline-block;
-        &::after {
-          content: '/';
-          display: inline-block;
-          font-size: 12px;
-          color: #666;
-          padding-left: 5px;
+      .user_id {
+        #user_id {
+          width: 100%;
+          height: 40px;
+          padding: 10px;
+          box-sizing: border-box;
+          font: 14px/1 'Nanum Gothic', sans-serif;
+          margin-bottom: 10px;
+          border: 1px solid #aaa;
         }
-        a {
-          display: inline-block;
-          font: 12px/1 'arial';
-          color: #666;
-          position: relative;
-          
-          &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            background: #666;
-          }
-        }
-        &:last-of-type a::after {
-          display: none;
-        }
-        &:last-of-type::after {
-          display: none;
+      }
+      .user_pw {
+        #user_pw {
+          width: 100%;
+          height: 40px;
+          padding: 10px;
+          box-sizing: border-box;
+          font: 14px/1 'Nanum Gothic', sans-serif;
+          margin-bottom: 20px;
+          border: 1px solid #aaa;
         }
       }
     }
 
-    h1 {
-      text-align: center;
-      font: 44px/1 'Nanum Myeongjo', serif;
-      color: #222;
-      margin-bottom: 100px;
+    input[type=submit] {
+      width: 100%;
+      height: 40px;
+      background: #ddd;
+      border: 1px solid #eee;
+      font: 14px/40px 'Nanum Gothic', sans-serif;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: 0.5s;
+
+      &:hover {
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        transform: scale(1.02);
+      }
+    }
+    
+    .login_info {
+      li {
+        width: 32%;
+        text-align: center;
+        display: inline-block;
+        a {
+          font: 14px/1 'Nanum Gothic', sans-serif;
+          color: #222;
+        }
+      }
     }
   }
 }

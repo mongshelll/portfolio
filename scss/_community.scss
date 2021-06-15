@@ -2,23 +2,7 @@
 @import "sub_layout";
 
 #community {
-  width: 100%;
-  padding: 100px 0;
-  position: relative;
-
   .inner {
-    width: 1180px;
-    margin: 0 auto;
-    position: relative;
-
-    .site_map {
-      li {
-        &:last-of-type a::after {
-          display: none;
-        }
-      }
-    }
-
     .btn {
       width: 100%;
       text-align: center;

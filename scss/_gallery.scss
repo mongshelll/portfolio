@@ -1,0 +1,242 @@
+@charset 'utf-8';
+@import "sub_layout";
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  opacity: 0;
+
+  &.on {
+    opacity: 1;
+  }
+}
+#search {
+  margin-bottom: 50px;
+  position: relative;
+
+  input[type=text] {
+    width: 240px;
+    height: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    background: #efefef;
+  }
+
+  button {
+    position: absolute;
+    top: 1px;
+    left: 200px;
+    padding: 19px;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: none;
+
+    >.fa-search {
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #888;
+    }
+  }
+}
+#gallery {
+  .inner {
+    #flickr_gallery {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: 1s;
+
+      &.on {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      ul {
+        width: 100%;
+
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        li {
+          float: left;
+          padding: 10px;
+          height: 300px;
+          box-sizing: border-box;
+          width: 33.333%;
+
+          &.item-sizer {
+            width: 33.333%;
+            opacity: 0;
+          }
+
+          &:nth-of-type(2) {
+            width: 66.666%;
+          }
+
+          &:nth-of-type(4) {
+            height: 600px;
+          }
+
+          &:nth-of-type(7) {
+            width: 66.666%;
+          }
+
+          .inner {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+
+            >a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              opacity: 1;
+              transition: 0.5s;
+
+              >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            p {
+              position: absolute;
+              top: 20px;
+              left: 20px;
+              font: bold 14px/1 "arial";
+              color: #fff;
+              opacity: 0;
+              transition: 0.5s;
+            }
+
+            .profile {
+              position: absolute;
+              bottom: -20px;
+              right: 40px;
+              opacity: 0;
+              transition: 0.5s 0.2s;
+
+              img {
+                border-radius: 50%;
+              }
+
+              span {
+                font: 14px/1 "arial";
+                color: #fff;
+                margin-left: 15px;
+                opacity: 0.7;
+                position: relative;
+                top: -18px;
+              }
+            }
+
+            &:hover {
+              >a {
+                opacity: 0.4;
+              }
+              >p {
+                opacity: 1;
+              }
+              .profile {
+                bottom: 20px;
+                opacity: 1;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  #gallery {
+    padding: 100px 40px;
+    box-sizing: border-box;
+    .inner {
+      width: 100%;
+      #flickr_gallery {  
+        ul {
+          li {
+            width: 50%;
+  
+            &.item-sizer {
+              width: 50%;
+            }
+  
+            &:nth-of-type(2) {
+              width: 100%;
+            }
+  
+            &:nth-of-type(4) {
+              height: 600px;
+            }
+  
+            &:nth-of-type(7) {
+              width: 50%;
+            }
+
+            &:nth-of-type(8) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 539px) {
+  #gallery {
+    padding: 50px 40px;
+    .inner {
+      .site_map {
+        top: -40px;
+      }
+      h1 {
+        margin-bottom: 50px;
+      }
+      #flickr_gallery {  
+        ul {
+          li {
+            width: 100%;
+  
+            &.item-sizer {
+              width: 100%;
+            }
+            &:nth-of-type(2) {
+              width: 100%;
+            }
+            &:nth-of-type(4) {
+              height: 300px;
+            }
+            &:nth-of-type(7) {
+              width: 100%;
+            }
+            &:nth-of-type(8) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
