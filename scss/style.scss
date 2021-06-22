@@ -517,6 +517,7 @@ font-family: 'Quicksand', sans-serif;
         position: relative;
         padding-bottom: 60px;
         .logo {
+          width: 100px;
           margin-bottom: 20px;
           position: absolute;
           left: 50%;
@@ -524,11 +525,12 @@ font-family: 'Quicksand', sans-serif;
           transform: translateX(-50%);
         }
         .footer_links {
+          margin-left: 0;
           width: 50%;
         }
         .fam_site_sns {
           float: right;
-          width: 29%;
+          width: 40%;
           text-align: center;
   
           #family_site {
