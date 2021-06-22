@@ -1550,6 +1550,7 @@ fieldset {
         vertical-align: top; }
         #footer .inner .upper .fam_site_sns #family_site {
           display: inline-block;
+          width: 160px;
           padding: 10px;
           box-sizing: border-box;
           border: 1px solid #222; }
@@ -1612,8 +1613,8 @@ fieldset {
         width: 29%;
         text-align: center; }
         #footer .inner .upper .fam_site_sns #family_site {
-          width: 100%;
-          display: block; }
+          display: block;
+          margin: 0 auto; }
         #footer .inner .upper .fam_site_sns .sns {
           display: block;
           margin: 20px 0; }
@@ -1623,35 +1624,17 @@ fieldset {
   #header .header_upper > .inner .login_btn {
     display: none; }
 
-  #footer {
-    padding: 50px 40px;
-    box-sizing: border-box; }
-    #footer .inner {
-      width: 100%; }
-      #footer .inner .upper {
-        position: relative;
-        padding-bottom: 60px; }
-        #footer .inner .upper .logo {
-          width: 100px;
-          margin-bottom: 20px;
-          position: absolute;
-          left: 50%;
-          bottom: 10px;
-          transform: translateX(-50%); }
-        #footer .inner .upper .footer_links {
-          margin-left: 0;
-          width: 50%; }
-        #footer .inner .upper .fam_site_sns {
-          float: right;
-          width: 40%;
-          text-align: center; }
-          #footer .inner .upper .fam_site_sns #family_site {
-            width: 100%;
-            display: block; }
-          #footer .inner .upper .fam_site_sns .sns {
-            display: block;
-            margin: 20px 0; }
-    #footer .lower p {
-      line-height: 1.5; } }
+  #footer .inner .upper {
+    position: relative;
+    padding-bottom: 60px; }
+    #footer .inner .upper .logo {
+      width: 100px;
+      margin-bottom: 20px;
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%); }
+    #footer .inner .upper .footer_links {
+      margin-left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

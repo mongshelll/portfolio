@@ -381,6 +381,7 @@ font-family: 'Quicksand', sans-serif;
 
         #family_site {
           display: inline-block;
+          width: 160px;
           padding: 10px;
           box-sizing: border-box;
           border: 1px solid #222;
@@ -479,8 +480,8 @@ font-family: 'Quicksand', sans-serif;
           text-align: center;
   
           #family_site {
-            width: 100%;
             display: block;
+            margin: 0 auto;
           }
           .sns {
             display: block;
@@ -509,10 +510,7 @@ font-family: 'Quicksand', sans-serif;
   }
 
   #footer {
-    padding: 50px 40px;
-    box-sizing: border-box;
     .inner {
-      width: 100%;  
       .upper {
         position: relative;
         padding-bottom: 60px;
@@ -526,27 +524,7 @@ font-family: 'Quicksand', sans-serif;
         }
         .footer_links {
           margin-left: 0;
-          width: 50%;
         }
-        .fam_site_sns {
-          float: right;
-          width: 40%;
-          text-align: center;
-  
-          #family_site {
-            width: 100%;
-            display: block;
-          }
-          .sns {
-            display: block;
-            margin: 20px 0;
-          }
-        }
-      }
-    }
-    .lower {
-      p {
-        line-height: 1.5;
       }
     }
   }
