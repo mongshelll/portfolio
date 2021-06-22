@@ -1297,7 +1297,8 @@ fieldset {
   #header .header_upper {
     width: 100%;
     position: relative;
-    border-top: 1px solid #eee; }
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
     #header .header_upper > .inner {
       width: 1180px;
       height: 70px;
