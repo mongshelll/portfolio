@@ -530,7 +530,7 @@ fieldset {
       margin-bottom: 50px; } }
 .loading {
   position: fixed;
-  top: 50%;
+  top: 70%;
   left: 50%;
   width: 80px;
   height: 80px;
