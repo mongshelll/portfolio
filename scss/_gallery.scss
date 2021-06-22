@@ -169,8 +169,6 @@
 
 @media screen and (max-width: 1179px) {
   #gallery {
-    padding: 100px 40px;
-    box-sizing: border-box;
     .inner {
       width: 100%;
       #flickr_gallery {  
@@ -206,14 +204,7 @@
 
 @media screen and (max-width: 539px) {
   #gallery {
-    padding: 50px 40px;
     .inner {
-      .site_map {
-        top: -40px;
-      }
-      h1 {
-        margin-bottom: 50px;
-      }
       #flickr_gallery {  
         ul {
           li {

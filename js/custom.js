@@ -71,6 +71,23 @@ function closeSub(el){
   });
 }
 
+var btnCall = $header_upper.find(".btnCall");
+var menuMo = $header_upper.find("#menu_mo");
+
+btnCall.on("click", function () {
+  btnCall.toggleClass("on");
+  menuMo.toggleClass("on");
+});
+
+window.onresize = function(){
+  var wid = window.innerWidth;
+  if(wid>=1180){
+    btnCall.removeClass("on");
+    menuMo.removeClass("on");
+  }
+};
+
+
 /* @@@ GNB end @@@ */
 
 /* @@@ TAB @@@ */

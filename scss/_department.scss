@@ -27,10 +27,7 @@
 /* tablet */
 @media screen and (max-width: 1179px) {
   #department {
-    padding: 100px 40px;
-    box-sizing: border-box;
     .inner {
-      width: 100%;
       .division {
         height: 60vw;
       }
@@ -41,14 +38,7 @@
 /* mobile */
 @media screen and (max-width: 539px) {
   #department {
-    padding: 50px 40px;
     .inner {
-      .site_map {
-        top: -40px;
-      }
-      h1 {
-        margin-bottom: 50px;
-      }
       .division {
         height: auto;
         background: none;

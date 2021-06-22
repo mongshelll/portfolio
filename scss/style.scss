@@ -1,13 +1,4 @@
 @charset 'utf-8';
-@import "reset";
-@import "login";
-@import "join";
-@import "department";
-@import "gallery";
-@import "youtube";
-@import "community";
-@import "location";
-
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand:wght@500&display=swap');
 /*
@@ -16,6 +7,15 @@ font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Nanum Myeongjo', serif;
 font-family: 'Quicksand', sans-serif;
 */
+
+@import "reset";
+@import "login";
+@import "join";
+@import "department";
+@import "gallery";
+@import "youtube";
+@import "community";
+@import "location";
 
 
 #skipNavi a {
@@ -139,6 +139,65 @@ font-family: 'Quicksand', sans-serif;
               }
             }
           }
+        }
+      }
+
+      #menu_mo {
+        display: none;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -50%;
+        background: #333;
+        padding: 35px 30px;
+        box-sizing: border-box;
+        z-index: 2;
+        transition: 0.5s;
+
+        .logo_mo {
+          padding-bottom: 20px;
+          border-bottom: 1px solid #666;
+
+          a {
+            display: inline-block;
+            padding: 20px;
+            box-sizing: border-box;
+            font: bold 30px/1 'Nanum Gothic', sans-seri;
+            letter-spacing: 4px;
+            color: #fff;
+          }
+        }
+        ul {
+          li {
+            a {
+              display: block;
+              width: 100%;
+              padding: 20px 0;
+              border-bottom: 1px solid #444;
+              font: 15px/70px 'Nanum Gothic', sans-seri;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .btnCall {
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        font-size: 30px;
+        color: #555;
+        display: none;
+
+        .close {
+          display: none;
+        }
+        &.on .close {
+          display: block;
+        }
+        &.on .open {
+          display: none;
         }
       }
       .login_btn {
@@ -283,62 +342,6 @@ font-family: 'Quicksand', sans-serif;
   }
 }
 
-.content {
-  width: 100%;
-  padding: 100px 0;
-  position: relative;
-  .site_map {
-    position: absolute;
-    top: 20px;
-    right: 80px;
-    
-    li {
-      display: inline-block;
-      &::after {
-        content: '/';
-        display: inline-block;
-        font-size: 12px;
-        color: #666;
-        padding-left: 5px;
-      }
-      a {
-        display: inline-block;
-        font: 12px/1 'arial';
-        color: #666;
-        position: relative;
-        
-        &::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 1px;
-          position: absolute;
-          left: 0;
-          bottom: -3px;
-          background: #666;
-        }
-      }
-      &:last-of-type a::after {
-        display: none;
-      }
-      &:last-of-type::after {
-        display: none;
-      }
-    }
-  }
-  .inner {
-    width: 1180px;
-    margin: 0 auto;
-
-    h1 {
-      text-align: center;
-      font: 44px/1 'Nanum Myeongjo', serif;
-      color: #222;
-      margin-bottom: 100px;
-    }
-  }
-}
-
 #footer {
   width: 100%;
   padding: 50px 0;
@@ -371,7 +374,6 @@ font-family: 'Quicksand', sans-serif;
         }
       }
       .fam_site_sns {
-        width: 100%;
         text-align: right;
         margin-bottom: 30px;
         vertical-align: top;
@@ -379,6 +381,7 @@ font-family: 'Quicksand', sans-serif;
         #family_site {
           display: inline-block;
           padding: 10px;
+          box-sizing: border-box;
           border: 1px solid #222;
         }
         .sns {
@@ -408,6 +411,140 @@ font-family: 'Quicksand', sans-serif;
       font: 12px/1 'Nanum Gothic';
       color: #232323;
       margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1179px) {
+  #header {    
+    .header_upper {  
+      >.inner {
+        width: 100%;
+        height: 70px;  
+        .logo {
+          left: 50%;
+          transform: translateX(-50%);
+        }  
+        #gnb {
+          display: none;
+        }
+
+        #menu_mo {
+          display: block;
+
+          &.on {
+            left: 0;
+          }
+        }
+        .btnCall {
+          display: block;
+        }
+
+        .login_btn {
+          right: 100px;
+        }
+        .util {
+          right: 40px;
+        }
+      }
+    }
+  
+    .header_lower {
+      display: none;
+    }
+  }
+  
+  #footer {
+    padding: 50px 40px;
+    box-sizing: border-box;
+    .inner {
+      width: 100%;  
+      .upper {
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        .logo {
+          width: 10%;
+          margin-bottom: 20px;
+        }
+        .footer_links {
+          width: 50%;
+        }
+        .fam_site_sns {
+          float: right;
+          width: 29%;
+          text-align: center;
+  
+          #family_site {
+            width: 100%;
+            display: block;
+          }
+          .sns {
+            display: block;
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+    .lower {
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 539px) {
+  #header {    
+    .header_upper {  
+      >.inner {
+        .login_btn {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #footer {
+    padding: 50px 40px;
+    box-sizing: border-box;
+    .inner {
+      width: 100%;  
+      .upper {
+        position: relative;
+        padding-bottom: 60px;
+        .logo {
+          margin-bottom: 20px;
+          position: absolute;
+          left: 50%;
+          bottom: 10px;
+          transform: translateX(-50%);
+        }
+        .footer_links {
+          width: 50%;
+        }
+        .fam_site_sns {
+          float: right;
+          width: 29%;
+          text-align: center;
+  
+          #family_site {
+            width: 100%;
+            display: block;
+          }
+          .sns {
+            display: block;
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+    .lower {
+      p {
+        line-height: 1.5;
+      }
     }
   }
 }
