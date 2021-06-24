@@ -79,14 +79,13 @@ btnCall.on("click", function () {
   menuMo.toggleClass("on");
 });
 
-window.onresize = function(){
+$(window).on("resize", function(){
   var wid = window.innerWidth;
   if(wid>=1180){
     btnCall.removeClass("on");
     menuMo.removeClass("on");
   }
-};
-
+});
 
 /* @@@ GNB end @@@ */
 

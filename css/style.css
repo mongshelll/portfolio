@@ -1642,9 +1642,9 @@ fieldset {
             #header .header_upper > .inner #gnb > li > a > span {
               font-size: 18px; }
           #header .header_upper > .inner #gnb > li.on > a {
-            color: #f22c2d; }
+            color: orange; }
           #header .header_upper > .inner #gnb > li:hover > a {
-            color: #f22c2d; }
+            color: orange; }
           #header .header_upper > .inner #gnb > li .sub {
             position: absolute;
             width: 1180px;
@@ -1679,7 +1679,7 @@ fieldset {
                     font: 13px/1 'Nanum Gothic', sans-seri;
                     color: #666; }
                   #header .header_upper > .inner #gnb > li .sub .depth2 > ul > li:hover > a {
-                    color: #f22c2d; }
+                    color: orange; }
       #header .header_upper > .inner #menu_mo {
         display: none;
         width: 50%;
