@@ -17,6 +17,9 @@ font-family: 'Quicksand', sans-serif;
 @import "community";
 @import "location";
 
+body {
+  overflow-x: hidden;
+}
 
 #skipNavi a {
   display: block;
@@ -341,6 +344,7 @@ font-family: 'Quicksand', sans-serif;
             }
           }
           &.on a {
+            font-weight: bold;
             color: #fff;
 
             &::after {

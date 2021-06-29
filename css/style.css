@@ -743,7 +743,8 @@ fieldset {
       margin-bottom: 50px; } }
 #youtube .inner #vidGallery {
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0 auto; }
   #youtube .inner #vidGallery::after {
     content: "";
     display: block;
@@ -751,7 +752,6 @@ fieldset {
   #youtube .inner #vidGallery article {
     width: 46%;
     height: 400px;
-    margin: 1%;
     float: left;
     box-sizing: border-box;
     margin: 30px 0 30px 0;
@@ -763,7 +763,7 @@ fieldset {
       clear: both; }
     #youtube .inner #vidGallery article .pic {
       display: block;
-      width: 50%;
+      width: 70%;
       height: 300px;
       background-repeat: no-repeat;
       background-position: center;
@@ -771,18 +771,18 @@ fieldset {
       float: left;
       position: absolute;
       font-size: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-60%, -50%); }
+      top: 0%;
+      left: 0%; }
     #youtube .inner #vidGallery article h2 {
+      width: 100%;
+      background: #fff;
       font: bold 25px/1.2 "airl";
       color: #333;
       margin-bottom: 20px;
       position: absolute;
-      top: 40%;
-      left: 50px;
+      top: 0;
+      left: 10px;
       transform: translateY(-50%);
-      text-shadow: 1px 1px 1px #fff;
       opacity: 0;
       transition: 0.5s; }
     #youtube .inner #vidGallery article p {
@@ -1592,6 +1592,9 @@ fieldset {
       color: #fff;
       text-align: center; }
 
+body {
+  overflow-x: hidden; }
+
 #skipNavi a {
   display: block;
   width: 100%;
@@ -1835,6 +1838,7 @@ fieldset {
             #header .header_lower > .inner .fixed_menu li a:hover {
               color: #fff; }
           #header .header_lower > .inner .fixed_menu li.on a {
+            font-weight: bold;
             color: #fff; }
             #header .header_lower > .inner .fixed_menu li.on a::after {
               content: '';

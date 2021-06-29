@@ -18,9 +18,20 @@ skip_a.on("focusout", function(){
 
 var $header = $("#header");
 var $header_upper = $header.find(".header_upper");
+var $gnb = $header_upper.find("#gnb");
 var $gnb_li = $header_upper.find("#gnb>li");
 var $sub = $gnb_li.find(".sub");
-var speed = 500;
+var $depth2_tit = $header_upper.find("#gnb>li.on .sub .depth2 h2 a");
+var speed = 300;
+
+
+$depth2_tit.each(function(index, items){  
+  $(".header_lower .inner .fixed_menu").append(
+    $("<li>").append(
+      $("<a href='#'>").text(items.text)
+    )
+  )
+});
 
 //gnb li에 마우스엔터, 포커스인 했을 때
 $gnb_li.on("mouseenter focusin", function(){
@@ -33,8 +44,10 @@ $gnb_li.on("mouseleave focusout", function(){
 });
 
 function openSub(el){
+  var wid = $("body").width();
+  var gnb_wid = $gnb.width();
   var ht = $(el).find($sub).css("height");
-  ht = parseInt(ht) + 100;
+  ht = parseInt(ht) + 100; //.sub padding값 고려
   var bg = $sub.css("background-color");
 
   var sub_depth = $(el).find(".depth2").length + 2;
@@ -43,32 +56,28 @@ function openSub(el){
     width: "calc(100% / "+sub_depth+")"
   });
 
-  $header_upper.prepend(
+  $(el).prepend(
     $("<div class='gnbBg'>").css({
-      width: "100%",
+      width: wid,
       height: ht,
       position: "absolute",
       top: 70,
-      left: 0,
+      left: (gnb_wid/2)-(wid/2),
       borderTop: "1px solid #ccc",
       boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
       backgroundColor: bg,
       display: "none",
       zIndex: 2
     })
-  )
-  $(".gnbBg").slideDown(speed);
+  );
+  $(".gnbBg").stop().slideDown(speed);
 
   $(el).children(".sub").stop().slideDown(speed);
 }
 
 function closeSub(el){
   $(el).children(".sub").stop().slideUp(speed / 2);
-  $(".gnbBg").css({
-    boxShadow: "none"
-  }).slideUp(speed / 2, function(){
-    $(this).remove();
-  });
+  $(".gnbBg").remove();
 }
 
 var btnCall = $header_upper.find(".btnCall");
@@ -86,6 +95,18 @@ $(window).on("resize", function(){
     menuMo.removeClass("on");
   }
 });
+
+
+// $bepth2_tit.each(function(index, items){
+//   $(".fixed_menu")
+//   .append(
+//     $("<li>")
+//     .append(
+//       $("a")
+//     )
+//   )
+// })
+
 
 /* @@@ GNB end @@@ */
 
@@ -124,7 +145,7 @@ var $frame = $(".faq");
 var $btns = $frame.find("dt");
 var $boxs = $frame.find("dd");
 
-var speed = 300;
+var faq_speed = 300;
 var enableClick = true;
 
 //버튼을 클릭했을 때
@@ -151,14 +172,14 @@ function activation(self){
 
   //모든 버튼, 박스 비활성화
   $btns.removeClass("on");
-  $boxs.slideUp(speed);
+  $boxs.slideUp(faq_speed);
 
   //만약 활성화 되어있다면 
   if(isOn){
     //버튼의 on 제거 - 비활성화, 버튼 다음의 dd도 감춤 - slideUp();
     $(self).removeClass("on");
 
-    $(self).next("dd").slideUp(speed, function(){
+    $(self).next("dd").slideUp(faq_speed, function(){
       //동작이 끝나면 클릭이 가능하도록 enableClick을 true값으로 바꿈
       enableClick = true;
     });
@@ -169,7 +190,7 @@ function activation(self){
     $(self).find(".fa-chevron-up").css({
       transform: "rotate(0deg)"
     });
-    $(self).next("dd").slideDown(speed, function(){
+    $(self).next("dd").slideDown(faq_speed, function(){
       enableClick = true;
     });
   }
