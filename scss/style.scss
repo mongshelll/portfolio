@@ -80,9 +80,22 @@ font-family: 'Quicksand', sans-serif;
             color: #444;
             box-sizing: border-box;
             transition: 0.3s;
+            position: relative;
 
             >span {
               font-size: 18px;
+            }
+
+            &::after {
+              content: "";
+              display: block;
+              width: calc(100% - 40px);
+              height: 2px;
+              background: orange;
+              position: absolute;
+              bottom: 0px;
+              opacity: 0;
+              transition: opacity 0.3s;
             }
           }
           &.on>a {
@@ -90,7 +103,11 @@ font-family: 'Quicksand', sans-serif;
           }
           &:hover>a {
             color: orange;
+            &::after {
+              opacity: 1;
+            }
           }
+
           .sub {
             position: absolute;
             width: 1180px;

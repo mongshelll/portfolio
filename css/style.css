@@ -1643,13 +1643,26 @@ fieldset {
             font: 15px/70px 'Nanum Gothic', sans-seri;
             color: #444;
             box-sizing: border-box;
-            transition: 0.3s; }
+            transition: 0.3s;
+            position: relative; }
             #header .header_upper > .inner #gnb > li > a > span {
               font-size: 18px; }
+            #header .header_upper > .inner #gnb > li > a::after {
+              content: "";
+              display: block;
+              width: calc(100% - 40px);
+              height: 2px;
+              background: orange;
+              position: absolute;
+              bottom: 0px;
+              opacity: 0;
+              transition: opacity 0.3s; }
           #header .header_upper > .inner #gnb > li.on > a {
             color: orange; }
           #header .header_upper > .inner #gnb > li:hover > a {
             color: orange; }
+            #header .header_upper > .inner #gnb > li:hover > a::after {
+              opacity: 1; }
           #header .header_upper > .inner #gnb > li .sub {
             position: absolute;
             width: 1180px;
