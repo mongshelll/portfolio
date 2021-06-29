@@ -186,31 +186,31 @@
     });
   }
 
-  MyYoutube.prototype.hover = function(target){
-    $(target).find("a").append(
-      $("<div class='cov'>")
-      .css({
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(0,0,0,0.3)",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        display: "none"
-      }).fadeIn(300)
-      );
-    $(target).find("h2").css({top:"10%", opacity: 1});
-    $(target).find("p").css({right: 20, opacity: 1});
+  // MyYoutube.prototype.hover = function(target){
+  //   $(target).find("a").append(
+  //     $("<div class='cov'>")
+  //     .css({
+  //       width: "100%",
+  //       height: "100%",
+  //       backgroundColor: "rgba(0,0,0,0.3)",
+  //       position: "absolute",
+  //       top: 0,
+  //       left: 0,
+  //       display: "none"
+  //     }).fadeIn(300)
+  //     );
+  //   $(target).find("h2").css({top:"10%", opacity: 1});
+  //   $(target).find("p").css({right: 20, opacity: 1});
 
-    //텍스트 fade효과 실패
-  }
-  MyYoutube.prototype.leave = function(target){
-    $(target).find(".cov").fadeOut(300, function(){
-      $(this).remove();
-    });
-    $(target).find("h2").css({top: 0, opacity: 0});
-    $(target).find("p").css({right: -100, opacity: 0});
-  }
+  //   //텍스트 fade효과 실패
+  // }
+  // MyYoutube.prototype.leave = function(target){
+  //   $(target).find(".cov").fadeOut(300, function(){
+  //     $(this).remove();
+  //   });
+  //   $(target).find("h2").css({top: 0, opacity: 0});
+  //   $(target).find("p").css({right: -100, opacity: 0});
+  // }
 })(jQuery);
 
 
