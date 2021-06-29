@@ -540,17 +540,21 @@ fieldset {
   .loading.on {
     opacity: 1; }
 
-#search {
+#gallery .inner .sub_visual {
+  background: url(../img/gallery_banner.jpg) no-repeat center/cover;
+  filter: saturate(10%); }
+#gallery .inner #search {
   margin-bottom: 50px;
   position: relative; }
-  #search input[type=text] {
+  #gallery .inner #search input[type=text] {
     width: 240px;
     height: 40px;
+    margin-left: 10px;
     padding: 20px;
     box-sizing: border-box;
     border: none;
     background: #efefef; }
-  #search button {
+  #gallery .inner #search button {
     position: absolute;
     top: 1px;
     left: 200px;
@@ -558,14 +562,13 @@ fieldset {
     box-sizing: border-box;
     vertical-align: top;
     border: none; }
-    #search button > .fa-search {
+    #gallery .inner #search button > .fa-search {
       font-size: 20px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #888; }
-
+      color: #222; }
 #gallery .inner #flickr_gallery {
   opacity: 0;
   transform: translateY(100px);
@@ -752,9 +755,9 @@ fieldset {
   #youtube .inner #vidGallery article {
     width: 46%;
     height: 400px;
+    margin: 2%;
     float: left;
     box-sizing: border-box;
-    margin: 30px 0 30px 0;
     padding: 30px;
     position: relative; }
     #youtube .inner #vidGallery article:after {
@@ -775,13 +778,15 @@ fieldset {
       left: 0%; }
     #youtube .inner #vidGallery article h2 {
       width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
       background: #fff;
       font: bold 25px/1.2 "airl";
       color: #333;
       margin-bottom: 20px;
       position: absolute;
       top: 0;
-      left: 10px;
+      left: 0;
       transform: translateY(-50%);
       opacity: 0;
       transition: 0.5s; }
@@ -1899,7 +1904,7 @@ body {
             #footer .inner .upper .fam_site_sns .sns li:hover a {
               color: #222; }
   #footer .lower p {
-    font: 12px/1 'Nanum Gothic';
+    font: 12px/1.3 'Nanum Gothic';
     color: #232323;
     margin-bottom: 10px; }
 
@@ -1966,6 +1971,15 @@ body {
       bottom: 10px;
       transform: translateX(-50%); }
     #footer .inner .upper .footer_links {
-      margin-left: 0; } }
+      margin-left: 0; }
+    #footer .inner .upper .fam_site_sns {
+      width: 50%; }
+      #footer .inner .upper .fam_site_sns #family_site {
+        width: 130px; }
+      #footer .inner .upper .fam_site_sns .sns {
+        margin: 20px 0; } }
+@media screen and (max-width: 380px) {
+  #footer .inner .upper .fam_site_sns .sns li {
+    margin: 0 2px; } }
 
 /*# sourceMappingURL=style.css.map */

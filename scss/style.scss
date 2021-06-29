@@ -431,7 +431,7 @@ body {
   }
   .lower {
     p {
-      font: 12px/1 'Nanum Gothic';
+      font: 12px/1.3 'Nanum Gothic';
       color: #232323;
       margin-bottom: 10px;
     }
@@ -545,6 +545,31 @@ body {
         }
         .footer_links {
           margin-left: 0;
+        }
+        .fam_site_sns {
+          width: 50%;
+  
+          #family_site {
+            width: 130px;
+          }
+          .sns {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  #footer {
+    .inner {
+      .upper {
+        .fam_site_sns {
+          .sns {
+            li {
+              margin: 0 2px;
+            }
+          }
         }
       }
     }
