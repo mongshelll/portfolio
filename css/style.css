@@ -775,7 +775,7 @@ fieldset {
     #youtube .inner #vidGallery article:hover h2 {
       top: 10%; }
     #youtube .inner #vidGallery article:hover p {
-      bottom: 20%;
+      bottom: 30%;
       opacity: 1;
       transition: 1.5s; }
     #youtube .inner #vidGallery article:hover span {
