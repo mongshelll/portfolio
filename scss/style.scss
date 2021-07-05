@@ -397,6 +397,7 @@ body {
       }
       .fam_site_sns {
         text-align: right;
+        margin-right: 20px;
         margin-bottom: 30px;
         vertical-align: top;
 
@@ -519,6 +520,39 @@ body {
   }
 }
 
+@media screen and (max-width: 775px) {
+  #footer {
+    .inner {
+      .upper {
+        position: relative;
+        .logo {
+          position: absolute;
+          bottom: 20px;
+        }
+        .footer_links {
+          display: block;
+          width: 100%;
+        }
+        .fam_site_sns {
+          width: 70%;
+          text-align: center;
+  
+          #family_site {
+            display: inline-block;
+          }
+          .sns {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .lower {
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+}
 @media screen and (max-width: 539px) {
   #header {    
     .header_upper {  
@@ -529,46 +563,28 @@ body {
       }
     }
   }
-
+}
+@media screen and (max-width: 495px) {
   #footer {
     .inner {
       .upper {
-        position: relative;
-        padding-bottom: 60px;
         .logo {
           width: 100px;
-          margin-bottom: 20px;
-          position: absolute;
           left: 50%;
-          bottom: 10px;
           transform: translateX(-50%);
         }
         .footer_links {
           margin-left: 0;
         }
         .fam_site_sns {
-          width: 50%;
-  
+          width: 100%;
+          margin-bottom: 100px;
+
           #family_site {
             width: 130px;
           }
           .sns {
             margin: 20px 0;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 380px) {
-  #footer {
-    .inner {
-      .upper {
-        .fam_site_sns {
-          .sns {
-            li {
-              margin: 0 2px;
-            }
           }
         }
       }

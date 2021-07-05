@@ -7,8 +7,8 @@
 (function($){
   //디폴트 옵션값
   $.defaults  = {
-    // key : "AIzaSyDcqePi8_ewVabkUUFxrdkZiF3xo16LBes",
-    // playlist : "PLoIl8ul_XWuUm2DpZwMZSbJhSvJ-ebRyp",
+    key : "AIzaSyDcqePi8_ewVabkUUFxrdkZiF3xo16LBes",
+    playlist : "PLoIl8ul_XWuWPrTDKqRESrEkLPraZH_79",
     count : 4
   }
 
@@ -54,18 +54,6 @@
   
       this.removePop();
     }.bind(this));
-
-    $("body").on("mouseenter", "article", function(e){
-      e.preventDefault();
-      var target = e.currentTarget;
-      this.hover(target);
-    }.bind(this));
-    
-    $("body").on("mouseleave", "article", function(e){
-      e.preventDefault();
-      var target = e.currentTarget;
-      this.leave(target);
-    }.bind(this));
   }
   
   MyYoutube.prototype.CallData = function(){
@@ -94,11 +82,11 @@
       var tit = data.snippet.title;
       if(tit.length > 20) tit = tit.substr(0, 20) + "...";
       var txt = data.snippet.description;
-      if(txt.length > 50) txt = txt.substr(0, 300)+"...";
+      if(txt.length > 50) txt = txt.substr(0, 200)+"...";
       var date = data.snippet.publishedAt.split("T")[0];
       var imgSrc = data.snippet.thumbnails.high.url;
       var vidId = data.snippet.resourceId.videoId;
-  
+
       this.frame
       .append(
         $("<article>")
@@ -120,6 +108,7 @@
   
   MyYoutube.prototype.createPop = function(vidId){
     $("body")
+    .css({overflowY: "hidden"})
     .append(
       $("<aside class='pop_youtube'>")
       .css({
@@ -167,8 +156,8 @@
         .text("Close")
         .css({
           position: "absolute",
-          top: 20,
-          right: 20,
+          top: 60,
+          right: 100,
           color: "#fff"
         })
       ).fadeIn()
@@ -184,33 +173,11 @@
     $(".pop_youtube").fadeOut(500, function(){
       $(this).remove();
     });
+    $("body").css({
+      overflowY: "visible"
+    });
   }
 
-  // MyYoutube.prototype.hover = function(target){
-  //   $(target).find("a").append(
-  //     $("<div class='cov'>")
-  //     .css({
-  //       width: "100%",
-  //       height: "100%",
-  //       backgroundColor: "rgba(0,0,0,0.3)",
-  //       position: "absolute",
-  //       top: 0,
-  //       left: 0,
-  //       display: "none"
-  //     }).fadeIn(300)
-  //     );
-  //   $(target).find("h2").css({top:"10%", opacity: 1});
-  //   $(target).find("p").css({right: 20, opacity: 1});
-
-  //   //텍스트 fade효과 실패
-  // }
-  // MyYoutube.prototype.leave = function(target){
-  //   $(target).find(".cov").fadeOut(300, function(){
-  //     $(this).remove();
-  //   });
-  //   $(target).find("h2").css({top: 0, opacity: 0});
-  //   $(target).find("p").css({right: -100, opacity: 0});
-  // }
 })(jQuery);
 
 

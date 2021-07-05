@@ -2,6 +2,10 @@
 @import "sub_layout";
 
 #youtube{
+  .sub_visual {
+    background: url(../img/youtube_banner.jpg) no-repeat 0px 62%/cover;
+    filter: saturate(0%);
+  }
   .inner {
     #vidGallery {
       width: 100%;
@@ -14,72 +18,183 @@
       }
     
       article {
-        width: 46%;
-        height: 400px;
-        // margin: 1%;
-        float: left;
-        box-sizing: border-box;
-        margin: 30px 0 30px 0;
-        padding: 30px;
+        width: 92%;
+        height: 25vw;
+        margin: 0 auto;
+        margin-bottom: 140px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
         position: relative;
 
-        &:after {
-          content: '';
-          display: block;
-          clear: both;
+        &:hover {
+          h2 {
+            top: 10%;
+          }
+          p {
+            bottom: 20%;
+            opacity: 1;
+            transition: 1.5s
+          }
+          span {
+            bottom: 10%;
+            transition: 0.5s 1.2s;
+          }
         }
-    
+
         .pic {
           display: block;
-          width: 70%;
-          height: 300px;
+          width: 60%;
+          height: 100%;
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          float: left;
           position: absolute;
-          font-size: 0;
           top: 0%;
-          left: 0%;
-          // transform: translate(-60%, -50%);
+          right: 0%;
         }
 
         h2 {
-          width: 100%;
-          background: #fff;
-          font: bold 25px/1.2 "airl";
+          width: 30%;
+          font: bold 26px/1 "arial";
           color: #333;
-          margin-bottom: 20px;
           position: absolute;
-          top: 0;
-          left: 10px;
-          transform: translateY(-50%);
-          opacity: 0;
+          top: 50%;
+          left: 20px;
           transition: 0.5s;
-          // display: none;
         }
         
         p {
-          width: 300px;
+          width: 30%;
           font: 16px/1.5 "arial";
           color: #666;
           position: absolute;
-          top: 70px;
-          right: -100px;
-          opacity: 0;
+          bottom: -200px;
+          left: 20px;
           transition: 0.5s;
-          // display: none;
+          opacity: 0;
         }
   
         span {
           font: bold italic 14px/1 'arial';
           color: #333;
           position: absolute;
-          bottom: 0px;
-          left: 20px;
+          bottom: -20px;
+          left: 30%;
+          transition: 0.5s;
         }
       }
     }
   }
 }
 
+@media screen and (max-width: 1179px) {
+  #youtube{
+    .inner {
+      #vidGallery {
+        article {
+          height: 30vw;
+          &:hover {
+            p {
+              bottom: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  #youtube{
+    .inner {
+      #vidGallery {
+        article {
+          h2 {
+            top: 10%;
+            font-size: 20px;
+          }
+          p {
+            bottom: 10%;
+            opacity: 1;
+          }
+          span {
+            bottom: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 902px) {
+  #youtube{
+    .inner {
+      #vidGallery {
+        article {
+          h2 {
+            width: 60%;
+            top: 5%;
+            left: auto;
+            right: 0px;
+          }
+
+          span {
+            left: 20%;
+          }
+          &:hover {
+            h2 {
+              top: 5%;
+            }
+            p {
+              bottom: 10%;
+            }
+          }
+          .pic {
+            height: 80%;
+            position: absolute;
+            top: 20%;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #youtube{
+    .inner {
+      #vidGallery {
+        article {
+          height: 50vh;
+          h2 {
+            width: 100%;
+            top: 10%;
+            right: auto;
+            transform: translateY(-50%);
+            text-align: center;
+          }
+          p {
+            display: none;
+          }
+          span {
+            left: auto;
+            bottom: auto;
+            top: 15%;
+            right: 5%;
+          }
+          &:hover {
+            h2 {
+              top: 10%;
+            }
+            p {
+              bottom: 10%;
+            }
+          }
+          .pic {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -17,11 +17,12 @@
 }
 
 #gallery {
+  .sub_visual {
+    background: url(../img/gallery_banner.jpg) no-repeat center/cover;
+    filter: saturate(10%);
+  }
   .inner {
-    .sub_visual {
-      background: url(../img/gallery_banner.jpg) no-repeat center/cover;
-      filter: saturate(10%);
-    }
+    margin-bottom: 140px;
     #search {
       margin-bottom: 50px;
       position: relative;
@@ -176,7 +177,7 @@
 @media screen and (max-width: 1179px) {
   #gallery {
     .inner {
-      width: 100%;
+      margin-bottom: 100px;
       #flickr_gallery {  
         ul {
           li {
@@ -211,6 +212,7 @@
 @media screen and (max-width: 539px) {
   #gallery {
     .inner {
+      margin-bottom: 50px;
       #flickr_gallery {  
         ul {
           li {

@@ -14,41 +14,42 @@ var map = new kakao.maps.Map(container, options);
 
 var mapTypeControl = new kakao.maps.MapTypeControl();
 
-map.addControl(mapTypeControl, kakao.maps.ControlPosition.BOTTOMRIGHT);
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 //각각의 본점, 지점의 이름, 위도, 경도, 마커이미지, 마커 수정 위치값, 매칭되는 버튼을 등록
 var markerOptions = [{
   title: "본점",
   latlng: new kakao.maps.LatLng(37.5130525, 127.0582537),
-  imgSrc: 'img/marker1.png',
-  imgSize: new kakao.maps.Size(232, 99),
+  imgSrc: 'img/marker.png',
+  imgSize: new kakao.maps.Size(40, 65),
   imgPos: {
-    offset: new kakao.maps.Point(113, 99)  //이미지 위치 기준점 (기본 top: 0,left: 0)
+    offset: new kakao.maps.Point(20, 65)  //이미지 위치 기준점 (기본 top: 0,left: 0)
   },
   button: branch_btns[0]
   },
   {
   title: "지점1",
   latlng: new kakao.maps.LatLng(37.507301759552675, 126.75455238897419),
-  imgSrc: 'img/marker2.png',
-  imgSize: new kakao.maps.Size(232, 99),
+  imgSrc: 'img/marker.png',
+  imgSize: new kakao.maps.Size(40, 65),
   imgPos: {
-    offset: new kakao.maps.Point(113, 99)
+    offset: new kakao.maps.Point(20, 65)
   },
   button: branch_btns[1]
   },
   {
   title: "지점2",
   latlng: new kakao.maps.LatLng(38.119140067921535, 128.4653595484861),
-  imgSrc: 'img/marker3.png',
-  imgSize: new kakao.maps.Size(232, 99),
+  imgSrc: 'img/marker.png',
+  imgSize: new kakao.maps.Size(40, 65),
   imgPos: {
-    offset: new kakao.maps.Point(113, 99)
+    offset: new kakao.maps.Point(20, 65)
   },
   button: branch_btns[2]
   }
 ];
 
+//마커옵션의 갯수만큼 반복을 돌며 지점 보기 버튼 이벤트 연결
 for (var i = 0; i < markerOptions.length; i++) {
   new kakao.maps.Marker({
     map: map,
@@ -88,6 +89,7 @@ var t_off = document.querySelectorAll(".traffic li")[1]; //트레픽 숨기기 �
 t_on.addEventListener("click", function (e) {
   e.preventDefault();
 
+  map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
   map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
   t_on.classList.add("on");
   t_off.classList.remove("on");

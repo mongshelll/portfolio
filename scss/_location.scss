@@ -1,49 +1,82 @@
 @charset 'utf-8';
 @import "sub_layout";
 
-#location{
+#location {
+  .sub_visual {
+    background: url(../img/loaction_banner.jpg) no-repeat center/cover;
+    filter: saturate(0%);
+  }
+
   .inner {
-    #map{
-      width:100%; 
-      height:500px; 
-      background:#000; 
+    position: relative;
+    margin-bottom: 240px;
+
+    #map {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 100px;
     }
-    
-    .traffic{
-      float:left;  margin-top:20px; 
-    
-      li{
-        float:left; margin-right:10px; 
-    
-        a{
-          display:block; width:200px; height:40px; 
-          background:#555; 
-          font:bold 12px/40px 'arial'; color:#fff; 
-          text-align:center; 
+
+    .traffic {
+      float: left;
+      position: absolute;
+      right: 10px;
+      top: 600px;
+      z-index: 1;
+
+      li {
+        float: left;
+
+        a {
+          display: block;
+          width: 100px;
+          height: 40px;
+          background: #aaa;
+          font: bold 12px/40px "arial";
+          color: #fff;
+          text-align: center;
         }
-    
-        &.on{
-          a{
-            background:#fff; 
-            color:#333; 
-            border:1px solid #333;
+
+        &.on {
+          a {
+            background: #555;
+            color: #fff;
           }
         }
       }
     }
-    
+
     .branch {
-      float:right; margin-top:20px; 
-      li{
-        float:left; margin-right:10px; 
-        a{
-          display:block; width:200px; height:40px; 
-          background:#555; 
-          font:bold 12px/40px 'arial'; color:#fff; 
-          text-align:center; 
+      float: left;
+      position: absolute;
+      top: 104px;
+      left: 0;
+
+      li {
+        float: left;
+
+        a {
+          display: block;
+          width: calc( 1180px / 3);
+          height: 40px;
+          background: #aaa;
+          font: bold 12px/40px 'arial';
+          color: #fff;
+          text-align: center;
+        }
+
+        &.on {
+          a {
+            background: #555;
+          }
         }
       }
     }
+
+    h2 {
+      font: bold 24px/1 'Nanum Gothic';
+      text-align: center;
+      margin-bottom: 50px;
+    }
   }
 }
-
