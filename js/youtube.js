@@ -43,7 +43,7 @@
   MyYoutube.prototype.bindingEvent = function(){
     this.CallData();
   
-    $("body").on("click", "article a", function(e){
+    $("body").on("click", "#vidGallery article a", function(e){
       e.preventDefault();
       var vidId = $(e.currentTarget).attr("href"); //this로 하면 vidId값을 구할 수 없음
       this.createPop(vidId);
