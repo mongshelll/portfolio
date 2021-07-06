@@ -71,11 +71,11 @@ function openSub(el){
 }
 
 function closeSub(el){
-  $(el).children(".sub").stop().slideUp(speed / 3);
-  // $(".gnbBg").remove();
-  $(".gnbBg").stop().slideUp(speed / 3, function(){
-    $(this).remove();
-  });
+  $(el).children(".sub").stop().slideUp(speed / 2);
+  $(".gnbBg").remove();
+  // $(".gnbBg").stop().slideUp(speed / 2, function(){
+  //   $(this).remove();
+  // });
 }
 
 var btnCall = $header_upper.find(".btnCall");
