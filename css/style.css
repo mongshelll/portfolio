@@ -1627,9 +1627,12 @@ fieldset {
         background: #aaa;
         font: bold 12px/40px 'arial';
         color: #fff;
-        text-align: center; }
+        text-align: center;
+        transition: 0.5s; }
       #location .inner .branch li.on a {
         background: #555; }
+      #location .inner .branch li.on:hover a {
+        background: #222; }
   #location .inner h2 {
     font: bold 24px/1 'Nanum Gothic';
     text-align: center;

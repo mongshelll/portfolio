@@ -63,11 +63,15 @@
           font: bold 12px/40px 'arial';
           color: #fff;
           text-align: center;
+          transition: 0.5s;
         }
 
         &.on {
           a {
             background: #555;
+          }
+          &:hover a {
+            background: #222;
           }
         }
       }
