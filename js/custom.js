@@ -19,7 +19,7 @@ skip_a.on("focusout", function(){
 var $header = $("#header");
 var $header_upper = $header.find(".header_upper");
 var $gnb = $header_upper.find("#gnb");
-var $gnb_li = $gnb.find("li");
+var $gnb_li = $gnb.find(">li");
 var $sub = $gnb_li.find(".sub");
 var $depth2_tit = $header_upper.find("#gnb>li.on .sub .depth2 h2 a");
 var speed = 300;
