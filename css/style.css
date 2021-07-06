@@ -384,6 +384,9 @@ fieldset {
       display: none; }
     .content .inner h1 {
       margin-bottom: 50px; } }
+#department .sub_visual {
+  background: url(../img/department_banner.jpg) no-repeat center/cover;
+  filter: saturate(0%); }
 #department .inner h1 {
   text-align: center;
   font: 44px/1 'Nanum Myeongjo', serif;
@@ -938,6 +941,9 @@ fieldset {
       display: none; }
     .content .inner h1 {
       margin-bottom: 50px; } }
+#community .sub_visual {
+  background: url(../img/community_banner.jpg) no-repeat 0 60%/cover;
+  filter: saturate(0%); }
 #community .inner .btn {
   width: 100%;
   text-align: center;
@@ -1556,6 +1562,31 @@ fieldset {
               top: 50%;
               right: 15px;
               transform: translateY(-50%); } }
+@media screen and (max-width: 639px) {
+  #community .inner #f_board .pagination {
+    margin-bottom: 50px; }
+    #community .inner #f_board .pagination p a {
+      display: inline-block;
+      padding: 5px;
+      box-sizing: border-box;
+      margin: 0 15px;
+      position: relative;
+      font: 16px/1 'Quicksand', sans-serif;
+      color: #888; }
+      #community .inner #f_board .pagination p a:nth-of-type(6), #community .inner #f_board .pagination p a:nth-of-type(7), #community .inner #f_board .pagination p a:nth-of-type(8), #community .inner #f_board .pagination p a:nth-of-type(9), #community .inner #f_board .pagination p a:nth-of-type(10) {
+        display: none; }
+      #community .inner #f_board .pagination p a.on {
+        font-weight: bold;
+        color: #222; }
+        #community .inner #f_board .pagination p a.on::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #222;
+          position: absolute;
+          left: 0;
+          bottom: -2px; } }
 .content {
   width: 100%;
   padding: 0 0 100px;

@@ -19,19 +19,11 @@ skip_a.on("focusout", function(){
 var $header = $("#header");
 var $header_upper = $header.find(".header_upper");
 var $gnb = $header_upper.find("#gnb");
-var $gnb_li = $header_upper.find("#gnb>li");
+var $gnb_li = $gnb.find("li");
 var $sub = $gnb_li.find(".sub");
 var $depth2_tit = $header_upper.find("#gnb>li.on .sub .depth2 h2 a");
 var speed = 300;
 
-
-$depth2_tit.each(function(index, items){  
-  $(".header_lower .inner .fixed_menu").append(
-    $("<li>").append(
-      $("<a href='#'>").text(items.text)
-    )
-  )
-});
 
 //gnb li에 마우스엔터, 포커스인 했을 때
 $gnb_li.on("mouseenter focusin", function(){
@@ -51,25 +43,28 @@ function openSub(el){
   var bg = $sub.css("background-color");
 
   var sub_depth = $(el).find(".depth2").length + 2;
-
+  var isGnbBg = $(".gnbBg").length;
   $(el).find(".depth2").css({
     width: "calc(100% / "+sub_depth+")"
   });
 
-  $(el).prepend(
-    $("<div class='gnbBg'>").css({
-      width: wid,
-      height: ht,
-      position: "absolute",
-      top: 70,
-      left: (gnb_wid/2)-(wid/2),
-      borderTop: "1px solid #ccc",
-      boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
-      backgroundColor: bg,
-      display: "none",
-      zIndex: 2
-    })
-  );
+  if(!isGnbBg) {
+    $(el).prepend(
+      $("<div class='gnbBg'>").css({
+        width: wid,
+        height: ht,
+        position: "absolute",
+        top: 70,
+        left: (gnb_wid/2)-(wid/2),
+        borderTop: "1px solid #ccc",
+        boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
+        backgroundColor: bg,
+        display: "none",
+        zIndex: 2
+      })
+    );
+  };
+
   $(".gnbBg").stop().slideDown(speed);
 
   $(el).children(".sub").stop().slideDown(speed);
@@ -78,6 +73,10 @@ function openSub(el){
 function closeSub(el){
   $(el).children(".sub").stop().slideUp(speed / 2);
   $(".gnbBg").remove();
+  // $(".gnbBg").stop().slideUp(speed / 2, function(){
+  //   $(this).remove();
+  // });
+
 }
 
 var btnCall = $header_upper.find(".btnCall");
@@ -96,6 +95,14 @@ $(window).on("resize", function(){
   }
 });
 
+
+$depth2_tit.each(function(index, items){  
+  $(".header_lower .inner .fixed_menu").append(
+    $("<li>").append(
+      $("<a href='#'>").text(items.text)
+    )
+  )
+});
 
 // $bepth2_tit.each(function(index, items){
 //   $(".fixed_menu")

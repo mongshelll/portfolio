@@ -1,6 +1,10 @@
 @charset 'utf-8';
 @import "sub_layout";
 #department {
+  .sub_visual {
+    background: url(../img/department_banner.jpg) no-repeat center/cover;
+    filter: saturate(0%);
+  }
   .inner {
     h1 {
       text-align: center;
