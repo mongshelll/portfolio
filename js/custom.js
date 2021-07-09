@@ -36,43 +36,43 @@ $gnb_li.on("mouseleave focusout", function(){
 });
 
 function openSub(el){
-  var wid = $("body").width();
-  var gnb_wid = $gnb.width();
+  // var wid = $("body").width();
+  // var gnb_wid = $gnb.width();
   var ht = $(el).find($sub).css("height");
   ht = parseInt(ht) + 100; //.sub padding값 고려
-  var bg = $sub.css("background-color");
+  // var bg = $sub.css("background-color");
 
   var sub_depth = $(el).find(".depth2").length + 2;
-  var isGnbBg = $(".gnbBg").length;
+  // var isGnbBg = $(".gnbBg").length;
   $(el).find(".depth2").css({
     width: "calc(100% / "+sub_depth+")"
   });
 
-  if(!isGnbBg) {
-    $(el).prepend(
-      $("<div class='gnbBg'>").css({
-        width: wid,
-        height: ht,
-        position: "absolute",
-        top: 70,
-        left: (gnb_wid/2)-(wid/2),
-        borderTop: "1px solid #ccc",
-        boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
-        backgroundColor: bg,
-        display: "none",
-        zIndex: 2
-      })
-    );
-  };
+  // if(!isGnbBg) {
+  //   $(el).prepend(
+  //     $("<div class='gnbBg'>").css({
+  //       width: wid,
+  //       height: ht,
+  //       position: "absolute",
+  //       top: 70,
+  //       left: (gnb_wid/2)-(wid/2),
+  //       borderTop: "1px solid #ccc",
+  //       boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
+  //       backgroundColor: bg,
+  //       display: "none",
+  //       zIndex: 2
+  //     })
+  //   );
+  // };
 
-  $(".gnbBg").stop().slideDown(speed);
+  // $(".gnbBg").stop().slideDown(speed);
 
-  $(el).children(".sub").stop().slideDown(speed);
+  $(el).children(".sub").css({zIndex:2}).stop().slideDown(speed);
 }
 
 function closeSub(el){
-  $(el).children(".sub").stop().slideUp(speed / 2);
-  $(".gnbBg").remove();
+  $(el).children(".sub").css({zIndex:1}).stop().slideUp(speed);
+  // $(".gnbBg").remove();
   // $(".gnbBg").stop().slideUp(speed / 2, function(){
   //   $(this).remove();
   // });

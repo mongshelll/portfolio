@@ -775,15 +775,6 @@ fieldset {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative; }
-    #youtube .inner #vidGallery article:hover h2 {
-      top: 10%; }
-    #youtube .inner #vidGallery article:hover p {
-      bottom: 30%;
-      opacity: 1;
-      transition: 1.5s; }
-    #youtube .inner #vidGallery article:hover span {
-      bottom: 10%;
-      transition: 0.5s 1.2s; }
     #youtube .inner #vidGallery article .pic {
       display: block;
       width: 60%;
@@ -799,7 +790,7 @@ fieldset {
       font: bold 26px/1 "arial";
       color: #333;
       position: absolute;
-      top: 50%;
+      top: 10%;
       left: 20px;
       transition: 0.5s; }
     #youtube .inner #vidGallery article p {
@@ -807,7 +798,7 @@ fieldset {
       font: 16px/1.5 "arial";
       color: #666;
       position: absolute;
-      bottom: -200px;
+      bottom: 30%;
       left: 20px;
       transition: 0.5s;
       opacity: 0; }
@@ -815,15 +806,13 @@ fieldset {
       font: bold italic 14px/1 'arial';
       color: #333;
       position: absolute;
-      bottom: -20px;
+      bottom: 10%;
       left: 30%;
       transition: 0.5s; }
 
 @media screen and (max-width: 1179px) {
   #youtube .inner #vidGallery article {
-    height: 30vw; }
-    #youtube .inner #vidGallery article:hover p {
-      bottom: 10%; } }
+    height: 30vw; } }
 @media screen and (max-width: 940px) {
   #youtube .inner #vidGallery article h2 {
     top: 10%;
@@ -841,10 +830,6 @@ fieldset {
     right: 0px; }
   #youtube .inner #vidGallery article span {
     left: 20%; }
-  #youtube .inner #vidGallery article:hover h2 {
-    top: 5%; }
-  #youtube .inner #vidGallery article:hover p {
-    bottom: 10%; }
   #youtube .inner #vidGallery article .pic {
     height: 80%;
     position: absolute;
@@ -866,10 +851,6 @@ fieldset {
       bottom: auto;
       top: 15%;
       right: 5%; }
-    #youtube .inner #vidGallery article:hover h2 {
-      top: 10%; }
-    #youtube .inner #vidGallery article:hover p {
-      bottom: 10%; }
     #youtube .inner #vidGallery article .pic {
       width: 100%; } }
 .content {
@@ -1721,7 +1702,8 @@ body {
             left: 50%;
             transform: translateX(-590px);
             border-top: 1px solid #ccc;
-            z-index: 3;
+            box-shadow: 0px 10px 10px rgba(51, 51, 51, 0.08);
+            z-index: 2;
             display: none; }
             #header .header_upper > .inner #gnb > li .sub .depth2 {
               display: inline-block; }
@@ -1896,6 +1878,8 @@ body {
               left: 0;
               bottom: 15px; }
 
+#main .sub_visual {
+  text-align: center; }
 #main .inner {
   width: 1180px;
   height: 2000px; }
@@ -1903,12 +1887,12 @@ body {
 #footer {
   width: 100%;
   padding: 50px 0;
-  border-top: 1px solid #ddd; }
+  border-top: 1px solid #232323; }
   #footer .inner {
     width: 1180px;
     margin: 0 auto; }
     #footer .inner .upper {
-      border-bottom: 1px solid #232323;
+      border-bottom: 1px solid #ddd;
       margin-bottom: 30px; }
       #footer .inner .upper .logo {
         display: inline-block;
