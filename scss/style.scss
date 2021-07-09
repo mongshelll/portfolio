@@ -101,6 +101,13 @@ body {
               transition: opacity 0.3s;
             }
           }
+          &:last-of-type {
+            >a {
+              &::after {
+                display: none;
+              }
+            }
+          }
           &.on>a {
             color: orange;
           }

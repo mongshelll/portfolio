@@ -26,21 +26,6 @@
         overflow: hidden;
         position: relative;
 
-        &:hover {
-          h2 {
-            top: 10%;
-          }
-          p {
-            bottom: 30%;
-            opacity: 1;
-            transition: 1.5s
-          }
-          span {
-            bottom: 10%;
-            transition: 0.5s 1.2s;
-          }
-        }
-
         .pic {
           display: block;
           width: 60%;
@@ -58,7 +43,7 @@
           font: bold 26px/1 "arial";
           color: #333;
           position: absolute;
-          top: 50%;
+          top: 10%;
           left: 20px;
           transition: 0.5s;
         }
@@ -68,7 +53,7 @@
           font: 16px/1.5 "arial";
           color: #666;
           position: absolute;
-          bottom: -200px;
+          bottom: 30%;
           left: 20px;
           transition: 0.5s;
           opacity: 0;
@@ -78,7 +63,7 @@
           font: bold italic 14px/1 'arial';
           color: #333;
           position: absolute;
-          bottom: -20px;
+          bottom: 10%;
           left: 30%;
           transition: 0.5s;
         }
@@ -93,11 +78,6 @@
       #vidGallery {
         article {
           height: 30vw;
-          &:hover {
-            p {
-              bottom: 10%;
-            }
-          }
         }
       }
     }
@@ -136,17 +116,8 @@
             left: auto;
             right: 0px;
           }
-
           span {
             left: 20%;
-          }
-          &:hover {
-            h2 {
-              top: 5%;
-            }
-            p {
-              bottom: 10%;
-            }
           }
           .pic {
             height: 80%;
@@ -181,14 +152,6 @@
             bottom: auto;
             top: 15%;
             right: 5%;
-          }
-          &:hover {
-            h2 {
-              top: 10%;
-            }
-            p {
-              bottom: 10%;
-            }
           }
           .pic {
             width: 100%;

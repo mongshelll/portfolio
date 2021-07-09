@@ -1687,6 +1687,8 @@ body {
               bottom: 0px;
               opacity: 0;
               transition: opacity 0.3s; }
+          #header .header_upper > .inner #gnb > li:last-of-type > a::after {
+            display: none; }
           #header .header_upper > .inner #gnb > li.on > a {
             color: orange; }
           #header .header_upper > .inner #gnb > li:hover > a {
