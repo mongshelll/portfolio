@@ -57,7 +57,6 @@
 
 
     //"#search"
-    console.log(this.search);
     var btn = $(this.search.selector).children("button");
 
     btn.on("click", function (e) {
