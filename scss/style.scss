@@ -378,7 +378,7 @@ body {
   }
   .inner {
     width: 1180px;
-    height: 2000px;
+    height: 150vh;
   }
 }
 
@@ -495,7 +495,16 @@ body {
       display: none;
     }
   }
-  
+
+  #main {
+    .sub_visual {
+      text-align: center;
+    }
+    .inner {
+      width: 100%;
+    }
+  }
+
   #footer {
     padding: 50px 40px;
     box-sizing: border-box;

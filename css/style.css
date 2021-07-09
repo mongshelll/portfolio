@@ -763,10 +763,6 @@ fieldset {
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto; }
-  #youtube .inner #vidGallery::after {
-    content: "";
-    display: block;
-    clear: both; }
   #youtube .inner #vidGallery article {
     width: 92%;
     height: 25vw;
@@ -1884,7 +1880,7 @@ body {
   text-align: center; }
 #main .inner {
   width: 1180px;
-  height: 2000px; }
+  height: 150vh; }
 
 #footer {
   width: 100%;
@@ -1961,6 +1957,11 @@ body {
       right: 40px; }
   #header .header_lower {
     display: none; }
+
+  #main .sub_visual {
+    text-align: center; }
+  #main .inner {
+    width: 100%; }
 
   #footer {
     padding: 50px 40px;
