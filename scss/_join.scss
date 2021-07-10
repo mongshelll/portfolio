@@ -45,7 +45,7 @@
             transform: translateY(-50%);
           }
         }
-        &:nth-of-type(5) th::before, &:nth-of-type(9) th::before, &:nth-of-type(10) th::before {
+        &:nth-of-type(5) th::before, &:nth-of-type(6) th::before, &:nth-of-type(7) th::before, &:nth-of-type(9) th::before, &:nth-of-type(10) th::before {
           display: none;
         }
         &:last-of-type th {

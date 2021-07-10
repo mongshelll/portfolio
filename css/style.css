@@ -266,7 +266,7 @@ fieldset {
         top: 50%;
         left: 20px;
         transform: translateY(-50%); }
-    #join .inner table tr:nth-of-type(5) th::before, #join .inner table tr:nth-of-type(9) th::before, #join .inner table tr:nth-of-type(10) th::before {
+    #join .inner table tr:nth-of-type(5) th::before, #join .inner table tr:nth-of-type(6) th::before, #join .inner table tr:nth-of-type(7) th::before, #join .inner table tr:nth-of-type(9) th::before, #join .inner table tr:nth-of-type(10) th::before {
       display: none; }
     #join .inner table tr:last-of-type th {
       text-align: center; }

@@ -284,3 +284,115 @@ function createTable(target, data){
 }
 */
 /* @@@ board end @@@ */
+
+
+/* @@@ join @@@ */
+
+$("input[type=submit").on("click", function(e){
+  if (!isId("userid", 5)) e.preventDefault();
+  if (!isPw("userpw", "userpw2", 5)) e.preventDefault();
+  if (!isEmail("email1")) e.preventDefault();
+  if (!isSelect("email2")) e.preventDefault();
+});
+
+function isId(name, len) {
+  var userId = $("[name=" + name + "]").val();
+
+  if (userId == "") {
+      alert("아이디를 입력하세요.");
+      return false;
+  } else {
+      if (userId.length < len) {
+          alert("최소 " + len + "글자 이상 입력하세요.");
+          return false;
+      }
+  }
+};
+
+//비밀번호와 재입력 모두 동일, 
+//특수문자, 영문, 숫자 포함
+//아닐경우 경고창
+
+//pw 인증
+function isPw(name1, name2, len) {
+  var $pw1 = $("input[name=" + name1 + "]");
+  var $pw2 = $("input[name=" + name2 + "]");
+  var pw1 = $pw1.val();
+  var pw2 = $pw2.val();
+  var isConfirm = false;
+  var i = 0;
+
+  var num = /[0-9]/;
+  var eng = /[a-zA-Z]/;
+  var spc = /[~!@#$%^&*()_+=\]\[-]/;
+
+  if (pw1 === pw2) {
+
+    //비번이 len의 갯수보다 큰지 확인
+    if (pwd1.length >= len) {
+      i++;
+    } else {
+      alert("비밀번호는 " + len + "자리 이상 입력하세요.");
+    }
+    
+    //pw에 숫자 포함여부 확인
+    if (num.test(pw1)) {
+      i++;
+    } else {
+      alert("비밀번호에 숫자를 포함하세요.");
+    }
+
+    //pw에 문자 포함여부 확인
+    if (eng.test(pw1)) {
+      i++;
+    }else{
+      alert("비밀번호에 문자를 추가하세요.");
+    }
+
+    //pw에 특수문자 포함여부 확인
+    if (spc.test(pw1)) {
+      i++;
+    }else{
+      alert("비밀번호에 특수문자를 포함하세요.")
+    }
+
+    if (i === 4) {
+      isConfirm = true;
+      return isConfirm;
+    }else{
+      return isConfirm;
+    }
+  }else{
+    alert("비밀번호를 동일하게 입력하세요.");
+    return isConfirm;
+  }
+};
+
+//select 인증 함수 정의
+function isEmail(name){
+  var email1 = $("[name=" + name + "]").val();
+
+  if (email1 == "") {
+      alert("메일 아이디를 입력하세요.");
+      return false;
+  } else {
+      if (userId.length < len) {
+          alert("최소 " + len + "글자 이상 입력하세요.");
+          return false;
+      }
+  }
+}
+
+function isSelect(name) {
+  var sel = $("select[name=" + name + "]").children("option:selected").val();
+  var msg = $("select[name=" + name + "]").children("option").eq(0).text();
+
+  if (sel == "") {
+    alert("이메일을 "+ msg);
+    return false;
+  } else {
+    return true;
+  }
+}
+
+/* @@@ join end @@@ */
