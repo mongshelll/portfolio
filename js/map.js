@@ -6,7 +6,7 @@ var branch_btns = document.querySelectorAll(".branch li"); //지점보기 버튼
 //2. 카카오맵 api에서 클릭으로 마커표시 샘플코드 (위의 위치값 적용)
 //3. 해당 위치에서 우리가 원하는 위치를 정밀하게 마커로 찍어서 표시 (위도, 경도값)구함
 var options = {
-  center: new kakao.maps.LatLng(37.57853560231513, 126.97698079197039),
+  center: new kakao.maps.LatLng(37.5725690132284, 126.97591119455987),
   level: 3
 };
 
@@ -18,8 +18,8 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 //각각의 본점, 지점의 이름, 위도, 경도, 마커이미지, 마커 수정 위치값, 매칭되는 버튼을 등록
 var markerOptions = [{
-  title: "경복궁",
-  latlng: new kakao.maps.LatLng(37.57853560231513, 126.97698079197039),
+  title: "본점",
+  latlng: new kakao.maps.LatLng(37.5725690132284, 126.97591119455987),
   imgSrc: 'img/marker.png',
   imgSize: new kakao.maps.Size(40, 65),
   imgPos: {
