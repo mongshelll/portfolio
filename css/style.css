@@ -1607,6 +1607,8 @@ fieldset {
     text-align: center;
     margin-bottom: 50px; }
   #location .inner .public_trans li {
+    border-bottom: 1px dotted #000;
+    padding-bottom: 20px;
     margin-bottom: 40px; }
     #location .inner .public_trans li p .bus_title {
       display: inline-block; }
