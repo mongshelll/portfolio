@@ -90,16 +90,14 @@
     }
 
     .public_trans {
-      ul {
-        li {
+      li {
+        margin-bottom: 40px;
 
+        p {
 
-          p {
+          .bus_title {
+            display: inline-block;
 
-            .bus_title {
-              display: inline-block;
-
-            }
           }
         }
       }
