@@ -787,43 +787,32 @@ fieldset {
       color: #333;
       position: absolute;
       top: 10%;
-      left: 20px;
-      transition: 0.5s; }
+      left: 20px; }
     #youtube .inner #vidGallery article p {
       width: 30%;
       font: 16px/1.5 "arial";
       color: #666;
       position: absolute;
-      bottom: 30%;
-      left: 20px;
-      transition: 0.5s;
-      opacity: 0; }
+      top: 40%;
+      left: 20px; }
     #youtube .inner #vidGallery article span {
       font: bold italic 14px/1 'arial';
       color: #333;
       position: absolute;
       bottom: 10%;
-      left: 30%;
-      transition: 0.5s; }
+      left: 30%; }
 
 @media screen and (max-width: 1179px) {
   #youtube .inner #vidGallery article {
     height: 30vw; } }
-@media screen and (max-width: 940px) {
-  #youtube .inner #vidGallery article h2 {
-    top: 10%;
-    font-size: 20px; }
-  #youtube .inner #vidGallery article p {
-    bottom: 10%;
-    opacity: 1; }
-  #youtube .inner #vidGallery article span {
-    bottom: 10%; } }
 @media screen and (max-width: 902px) {
   #youtube .inner #vidGallery article h2 {
     width: 60%;
     top: 5%;
     left: auto;
     right: 0px; }
+  #youtube .inner #vidGallery article p {
+    top: 5%; }
   #youtube .inner #vidGallery article span {
     left: 20%; }
   #youtube .inner #vidGallery article .pic {
