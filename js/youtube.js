@@ -1,4 +1,5 @@
 //AIzaSyDcqePi8_ewVabkUUFxrdkZiF3xo16LBes  - youtube key
+//PLoIl8ul_XWuWPrTDKqRESrEkLPraZH_79  - youtube key
 
 //매개변수 :ㅣ parameter 함수로 값이 전달되기 위한 통로이름
 //인수 : argument 매개변수 실제로 전달되는 값
@@ -7,7 +8,8 @@
 (function($){
   //디폴트 옵션값
   $.defaults  = {
-    key : "AIzaSyDcqePi8_ewVabkUUFxrdkZiF3xo16LBes",
+    // key : "AIzaSyDcqePi8_ewVabkUUFxrdkZiF3xo16LBes",
+    key : "AIzaSyD4pM0SFlzeHbYBc1XWSzrRBEkQQzO9wg8",
     playlist : "PLoIl8ul_XWuWPrTDKqRESrEkLPraZH_79",
     count : 4
   }
