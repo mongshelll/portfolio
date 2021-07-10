@@ -291,6 +291,7 @@ function createTable(target, data){
 $("input[type=submit").on("click", function(e){
   if (!isId("userid", 5)) e.preventDefault();
   if (!isPw("userpw", "userpw2", 5)) e.preventDefault();
+  if (!isname("user_name")) e.preventDefault();
   if (!isEmail("email1")) e.preventDefault();
   if (!isSelect("email2")) e.preventDefault();
 });
@@ -368,12 +369,22 @@ function isPw(name1, name2, len) {
   }
 };
 
-//select 인증 함수 정의
+//이름 입력 확인
+function isname(name) {
+  var userName = $("[name=" + name + "]").val();
+
+  if (userName == "") {
+      alert("이름을 입력하세요.");
+      return false;
+  }
+};
+
+//email 인증 함수 정의
 function isEmail(name){
   var email1 = $("[name=" + name + "]").val();
 
   if (email1 == "") {
-      alert("메일 아이디를 입력하세요.");
+      alert("이메일을 입력하세요.");
       return false;
   } else {
       if (userId.length < len) {
