@@ -2150,12 +2150,51 @@ body {
               left: 0;
               bottom: 15px; }
 
-#main .sub_visual {
+#main_visual {
   text-align: center;
-  height: calc(100vh - 122px); }
-#main .inner {
+  height: calc(100vh - 122px);
+  background: #ccc; }
+
+#box_content1 .inner {
   width: 1180px;
-  height: 150vh; }
+  height: 500px;
+  background: #ccc; }
+
+#banner {
+  height: 30vh;
+  background: #ccc; }
+
+#box_content2 .inner {
+  margin: 0 auto;
+  width: 1180px;
+  height: 500px;
+  background: #ccc; }
+
+#flex {
+  width: 100%; }
+  #flex .inner {
+    margin: 0 auto;
+    width: 1180px;
+    height: 500px;
+    background: #ccc; }
+
+#box_content3 .inner {
+  margin: 0 auto;
+  width: 1180px;
+  height: 500px;
+  background: #ccc; }
+
+#slider_content .inner {
+  margin: 0 auto;
+  width: 1180px;
+  height: 500px;
+  background: #ccc; }
+
+#box_content4 .inner {
+  margin: 0 auto;
+  width: 1180px;
+  height: 500px;
+  background: #ccc; }
 
 #footer {
   width: 100%;
