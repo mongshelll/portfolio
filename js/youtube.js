@@ -125,7 +125,7 @@
         padding: 100
       })
       .append(
-        $("<img src='img/loading.gif'>")
+        $("<img src='img/youtube_loading.gif'>")
         .css({
           width: 80,
           position: "absolute",

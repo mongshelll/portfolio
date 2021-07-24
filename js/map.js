@@ -6,7 +6,7 @@ var branch_btns = document.querySelectorAll(".branch li"); //지점보기 버튼
 //2. 카카오맵 api에서 클릭으로 마커표시 샘플코드 (위의 위치값 적용)
 //3. 해당 위치에서 우리가 원하는 위치를 정밀하게 마커로 찍어서 표시 (위도, 경도값)구함
 var options = {
-  center: new kakao.maps.LatLng(37.5725690132284, 126.97591119455987),
+  center: new kakao.maps.LatLng(37.57275218803956, 126.97573001877021),
   level: 3
 };
 
@@ -19,7 +19,7 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 //각각의 본점, 지점의 이름, 위도, 경도, 마커이미지, 마커 수정 위치값, 매칭되는 버튼을 등록
 var markerOptions = [{
   title: "본점",
-  latlng: new kakao.maps.LatLng(37.5725690132284, 126.97591119455987),
+  latlng: new kakao.maps.LatLng(37.57275218803956, 126.97573001877021),
   imgSrc: 'img/marker.png',
   imgSize: new kakao.maps.Size(40, 65),
   imgPos: {
@@ -39,7 +39,7 @@ var markerOptions = [{
   },
   {
   title: "지점2",
-  latlng: new kakao.maps.LatLng(38.119140067921535, 128.4653595484861),
+  latlng: new kakao.maps.LatLng(37.50199902516107, 127.00474989072569),
   imgSrc: 'img/marker.png',
   imgSize: new kakao.maps.Size(40, 65),
   imgPos: {
@@ -74,7 +74,7 @@ for (var i = 0; i < markerOptions.length; i++) {
 window.onresize = function () {
   var active_btn = document.querySelector(".branch li.on"); //지점버튼의 활성화 선택자명
   var active_index = active_btn.getAttribute("data-index"); //해당 버튼의 data-index속성값
-  console.log(active_index);
+  // console.log(active_index);
   map.setCenter(markerOptions[active_index].latlng);
 }
 

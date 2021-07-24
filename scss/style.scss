@@ -1,11 +1,13 @@
 @charset 'utf-8';
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*
 font-family: 'EB Garamond', serif;
 font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Nanum Myeongjo', serif;
 font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
 */
 
 @import "reset";
@@ -110,6 +112,7 @@ body {
           }
           &.on>a {
             color: orange;
+            font-weight: bold;
           }
           &:hover>a {
             color: orange;
@@ -605,6 +608,7 @@ body {
         }
         .fam_site_sns {
           width: 100%;
+          margin-right: auto;
           margin-bottom: 100px;
 
           #family_site {

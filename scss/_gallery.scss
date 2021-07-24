@@ -22,7 +22,6 @@
     filter: saturate(10%);
   }
   .inner {
-    margin-bottom: 140px;
     #search {
       margin-bottom: 50px;
       position: relative;
@@ -177,7 +176,6 @@
 @media screen and (max-width: 1179px) {
   #gallery {
     .inner {
-      margin-bottom: 100px;
       #flickr_gallery {  
         ul {
           li {

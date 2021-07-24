@@ -20,6 +20,10 @@
 }
 
 #login {
+  .sub_visual {
+    background: url(../img/login_banner.jpg) no-repeat 0px 9%/cover;
+    filter: saturate(0%);
+  }
   .inner {
     padding: 50px 0;
     .site_map {

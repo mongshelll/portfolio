@@ -203,94 +203,12 @@ function activation(self){
 }
 /* @@@ FAQ end @@@ */
 
-/* @@@ board @@@ */
-/*
-var frame = $("#community .inner .f_board");
-var url = "data/board.json";
-console.log(frame);
-callData(url);
-
-//데이터 호출함수
-function callData(url){
-  $.ajax({
-    url: url,
-    dataType: "json"
-  })
-  .success(function(data){
-    console.log(data)
-    createTable(frame, data);
-  })
-  .error(function(err){
-    console.error(err)
-  })
-}
-
-//테이블 생성함수
-function createTable(target, data){
-  var items = data.data;
-
-  //테이블 태그와 첫번째 고정영역인 thead, tbody 완성
-  target.append(
-    $("<table>")
-    .attr({
-      summary: "자유게시판"
-    })
-    .append(
-      $("<cation class='h'>").text("순번, 제목, 날짜, 작성자, 조회수 순서의 자유게시판 입니다.")
-      .append(
-        $("<thead>")
-        .append(
-          $("<tr>")
-          .append(
-            "<th>NO</th>",
-            "<th>제목</th>",
-            "<th>날짜</th>",
-            "<th>작성자</th>",
-            "<th>조회수</th>"
-          )
-        ),
-        $("<tbody>")
-      )
-    )
-  );
-
-  var wrap = frame.find("tbody");
-
-  $(items).each(function(index, data){    
-    var link = data.link;
-    var title = data.title;
-    var writer = data.writer;
-    var date = data.date;
-    var count_a = data.count_a;
-    var count = ++index;
-    //첫 숫자가 1부터 카운트 되야하기 때문에
-    //전위연산자로 일단 index0값을 먼저 1증가 후 코드에 반영
-
-    //tbody안에 데이터의 갯수만큼 tr생성
-    wrap.prepend( //최신데이터가 윗쪽으로 출력되게 함
-      $("<tr>")
-      .append(
-        $("<td>").text(count),
-        $("<td>")
-        .append(
-          $("<a>").attr("href", link).text(title)
-        ),
-        $("<td>").text(writer),
-        $("<td>").text(date),
-        $("<td>").text(count_a)
-      )
-    )
-  })
-}
-*/
-/* @@@ board end @@@ */
-
 
 /* @@@ join @@@ */
 
 $("input[type=submit").on("click", function(e){
   if (!isId("userid", 5)) e.preventDefault();
-  if (!isPw("userpw", "userpw2", 5)) e.preventDefault();
+  if (!isPw("userpw1", "userpw2", 5)) e.preventDefault();
   if (!isname("user_name")) e.preventDefault();
   if (!isEmail("email1")) e.preventDefault();
   if (!isSelect("email2")) e.preventDefault();
@@ -300,13 +218,13 @@ function isId(name, len) {
   var userId = $("[name=" + name + "]").val();
 
   if (userId == "") {
-      alert("아이디를 입력하세요.");
-      return false;
+    alert("아이디를 입력하세요.");
+    return false;
   } else {
-      if (userId.length < len) {
-          alert("최소 " + len + "글자 이상 입력하세요.");
-          return false;
-      }
+    if (userId.length < len) {
+      alert("최소 " + len + "글자 이상 입력하세요.");
+      return false;
+    }
   }
 };
 
@@ -384,13 +302,13 @@ function isEmail(name){
   var email1 = $("[name=" + name + "]").val();
 
   if (email1 == "") {
-      alert("이메일을 입력하세요.");
-      return false;
+    alert("이메일을 입력하세요.");
+    return false;
   } else {
-      if (userId.length < len) {
-          alert("최소 " + len + "글자 이상 입력하세요.");
-          return false;
-      }
+    if (userId.length < len) {
+      alert("최소 " + len + "글자 이상 입력하세요.");
+      return false;
+    }
   }
 }
 
