@@ -87,10 +87,6 @@ body {
             transition: 0.3s;
             position: relative;
 
-            >span {
-              font-size: 18px;
-            }
-
             &::after {
               content: "";
               display: block;
@@ -378,13 +374,21 @@ body {
 #main {
   .sub_visual {
     text-align: center;
+    height: calc(100vh - 122px);
   }
   .inner {
     width: 1180px;
     height: 150vh;
   }
 }
-
+section {
+  text-align: center;
+  .inner {
+    width: 1180px;
+    height: 150vh;
+    margin: 0 auto;
+  }
+}
 #footer {
   width: 100%;
   padding: 50px 0;
