@@ -49,24 +49,27 @@
         a {
           display: block;
           width: calc( 1180px / 3);
-          height: 40px;
-          background: #aaa;
-          font: bold 12px/40px "arial";
-          color: #fff;
+          height: 60px;
+          background: #fff;
+          font: bold 16px/60px "Nanum Gothic";
+          color: #888;
+          position: relative;
           text-align: center;
-          transition: background-color 0.5s;
+          transition: color 0.5s;
+          border-bottom: 2px solid #bbb;
+          box-sizing: border-box;
+
         }
         &:hover {
           a {
-            background: #999;
+            color: #222;
           }
         }
         &.on {
           a {
-            background: #555;
-          }
-          &:hover a {
-            background: #222;
+            color: #222;
+            border: 1px solid #bbb;
+            border-bottom: 0;
           }
         }
       }
@@ -88,7 +91,7 @@
       border: 1px solid #ddd;
       margin-bottom: 100px;
       >li {
-        border-bottom: 1px dotted #000;
+        border-bottom: 1px dotted rgba(0,0,0,0.2);
         padding-bottom: 40px;
         margin: 50px 0;
         &:last-of-type {

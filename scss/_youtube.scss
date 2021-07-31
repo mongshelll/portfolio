@@ -76,7 +76,7 @@
             right: 0px;
           }
           p {
-            top: 5%;
+            top: 20%;
           }
           span {
             left: 20%;
@@ -92,7 +92,29 @@
     }
   }
 }
-
+@media screen and (max-width: 890px) {
+  #youtube{
+    .inner {
+      #vidGallery {
+        article {
+          p {
+            top: 5%;
+          }
+          span {
+            left: 20%;
+            bottom: 5%;
+          }
+          .pic {
+            height: 80%;
+            position: absolute;
+            top: 20%;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 800px) {
   #youtube{
     .inner {
