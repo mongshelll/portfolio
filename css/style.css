@@ -1824,6 +1824,7 @@ fieldset {
       #location .inner .branch li.on a {
         color: #222;
         border: 1px solid #bbb;
+        border-top: 2px solid #bbb;
         border-bottom: 0; }
   #location .inner h2 {
     font: bold 24px/1 "Nanum Gothic";
