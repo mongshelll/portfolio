@@ -166,7 +166,7 @@
     )
     setTimeout(function(){
       $(".pop_youtube .con").fadeIn(500, function(){
-        $(".pop > img").remove();
+        $(".pop_youtube > img").remove();
       })
     }, 1000)
   }

@@ -113,8 +113,58 @@ $depth2_tit.each(function(index, items){
 //   )
 // })
 
-
 /* @@@ GNB end @@@ */
+
+/* @@@ main_visual @@@ */
+
+// var items = $("#main_visual_2 .wrap article");
+
+// items.on("click", function(){
+//   $(this).animate({
+//     width: "20%",
+//     left: 0
+//   })
+// })
+
+
+var $main_visual = $("#main_visual");
+var $article = $main_visual.find("article");
+var box_close = $main_visual.find(".close");
+
+$article.on("click", function(e){
+  e.preventDefault();
+  setTimeout(1000);
+  $(this).addClass("on");
+  $(this).parent().append(
+    $("<div class='left_box'>")
+    .append(
+      $("<h3>Lorem, ipsum dolor.</h3>")
+    ).append(
+      $("<p>Lorem ipsum dolor sit.</p>")
+    ).append(
+      $("<div class='left_pic'>")
+    ).append(
+      $("<ul class='left_boxBtn'>")
+      .append(
+        $("<li><a href='#'><i class='fas fa-times close'></i></a></li>")
+      )
+      .append(
+        $("<li><a href='#'><i class='fas fa-shopping-basket'></i></a></li>")
+      )
+    )
+  )
+  $(this).parent().find(".left_box").addClass("on");
+});
+
+$("body").on("click", "#main_visual .close", function(e){
+  e.preventDefault();
+
+  var left_box = $main_visual.find(".left_box");
+  left_box.remove();
+  $article.removeClass("on");
+});
+
+/* @@@ main_visual end @@@ */
 
 /* @@@ TAB @@@ */
 

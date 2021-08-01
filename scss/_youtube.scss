@@ -20,6 +20,13 @@
         box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
         overflow: hidden;
         position: relative;
+        
+
+        &:hover {
+          .pic {
+            transform: scale(1.02);
+          }
+        }
 
         .pic {
           display: block;
@@ -31,6 +38,7 @@
           position: absolute;
           top: 0%;
           right: 0%;
+          transition: transform 0.5s;
         }
 
         h2 {
