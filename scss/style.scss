@@ -445,8 +445,9 @@ body {
     h2 {
       position: absolute;
       top: 30%;
-      left: -200px;
+      left: -10%;
       opacity: 0;
+      transition: 1s;
     }
 
     &:nth-of-type(1) {
@@ -476,6 +477,7 @@ body {
 
     h2 {
       left: 30%;
+      opacity: 1;
     }
     }
   }
@@ -489,6 +491,22 @@ body {
     top: 0;
     right: -30%;
     transition: 0.5s;
+
+    h3 {
+      font: bold 16px/1 "arial";
+    }
+    p {
+      font: 14px/1 "arial";
+    }
+
+    .left_vid {
+      margin: 0 auto;
+      width: 100%;
+      height: 20vh;
+      position: absolute;
+      left: 0;
+      bottom: 300px;
+    }
 
     &.on {
         display: block;

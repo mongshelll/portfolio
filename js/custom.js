@@ -133,7 +133,6 @@ var box_close = $main_visual.find(".close");
 
 $article.on("click", function(e){
   e.preventDefault();
-  setTimeout(1000);
   $(this).addClass("on");
   $(this).parent().append(
     $("<div class='left_box'>")
@@ -142,7 +141,7 @@ $article.on("click", function(e){
     ).append(
       $("<p>Lorem ipsum dolor sit.</p>")
     ).append(
-      $("<div class='left_pic'>")
+      $("<video src='video/vid_01.mp4' autoplay loop mute class='left_vid'>")
     ).append(
       $("<ul class='left_boxBtn'>")
       .append(

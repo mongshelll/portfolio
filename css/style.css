@@ -2196,8 +2196,9 @@ body {
     #main_visual article h2 {
       position: absolute;
       top: 30%;
-      left: -200px;
-      opacity: 0; }
+      left: -10%;
+      opacity: 0;
+      transition: 1s; }
     #main_visual article:nth-of-type(1) {
       background: pink; }
     #main_visual article:nth-of-type(2) {
@@ -2217,7 +2218,8 @@ body {
       cursor: auto;
       transition: 1s; }
       #main_visual article.on h2 {
-        left: 30%; }
+        left: 30%;
+        opacity: 1; }
   #main_visual .left_box {
     width: 30%;
     height: 100vh;
@@ -2228,6 +2230,17 @@ body {
     top: 0;
     right: -30%;
     transition: 0.5s; }
+    #main_visual .left_box h3 {
+      font: bold 16px/1 "arial"; }
+    #main_visual .left_box p {
+      font: 14px/1 "arial"; }
+    #main_visual .left_box .left_vid {
+      margin: 0 auto;
+      width: 100%;
+      height: 20vh;
+      position: absolute;
+      left: 0;
+      bottom: 300px; }
     #main_visual .left_box.on {
       display: block;
       right: 0; }
