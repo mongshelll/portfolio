@@ -94,7 +94,6 @@ $(window).on("resize", function(){
   }
 });
 
-
 $depth2_tit.each(function(index, items){  
   $(".header_lower .inner .fixed_menu").append(
     $("<li>").append(
@@ -129,39 +128,53 @@ $depth2_tit.each(function(index, items){
 
 var $main_visual = $("#main_visual");
 var $article = $main_visual.find("article");
-var box_close = $main_visual.find(".close");
+var left_box = $main_visual.find(".left_box");
+var box_close = left_box.find(".left_boxBtn").find(".close");
 
 $article.on("click", function(e){
   e.preventDefault();
+  $article.removeClass("on");
   $(this).addClass("on");
-  $(this).parent().append(
-    $("<div class='left_box'>")
-    .append(
-      $("<h3>Lorem, ipsum dolor.</h3>")
-    ).append(
-      $("<p>Lorem ipsum dolor sit.</p>")
-    ).append(
-      $("<video src='video/vid_01.mp4' autoplay loop mute class='left_vid'>")
-    ).append(
-      $("<ul class='left_boxBtn'>")
-      .append(
-        $("<li><a href='#'><i class='fas fa-times close'></i></a></li>")
-      )
-      .append(
-        $("<li><a href='#'><i class='fas fa-shopping-basket'></i></a></li>")
-      )
-    )
-  )
   $(this).parent().find(".left_box").addClass("on");
+  // $(this).parent().append(
+  //   $("<div class='left_box'>")
+  //   .append(
+  //     $("<h3>Lorem, ipsum dolor.</h3>")
+  //   ).append(
+  //     $("<p>Lorem ipsum dolor sit.</p>")
+  //   ).append(
+  //     $("<video src='video/vid_01.mp4' autoplay loop mute class='left_vid'>")
+  //   ).append(
+  //     $("<ul class='left_boxBtn'>")
+  //     .append(
+  //       $("<li><a href='#'><i class='fas fa-times close'></i></a></li>")
+  //     )
+  //     .append(
+  //       $("<li><a href='#'><i class='fas fa-shopping-basket'></i></a></li>")
+  //     )
+  //   )
+  // )
+  
 });
 
-$("body").on("click", "#main_visual .close", function(e){
+box_close.on("click", function(e){
   e.preventDefault();
 
-  var left_box = $main_visual.find(".left_box");
-  left_box.remove();
+  left_box.removeClass("on");
   $article.removeClass("on");
 });
+
+
+
+
+// $("body").on("click", "#main_visual .close", function(e){
+//   e.preventDefault();
+
+//   var left_box = $main_visual.find(".left_box");
+//   left_box.remove();
+//   $article.removeClass("on");
+// });
+
 
 /* @@@ main_visual end @@@ */
 

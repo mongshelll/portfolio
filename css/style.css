@@ -2216,24 +2216,32 @@ body {
       left: 0;
       opacity: 1;
       cursor: auto;
-      transition: 1s; }
+      transition: 1s;
+      flex: 4; }
       #main_visual article.on h2 {
         left: 30%;
         opacity: 1; }
   #main_visual .left_box {
     width: 30%;
     height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
     background: #fff;
     color: #000;
-    display: none;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
     position: absolute;
     top: 0;
     right: -30%;
     transition: 0.5s; }
     #main_visual .left_box h3 {
-      font: bold 16px/1 "arial"; }
+      font: bold 16px/1 "arial";
+      margin-bottom: 40px; }
     #main_visual .left_box p {
-      font: 14px/1 "arial"; }
+      font: 14px/1.3 "arial"; }
+      #main_visual .left_box p a {
+        font: bold 30px/1 "arial";
+        color: blue; }
     #main_visual .left_box .left_vid {
       margin: 0 auto;
       width: 100%;
@@ -2241,9 +2249,25 @@ body {
       position: absolute;
       left: 0;
       bottom: 300px; }
+    #main_visual .left_box .left_boxBtn li {
+      display: inline-block; }
+      #main_visual .left_box .left_boxBtn li a {
+        display: block;
+        padding: 20px;
+        box-sizing: border-box;
+        background: #444;
+        font: bold 16px/1 "arial";
+        color: orange;
+        letter-spacing: 1px;
+        position: absolute;
+        top: 25%;
+        left: -86px;
+        transform: rotate(-90deg); }
+        #main_visual .left_box .left_boxBtn li a > .fa-times {
+          margin-left: 5px; }
     #main_visual .left_box.on {
-      display: block;
-      right: 0; }
+      right: 0;
+      opacity: 1; }
 
 #box_content1 {
   width: 100%;
