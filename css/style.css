@@ -2185,8 +2185,7 @@ body {
   position: relative;
   overflow: hidden; }
   #main_visual article {
-    background: lightseagreen;
-    border: 1px solid #000;
+    background: #000;
     font-size: 50px;
     color: #222;
     cursor: pointer;
