@@ -2272,7 +2272,7 @@ body {
   #main_visual .mouse {
     width: 50px;
     height: 50px;
-    background: url(../img/mouse2.png) no-repeat center/cover;
+    background: url(../img/mouse.png) no-repeat center/cover;
     filter: invert(90%);
     position: absolute;
     left: 50%;
