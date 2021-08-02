@@ -431,7 +431,7 @@ body {
   display: flex;
   position: relative;
   overflow: hidden;
-
+  
   article {
     background: #000;
     font-size: 50px;
@@ -476,10 +476,10 @@ body {
     transition: 1s;
     flex: 4;
 
-    h2 {
-      left: 30%;
-      opacity: 1;
-    }
+      h2 {
+        left: 30%;
+        opacity: 1;
+      }
     }
   }
   .left_box {
@@ -545,6 +545,15 @@ body {
         right: 0;
         opacity: 1;
     }
+  }
+
+  .mouse {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
   }
 }
 

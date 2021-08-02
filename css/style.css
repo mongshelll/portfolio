@@ -2268,6 +2268,13 @@ body {
     #main_visual .left_box.on {
       right: 0;
       opacity: 1; }
+  #main_visual .mouse {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    bottom: 10%; }
 
 #box_content1 {
   width: 100%;

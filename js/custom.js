@@ -134,6 +134,7 @@ var box_close = left_box.find(".left_boxBtn").find(".close");
 $article.on("click", function(e){
   e.preventDefault();
   $article.removeClass("on");
+  left_box.removeClass("on");
   $(this).addClass("on");
   $(this).parent().find(".left_box").addClass("on");
   // $(this).parent().append(
