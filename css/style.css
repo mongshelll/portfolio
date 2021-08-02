@@ -2264,17 +2264,40 @@ body {
         left: -86px;
         transform: rotate(-90deg); }
         #main_visual .left_box .left_boxBtn li a > .fa-times {
-          margin-left: 5px; }
+          margin-left: 5px;
+          margin-bottom: -2px; }
     #main_visual .left_box.on {
       right: 0;
       opacity: 1; }
   #main_visual .mouse {
-    width: 30px;
-    height: 30px;
-    background: #000;
+    width: 50px;
+    height: 50px;
+    background: url(../img/mouse2.png) no-repeat center/cover;
+    filter: invert(90%);
     position: absolute;
     left: 50%;
-    bottom: 10%; }
+    bottom: 10%;
+    transform: translateX(-50%);
+    animation: wheelDown 1.5s ease-in-out infinite;
+    padding: 5px; }
+    #main_visual .mouse::after {
+      content: "";
+      display: block;
+      width: 120%;
+      height: 120%;
+      position: absolute;
+      top: -6px;
+      left: -8px;
+      border: 2px solid #222;
+      border-radius: 50%; }
+    #main_visual .mouse > .fa-arrow-down {
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 15px;
+      color: #555;
+      filter: invert(0%); }
 
 #box_content1 {
   width: 100%;
@@ -2389,6 +2412,17 @@ body {
     color: #232323;
     margin-bottom: 10px; }
 
+@keyframes wheelDown {
+  0% {
+    bottom: 10%; }
+  50% {
+    bottom: 5%; }
+  51% {
+    bottom: 5%; }
+  99% {
+    bottom: 10%; }
+  100% {
+    bottom: 10%; } }
 @media screen and (max-width: 1179px) {
   #header .header_upper > .inner {
     width: 100%;
