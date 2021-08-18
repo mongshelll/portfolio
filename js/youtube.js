@@ -84,7 +84,7 @@
       var tit = data.snippet.title;
       if(tit.length > 20) tit = tit.substr(0, 20) + "...";
       var txt = data.snippet.description;
-      if(txt.length > 50) txt = txt.substr(0, 200)+"...";
+      if(txt.length > 170) txt = txt.substr(0, 170)+"...";
       var date = data.snippet.publishedAt.split("T")[0];
       var imgSrc = data.snippet.thumbnails.high.url;
       var vidId = data.snippet.resourceId.videoId;
