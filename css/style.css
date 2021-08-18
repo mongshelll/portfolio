@@ -455,10 +455,6 @@ fieldset {
     height: 500px;
     position: relative;
     margin-bottom: 150px; }
-    #department .inner .division_deco::after {
-      content: "";
-      display: block;
-      clear: both; }
     #department .inner .division_deco > div {
       float: left;
       width: 50%;
@@ -481,16 +477,17 @@ fieldset {
           bottom: 0; }
       #department .inner .division_deco > div.deco_con {
         top: 0;
-        left: 295px;
+        left: 25%;
         width: 75%;
         height: 300px;
         background: #fff;
-        padding: 40px 40px 0 40px;
+        padding: 40px;
         box-sizing: border-box; }
         #department .inner .division_deco > div.deco_con .deco_tit {
           float: left;
           width: 30%;
-          padding-top: 40px; }
+          padding-top: 40px;
+          padding-right: 10%; }
           #department .inner .division_deco > div.deco_con .deco_tit h2 {
             font: bold 24px/1 "Roboto";
             color: #222;
@@ -508,7 +505,9 @@ fieldset {
               color: #05D98C; }
         #department .inner .division_deco > div.deco_con .deco_txt {
           float: left;
-          width: 70%; }
+          width: 60%;
+          height: 220px;
+          overflow: hidden; }
           #department .inner .division_deco > div.deco_con .deco_txt h3 {
             width: 70%;
             font: bold 20px/1 "arial";
@@ -517,19 +516,18 @@ fieldset {
           #department .inner .division_deco > div.deco_con .deco_txt p {
             font: 14px/1.5 "arial";
             color: #888; }
-    #department .inner .division_deco > p {
+    #department .inner .division_deco a {
+      display: block;
+      padding: 20px 60px;
+      font: bold 14px/1 "Nanum Gothic";
+      color: #fff;
       position: absolute;
       bottom: 0;
-      right: 0px; }
-      #department .inner .division_deco > p a {
-        display: block;
-        padding: 20px 60px;
-        font: bold 14px/1 "Nanum Gothic";
-        color: #fff;
-        background: #05d98c;
-        transition: background-color 0.5s; }
-        #department .inner .division_deco > p a:hover {
-          background: #03915d; }
+      right: 0px;
+      background: #05d98c;
+      transition: background-color 0.5s; }
+      #department .inner .division_deco a:hover {
+        background: #03915d; }
   #department .inner .division {
     width: 100%;
     margin-bottom: 100px; }
@@ -554,12 +552,12 @@ fieldset {
     #department .inner .division .wrap .con {
       float: left;
       width: 350px;
-      height: 20vw;
-      margin: 0 0 100px 100px;
+      height: 300px;
+      margin: 0 150px 100px 100px;
       position: relative;
       cursor: pointer; }
-      #department .inner .division .wrap .con:nth-of-type(odd) {
-        margin: 0 150px 100px 100px; }
+      #department .inner .division .wrap .con:nth-of-type(even) {
+        margin: 0 0 100px 100px; }
       #department .inner .division .wrap .con .pic {
         width: 70%;
         height: 100%;
@@ -652,31 +650,115 @@ fieldset {
         font: bold 14px/1 #222;
         margin-bottom: 40px; }
       #department .inner .division_deco2 article p {
+        width: 100%;
+        height: 140px;
         font: 12px/1.2 "arial";
-        color: #888; }
-      #department .inner .division_deco2 article:last-of-type p {
+        color: #888;
+        overflow: hidden; }
+      #department .inner .division_deco2 article:last-of-type a {
+        display: block;
+        width: 100%;
+        height: 70px;
+        background: #05d98c;
+        font: bold 16px/70px "Roboto";
+        color: #222;
+        text-align: center;
+        transition: background-color 0.5s;
         position: absolute;
         left: 0;
         bottom: 0; }
-        #department .inner .division_deco2 article:last-of-type p a {
-          display: block;
-          width: calc(1180px - 885px);
-          height: 70px;
-          background: #05d98c;
-          font: bold 16px/70px "Roboto";
-          color: #222;
-          text-align: center;
-          transition: background-color 0.5s; }
-          #department .inner .division_deco2 article:last-of-type p a .fa-arrow-right {
-            margin-left: 10px;
-            color: #eee;
-            transition: 0.5s; }
-          #department .inner .division_deco2 article:last-of-type p a:hover {
-            background: #03915d;
-            color: #eee; }
+        #department .inner .division_deco2 article:last-of-type a .fa-arrow-right {
+          margin-left: 10px;
+          color: #eee;
+          transition: 0.5s; }
+        #department .inner .division_deco2 article:last-of-type a:hover {
+          background: #03915d;
+          color: #eee; }
 
 /* tablet */
+@media screen and (max-width: 1179px) {
+  #department .inner .division .wrap .con {
+    margin: 0 0 100px 10vw; }
+    #department .inner .division .wrap .con:nth-of-type(even) {
+      margin: 0 0 100px 10vw; }
+  #department .inner .division_deco2 article {
+    width: 33.3333%;
+    height: 350px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    cursor: pointer; }
+    #department .inner .division_deco2 article p {
+      font: 12px/1.2 "arial";
+      color: #888; }
+    #department .inner .division_deco2 article:last-of-type a {
+      left: 0;
+      bottom: auto;
+      top: 0; }
+    #department .inner .division_deco2 article:last-of-type {
+      height: 70px;
+      margin-left: 66.6666%; } }
+@media screen and (max-width: 870px) {
+  #department .inner .division_deco > div.deco_pic span {
+    display: block;
+    height: 30%;
+    font: bold 20px/150px "arial"; }
+  #department .inner .division_deco > div.deco_con {
+    top: 0;
+    left: 25%;
+    width: 75%;
+    height: 70%; }
+    #department .inner .division_deco > div.deco_con .deco_tit {
+      width: 100%;
+      margin-bottom: 40px; }
+    #department .inner .division_deco > div.deco_con .deco_txt {
+      width: 100%;
+      height: auto; }
+      #department .inner .division_deco > div.deco_con .deco_txt h3 {
+        width: 100%; }
+      #department .inner .division_deco > div.deco_con .deco_txt p {
+        display: none; }
+  #department .inner .division_deco a {
+    bottom: 150px; }
+  #department .inner .division .wrap .con {
+    margin: 0 0 100px 10vw; }
+    #department .inner .division .wrap .con:nth-of-type(even) {
+      margin: 0 0 100px 10vw; }
+  #department .inner .division_deco2 article {
+    width: 33.3333%;
+    height: 350px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    cursor: pointer; }
+    #department .inner .division_deco2 article p {
+      font: 12px/1.2 "arial";
+      color: #888; }
+    #department .inner .division_deco2 article:last-of-type a {
+      left: 0;
+      bottom: auto;
+      top: 0; }
+    #department .inner .division_deco2 article:last-of-type {
+      height: 70px;
+      margin-left: 66.6666%; } }
 /* mobile */
+@media screen and (max-width: 539px) {
+  #department .inner .division_deco {
+    display: none; }
+  #department .inner .division h2 {
+    letter-spacing: 14px; }
+    #department .inner .division h2::before {
+      width: 240px;
+      left: 20px; }
+  #department .inner .division .wrap .con {
+    width: 70vw;
+    margin-left: 20px; }
+    #department .inner .division .wrap .con:nth-of-type(even) {
+      margin-left: 20px; }
+    #department .inner .division .wrap .con .pic .con_txt {
+      right: -55%; } }
 .content {
   width: 100%;
   padding: 0 0 100px;

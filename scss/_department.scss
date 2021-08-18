@@ -7,7 +7,6 @@
     filter: saturate(0%);
   }
   .inner {
-
     h1 {
       text-align: center;
       font: 44px/1 'Nanum Myeongjo', serif;
@@ -19,11 +18,6 @@
       height: 500px;
       position: relative;
       margin-bottom: 150px;
-      &::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
       >div {
         float: left;
         width: 50%;        
@@ -49,17 +43,18 @@
         }
         &.deco_con {
           top: 0;
-          left: 295px;
+          left: 25%;
           width: 75%;
           height: 300px;
           background: #fff;
-          padding: 40px 40px 0 40px;
+          padding: 40px;
           box-sizing: border-box;
 
           .deco_tit {
             float: left;
             width: 30%;
             padding-top: 40px;
+            padding-right: 10%;
             h2 {
               font: bold 24px/1 "Roboto";
               color: #222;
@@ -82,7 +77,9 @@
           }
           .deco_txt {
             float: left;
-            width: 70%;
+            width: 60%;
+            height: 220px;
+            overflow: hidden;
             h3 {
               width: 70%;
               font: bold 20px/1 "arial";
@@ -96,20 +93,18 @@
           }
         }
       }
-      >p {
+      a {
+        display: block;
+        padding: 20px 60px;
+        font: bold 14px/1 "Nanum Gothic";
+        color: #fff;
         position: absolute;
         bottom: 0;
         right: 0px;
-        a {
-          display: block;
-          padding: 20px 60px;
-          font: bold 14px/1 "Nanum Gothic";
-          color: #fff;
-          background: #05d98c;
-          transition: background-color 0.5s;
-          &:hover {
-            background: #03915d;
-          }
+        background: #05d98c;
+        transition: background-color 0.5s;
+        &:hover {
+          background: #03915d;
         }
       }
     }
@@ -143,13 +138,13 @@
         .con {
           float: left;
           width: 350px;
-          height: 20vw;
-          margin: 0 0 100px 100px;
+          height: 300px;
+          margin: 0 150px 100px 100px;
           position: relative;
           cursor: pointer;
 
-          &:nth-of-type(odd) {
-            margin: 0 150px 100px 100px;
+          &:nth-of-type(even) {
+            margin: 0 0 100px 100px;
           }
 
           .pic {
@@ -271,34 +266,34 @@
           margin-bottom: 40px;
         }
         p {
+          width: 100%;
+          height: 140px;
           font: 12px/1.2 "arial";
           color: #888;
+          overflow: hidden;
         }
-        &:last-of-type p {
+        &:last-of-type a {
+          display: block;
+          width: 100%;
+          height: 70px;
+          background: #05d98c;
+          font: bold 16px/70px "Roboto";
+          color: #222;
+          text-align: center;
+          transition: background-color 0.5s;
           position: absolute;
           left: 0;
           bottom: 0;
 
-          a {
-            display: block;
-            width: calc(1180px - 885px);
-            height: 70px;
-            background: #05d98c;
-            font: bold 16px/70px "Roboto";
-            color: #222;
-            text-align: center;
-            transition: background-color 0.5s;
+          .fa-arrow-right {
+            margin-left: 10px;
+            color: #eee;
+            transition: 0.5s;
+          }
 
-            .fa-arrow-right {
-              margin-left: 10px;
-              color: #eee;
-              transition: 0.5s;
-            }
-
-            &:hover {
-              background: #03915d;
-              color: #eee;
-            }
+          &:hover {
+            background: #03915d;
+            color: #eee;
           }
         }
       }
@@ -308,10 +303,159 @@
 
 /* tablet */
 @media screen and (max-width: 1179px) {
+  #department {
+    .inner {
+      .division {
+        .wrap {
+          .con {
+            margin: 0 0 100px 10vw;
+            &:nth-of-type(even) {
+              margin: 0 0 100px 10vw;
+            }
+          }
+        }
+      }
+      .division_deco2 {
+        article {
+          width: 33.3333%;
+          height: 350px;
+          padding: 40px;
+          box-sizing: border-box;
+          background: #fff;
+          position: relative;
+          cursor: pointer;
 
+          p {
+            font: 12px/1.2 "arial";
+            color: #888;
+          }
+          &:last-of-type a {
+            left: 0;
+            bottom: auto;
+            top: 0;
+          }
+
+          &:last-of-type {
+            height: 70px;
+            margin-left: 66.6666%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #department {
+    .inner {
+      .division_deco {
+        >div {
+          &.deco_pic {
+            span {
+              display: block;
+              height: 30%;
+              font: bold 20px/150px "arial";
+            }
+          }
+          &.deco_con {
+            top: 0;
+            left: 25%;
+            width: 75%;
+            height: 70%;
+  
+            .deco_tit {
+              width: 100%;
+              margin-bottom: 40px;
+            }
+            .deco_txt {
+              width: 100%;
+              height: auto;
+              h3 {
+                width: 100%;
+              }
+              p {
+                display: none;
+              }
+            }
+          }
+        }
+        a {
+          bottom: 150px;
+        }
+      }
+      .division {
+        .wrap {
+          .con {
+            margin: 0 0 100px 10vw;
+            &:nth-of-type(even) {
+              margin: 0 0 100px 10vw;
+            }
+          }
+        }
+      }
+      .division_deco2 {
+        article {
+          width: 33.3333%;
+          height: 350px;
+          padding: 40px;
+          box-sizing: border-box;
+          background: #fff;
+          position: relative;
+          cursor: pointer;
+
+          p {
+            font: 12px/1.2 "arial";
+            color: #888;
+          }
+          &:last-of-type a {
+            left: 0;
+            bottom: auto;
+            top: 0;
+          }
+
+          &:last-of-type {
+            height: 70px;
+            margin-left: 66.6666%;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* mobile */
 @media screen and (max-width: 539px) {
+  #department {
+    .inner {
+      .division_deco {
+        display: none;
+      }
+      .division {
+        h2 {
+          letter-spacing: 14px;
 
+          &::before {
+            width: 240px;
+            left: 20px;
+          }
+        }
+        .wrap {
+          .con {
+            width: 70vw;
+            margin-left: 20px;
+  
+            &:nth-of-type(even) {
+              margin-left: 20px;
+            }
+
+            .pic {
+              .con_txt {
+                right: -55%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
