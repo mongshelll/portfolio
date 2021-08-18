@@ -886,8 +886,15 @@ fieldset {
     #gallery .inner #flickr_gallery ul li:nth-of-type(8) {
       width: 100%; } }
 @media screen and (max-width: 539px) {
+  .loading {
+    top: 65%; }
+
+  #gallery .sub_visual {
+    margin-bottom: 50px; }
   #gallery .inner {
     margin-bottom: 50px; }
+    #gallery .inner h1 {
+      margin-bottom: 30px; }
     #gallery .inner #flickr_gallery ul li {
       width: 100%; }
       #gallery .inner #flickr_gallery ul li.item-sizer {
