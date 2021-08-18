@@ -758,7 +758,9 @@ fieldset {
     #department .inner .division .wrap .con:nth-of-type(even) {
       margin-left: 20px; }
     #department .inner .division .wrap .con .pic .con_txt {
-      right: -55%; } }
+      right: -55%; }
+  #department .inner .division_deco2 {
+    display: none; } }
 .content {
   width: 100%;
   padding: 0 0 100px;
