@@ -153,3 +153,16 @@
     }
   }
 }
+@media screen and (max-width: 539px) {
+  #youtube{
+    .inner {
+      #vidGallery {
+        article {
+          h2 {
+            top: 8%;
+          }
+        }
+      }
+    }
+  }
+}

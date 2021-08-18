@@ -1065,6 +1065,9 @@ fieldset {
       right: 5%; }
     #youtube .inner #vidGallery article .pic {
       width: 100%; } }
+@media screen and (max-width: 539px) {
+  #youtube .inner #vidGallery article h2 {
+    top: 8%; } }
 .content {
   width: 100%;
   padding: 0 0 100px;
