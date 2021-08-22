@@ -1894,14 +1894,12 @@ body {
               content: "";
               display: block;
               width: calc(100% - 40px);
-              height: 2px;
+              height: 3px;
               background: orange;
               position: absolute;
-              bottom: 0px;
+              bottom: -1px;
               opacity: 0;
               transition: opacity 0.3s; }
-          #header .header_upper > .inner #gnb > li:last-of-type > a::after {
-            display: none; }
           #header .header_upper > .inner #gnb > li.on > a {
             color: orange;
             font-weight: bold; }
@@ -1911,18 +1909,17 @@ body {
               opacity: 1; }
           #header .header_upper > .inner #gnb > li .sub {
             position: absolute;
-            width: 1180px;
-            padding: 50px 0;
-            background: #fff;
             top: 70px;
-            left: 50%;
-            transform: translateX(-590px);
+            left: 0;
+            transform: translateX(-220px);
             border-top: 1px solid #ccc;
-            box-shadow: 0px 10px 10px rgba(51, 51, 51, 0.08);
+            overflow: hidden;
             z-index: 2;
             display: none; }
             #header .header_upper > .inner #gnb > li .sub .depth2 {
-              display: inline-block; }
+              display: inline-block;
+              padding: 40px 20px;
+              vertical-align: top; }
               #header .header_upper > .inner #gnb > li .sub .depth2::after {
                 content: "";
                 display: block;

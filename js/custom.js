@@ -15,7 +15,6 @@ skip_a.on("focusout", function(){
 /* @@@ skipNavi end @@@ */
 
 /* @@@ GNB @@@ */
-
 var $header = $("#header");
 var $header_upper = $header.find(".header_upper");
 var $gnb = $header_upper.find("#gnb");
@@ -24,6 +23,7 @@ var $sub = $gnb_li.find(".sub");
 var $depth2_tit = $header_upper.find("#gnb>li.on .sub .depth2 h2 a");
 var speed = 300;
 
+create_gnbBg();
 
 //gnb li에 마우스엔터, 포커스인 했을 때
 $gnb_li.on("mouseenter focusin", function(){
@@ -36,47 +36,50 @@ $gnb_li.on("mouseleave focusout", function(){
 });
 
 function openSub(el){
-  // var wid = $("body").width();
-  // var gnb_wid = $gnb.width();
-  var ht = $(el).find($sub).css("height");
-  ht = parseInt(ht) + 100; //.sub padding값 고려
-  // var bg = $sub.css("background-color");
+  var gnbBg_wid = $(".gnbBg").width();
+  var ht = $(el).find($sub).height();
+  // ht = parseInt(ht) + 100; //.sub padding값 고려
+  // ht = parseInt(ht); //.sub padding값 고려
+  var wid = window.innerWidth; //화면 전체 넓이
+  var subPos = (wid-1180) /2
 
-  var sub_depth = $(el).find(".depth2").length + 2;
-  // var isGnbBg = $(".gnbBg").length;
-  $(el).find(".depth2").css({
-    width: "calc(100% / "+sub_depth+")"
+  $(el).find($sub).css({
+    width: gnbBg_wid,
+    left: -subPos
   });
 
-  // if(!isGnbBg) {
-  //   $(el).prepend(
-  //     $("<div class='gnbBg'>").css({
-  //       width: wid,
-  //       height: ht,
-  //       position: "absolute",
-  //       top: 70,
-  //       left: (gnb_wid/2)-(wid/2),
-  //       borderTop: "1px solid #ccc",
-  //       boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
-  //       backgroundColor: bg,
-  //       display: "none",
-  //       zIndex: 2
-  //     })
-  //   );
-  // };
+  $(".gnbBg").css({
+    height: ht
+  });
 
-  // $(".gnbBg").stop().slideDown(speed);
-
-  $(el).children(".sub").css({zIndex:2}).stop().slideDown(speed);
+  $(el).children(".sub").stop().slideDown(speed);
+  // $(el).children(".sub").stop().fadeIn(speed);
 }
 
 function closeSub(el){
-  $(el).children(".sub").css({zIndex:1}).stop().slideUp(speed);
-  // $(".gnbBg").remove();
-  // $(".gnbBg").stop().slideUp(speed / 2, function(){
-  //   $(this).remove();
-  // });
+    $(el).children(".sub").hide();
+    $(".gnbBg").css({
+      height: 0
+    });
 }
+
+function create_gnbBg() {
+  $header_upper.prepend(
+    $("<div class=gnbBg>").css({
+      width: "100%",
+      height: 0,
+      position: "absolute",
+      top: 70,
+      left: 0,
+      borderTop: "1px solid #ccc",
+      boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
+      backgroundColor: "#fff",
+      transition:"0.2s",
+      zIndex: 1
+    })
+  );
+}
+
 
 var btnCall = $header_upper.find(".btnCall");
 var menuMo = $header_upper.find("#menu_mo");
@@ -101,16 +104,6 @@ $depth2_tit.each(function(index, items){
     )
   )
 });
-
-// $bepth2_tit.each(function(index, items){
-//   $(".fixed_menu")
-//   .append(
-//     $("<li>")
-//     .append(
-//       $("a")
-//     )
-//   )
-// })
 
 /* @@@ GNB end @@@ */
 
