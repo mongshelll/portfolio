@@ -38,8 +38,6 @@ $gnb_li.on("mouseleave focusout", function(){
 function openSub(el){
   var gnbBg_wid = $(".gnbBg").width();
   var ht = $(el).find($sub).height();
-  // ht = parseInt(ht) + 100; //.sub padding값 고려
-  // ht = parseInt(ht); //.sub padding값 고려
   var wid = window.innerWidth; //화면 전체 넓이
   var subPos = (wid-1180) /2
 
