@@ -1852,7 +1852,8 @@ body {
 
 #header {
   width: 100%;
-  padding-top: 50px; }
+  padding-top: 50px;
+  box-sizing: border-box; }
   #header .header_upper {
     width: 100%;
     position: relative;
@@ -1874,14 +1875,15 @@ body {
           color: #222; }
       #header .header_upper > .inner #gnb {
         display: inline-block;
-        position: relative; }
+        position: relative;
+        font-size: 0;
+        vertical-align: top; }
         #header .header_upper > .inner #gnb::after {
           content: '';
           display: block;
           clear: both; }
         #header .header_upper > .inner #gnb > li {
-          display: inline-block;
-          vertical-align: top; }
+          display: inline-block; }
           #header .header_upper > .inner #gnb > li > a {
             display: inline-block;
             padding: 0 20px;
@@ -1897,7 +1899,7 @@ body {
               height: 3px;
               background: orange;
               position: absolute;
-              bottom: -1px;
+              bottom: 0px;
               opacity: 0;
               transition: opacity 0.3s; }
           #header .header_upper > .inner #gnb > li.on > a {
@@ -1908,12 +1910,11 @@ body {
             #header .header_upper > .inner #gnb > li:hover > a::after {
               opacity: 1; }
           #header .header_upper > .inner #gnb > li .sub {
+            width: calc(100vw - 17px);
             position: absolute;
             top: 70px;
             left: 0;
             transform: translateX(-220px);
-            border-top: 1px solid #ccc;
-            overflow: hidden;
             z-index: 2;
             display: none; }
             #header .header_upper > .inner #gnb > li .sub .depth2 {
@@ -1925,7 +1926,7 @@ body {
                 display: block;
                 clear: both; }
               #header .header_upper > .inner #gnb > li .sub .depth2 > h2 {
-                margin-bottom: 10px; }
+                margin-bottom: 20px; }
                 #header .header_upper > .inner #gnb > li .sub .depth2 > h2 > a {
                   font: bold 14px/1 'Nanum Gothic', sans-serif;
                   color: #222; }
@@ -1937,7 +1938,7 @@ body {
                   margin-right: 0; }
                 #header .header_upper > .inner #gnb > li .sub .depth2 > ul > li {
                   display: block;
-                  margin-bottom: 10px; }
+                  margin-bottom: 20px; }
                   #header .header_upper > .inner #gnb > li .sub .depth2 > ul > li a {
                     font: 13px/1 'Nanum Gothic', sans-seri;
                     color: #666; }
@@ -2108,7 +2109,7 @@ body {
     cursor: pointer;
     opacity: 0.7;
     flex: 1;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
     position: relative; }
     #main_visual article h2 {
       position: absolute;
@@ -2125,7 +2126,7 @@ body {
     #main_visual article:nth-of-type(4) {
       background: lightgreen; }
     #main_visual article:hover {
-      flex: 2;
+      flex: 1.5;
       opacity: 1; }
     #main_visual article.on {
       height: 100%;

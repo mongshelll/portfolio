@@ -42,6 +42,7 @@ body {
 #header {
   width: 100%;
   padding-top: 50px;
+  box-sizing: border-box;
   
   .header_upper {
     width: 100%;
@@ -71,6 +72,8 @@ body {
       #gnb {
         display: inline-block;
         position: relative;
+        font-size: 0;
+        vertical-align: top;
         &::after {
           content: '';
           display: block;
@@ -78,7 +81,6 @@ body {
         }
         >li {
           display: inline-block;
-          vertical-align: top;
 
           >a {
             display: inline-block;
@@ -96,7 +98,7 @@ body {
               height: 3px;
               background: orange;
               position: absolute;
-              bottom: -1px;
+              bottom: 0px;
               opacity: 0;
               transition: opacity 0.3s;
             }
@@ -113,12 +115,11 @@ body {
           }
 
           .sub {
+            width: calc(100vw - 17px); // 스크롤바 넓이 17px
             position: absolute;
             top: 70px;
             left: 0;
-            transform: translateX(-220px); //1180-gnb wid/2
-            border-top: 1px solid #ccc;
-            overflow: hidden;
+            transform: translateX(-220px); //1180-gnb 넓이 /2
             z-index: 2;
             display: none;
 
@@ -133,7 +134,7 @@ body {
                 clear: both;
               }
               >h2 {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 >a {
                   font: bold 14px/1 'Nanum Gothic', sans-serif;
                   color: #222;
@@ -150,7 +151,7 @@ body {
                 >li {
                   //depth2
                   display: block;
-                  margin-bottom: 10px;
+                  margin-bottom: 20px;
                   a {
                     font: 13px/1 'Nanum Gothic', sans-seri;
                     color: #666;
@@ -432,7 +433,7 @@ body {
     cursor: pointer;
     opacity: 0.7;
     flex: 1;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
     position: relative;
 
     h2 {
@@ -457,7 +458,7 @@ body {
     }
 
     &:hover {
-      flex: 2;
+      flex: 1.5;
       opacity: 1;
     }
     &.on {

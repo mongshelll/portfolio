@@ -36,22 +36,22 @@ $gnb_li.on("mouseleave focusout", function(){
 });
 
 function openSub(el){
-  var gnbBg_wid = $(".gnbBg").width();
+  // var gnbBg_wid = $(".gnbBg").width();
   var ht = $(el).find($sub).height();
-  var wid = window.innerWidth; //화면 전체 넓이
-  var subPos = (wid-1180) /2
-
+  var wid = window.innerWidth; //화면 전체 넓이(스크롤바 17px 제외)
+  var subPos = (wid-1180+17) /2  
+  console.log(wid);
   $(el).find($sub).css({
-    width: gnbBg_wid,
+    // width: gnbBg_wid,
     left: -subPos
   });
 
-  $(".gnbBg").css({
+  // $(el).children(".sub").stop().slideDown(speed);
+  $(el).children(".sub").stop().fadeIn(speed);
+
+    $(".gnbBg").css({
     height: ht
   });
-
-  $(el).children(".sub").stop().slideDown(speed);
-  // $(el).children(".sub").stop().fadeIn(speed);
 }
 
 function closeSub(el){
@@ -70,6 +70,7 @@ function create_gnbBg() {
       top: 70,
       left: 0,
       borderTop: "1px solid #ccc",
+      boxSizing: "border-box",
       boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
       backgroundColor: "#fff",
       transition:"0.2s",
