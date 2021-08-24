@@ -39,8 +39,7 @@ function openSub(el){
   // var gnbBg_wid = $(".gnbBg").width();
   var ht = $(el).find($sub).height();
   var wid = window.innerWidth; //화면 전체 넓이(스크롤바 17px 제외)
-  var subPos = (wid-1180+17) /2  
-  console.log(wid);
+  var subPos = (wid-1180+17) /2 
   $(el).find($sub).css({
     // width: gnbBg_wid,
     left: -subPos
