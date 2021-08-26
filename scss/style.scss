@@ -168,7 +168,7 @@ body {
 
       #menu_mo {
         display: none;
-        width: 50%;
+        width: 40%;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -197,7 +197,6 @@ body {
             a {
               display: block;
               width: 100%;
-              padding: 20px 0;
               border-bottom: 1px solid #444;
               font: 15px/70px 'Nanum Gothic', sans-seri;
               color: #fff;
@@ -784,10 +783,10 @@ body {
   }
   #box_content1 {
   padding: 100px 0;
-  .inner {
-    width: 100%;
+    .inner {
+      width: 100%;
+    }
   }
-}
 
   #box_content2 {
     padding: 100px 0;

@@ -1946,7 +1946,7 @@ body {
                     color: orange; }
       #header .header_upper > .inner #menu_mo {
         display: none;
-        width: 50%;
+        width: 40%;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -1969,7 +1969,6 @@ body {
         #header .header_upper > .inner #menu_mo ul li a {
           display: block;
           width: 100%;
-          padding: 20px 0;
           border-bottom: 1px solid #444;
           font: 15px/70px 'Nanum Gothic', sans-seri;
           color: #fff; }
