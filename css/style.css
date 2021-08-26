@@ -1961,14 +1961,13 @@ body {
           border-bottom: 1px solid #666; }
           #header .header_upper > .inner #menu_mo .logo_mo a {
             display: inline-block;
-            padding: 20px;
+            padding: 20px 0px;
             box-sizing: border-box;
             font: bold 30px/1 'Nanum Gothic', sans-seri;
             letter-spacing: 4px;
             color: #fff; }
         #header .header_upper > .inner #menu_mo ul li a {
           display: block;
-          width: 100%;
           border-bottom: 1px solid #444;
           font: 15px/70px 'Nanum Gothic', sans-seri;
           color: #fff; }
