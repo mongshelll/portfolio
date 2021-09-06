@@ -2127,48 +2127,116 @@ fieldset {
 
 #main_visual {
   height: calc(100vh - 122px);
-  padding-top: 122px;
+  margin-top: 122px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  justify-content: center; }
   #main_visual .slide_bg {
-    width: 200%;
+    width: 100%;
     height: 100%;
     position: relative; }
     #main_visual .slide_bg article {
-      width: 50%;
+      width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #main_visual .slide_bg article span {
+        font-size: 50px; }
       #main_visual .slide_bg article:nth-of-type(1) {
-        background: linear-gradient(skyblue, #87cecd); }
+        z-index: 4;
+        background: linear-gradient(lightcoral, #f08094, #f0801c); }
       #main_visual .slide_bg article:nth-of-type(2) {
-        background: linear-gradient(lightgreen, #90ee72);
-        left: auto;
-        left: 50%; }
+        z-index: 3;
+        background: linear-gradient(lightgreen, #90ee72); }
       #main_visual .slide_bg article:nth-of-type(3) {
+        z-index: 2;
         background: linear-gradient(lightpink, #ffb682); }
       #main_visual .slide_bg article:nth-of-type(4) {
-        background: linear-gradient(lightseagreen, #20b282); }
-  #main_visual .arrow {
+        z-index: 1;
+        background: linear-gradient(lightseagreen, #20b282);
+        left: auto;
+        left: 100%; }
+  #main_visual .inner_contents {
+    width: 80%;
+    height: 100%;
     position: absolute;
-    left: 50px;
-    bottom: 50px; }
-    #main_visual .arrow ul::after {
-      content: "";
-      display: block;
-      clear: both; }
-    #main_visual .arrow ul li {
-      float: left; }
-      #main_visual .arrow ul li + li {
-        margin-left: 10px; }
-      #main_visual .arrow ul li a {
-        display: block;
-        font-size: 40px;
-        color: #fff;
-        transition: 0.5s; }
-        #main_visual .arrow ul li a:hover {
-          color: #000; }
+    z-index: 5;
+    border: 1px solid #000; }
+    #main_visual .inner_contents .slide_pagination {
+      display: flex;
+      margin: 100px 0; }
+      #main_visual .inner_contents .slide_pagination li {
+        width: 100px;
+        height: 50px; }
+        #main_visual .inner_contents .slide_pagination li a {
+          font: 14px/1 "Quicksand", sans-serif;
+          color: #fff;
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          opacity: 0.5; }
+          #main_visual .inner_contents .slide_pagination li a::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #fff; }
+          #main_visual .inner_contents .slide_pagination li a::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #fff;
+            transition: 0.3s; }
+          #main_visual .inner_contents .slide_pagination li a.on {
+            opacity: 1; }
+    #main_visual .inner_contents .inner_slide {
+      margin-left: 50px;
+      position: relative; }
+      #main_visual .inner_contents .inner_slide > article {
+        position: absolute;
+        transform: translateX(50px);
+        opacity: 0;
+        transition: 1s; }
+        #main_visual .inner_contents .inner_slide > article > p {
+          font: 50px/1.5 "EB Garamond", serif;
+          color: #fff; }
+        #main_visual .inner_contents .inner_slide > article.on {
+          transform: translateX(0);
+          opacity: 1;
+          transition: 1s; }
+    #main_visual .inner_contents .btn_arrows {
+      position: absolute;
+      left: 50px;
+      bottom: 50px; }
+      #main_visual .inner_contents .btn_arrows ul {
+        display: flex; }
+        #main_visual .inner_contents .btn_arrows ul li {
+          display: flex;
+          width: 40px; }
+          #main_visual .inner_contents .btn_arrows ul li + li {
+            margin-left: 10px; }
+          #main_visual .inner_contents .btn_arrows ul li a {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-size: 40px;
+            color: #fff;
+            transition: 0.5s; }
+            #main_visual .inner_contents .btn_arrows ul li a:hover {
+              color: #000; }
 
 #box_content1 {
   width: 100%;
@@ -2419,6 +2487,9 @@ fieldset {
 @media screen and (max-width: 495px) {
   section > .inner {
     width: 100%; }
+
+  #banner .inner {
+    padding-left: 10px; }
 
   #footer .inner .upper .logo {
     width: 100px;
