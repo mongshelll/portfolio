@@ -1,9 +1,10 @@
 @charset 'utf-8';
 @import "sub_layout";
 
-#youtube{
+#youtube {
+  padding-top: 181px;
   .sub_visual {
-    background: url(../img/youtube_banner.jpg) no-repeat 0px 62%/cover;
+    background: url(../img/youtube_banner.jpg) no-repeat 0px 62% / cover;
     filter: saturate(0%);
   }
   .inner {
@@ -11,16 +12,15 @@
       width: 100%;
       box-sizing: border-box;
       margin: 0 auto;
-    
+
       article {
         width: 92%;
         height: 25vw;
         margin: 0 auto;
         margin-bottom: 140px;
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         position: relative;
-        
 
         &:hover {
           .pic {
@@ -49,7 +49,7 @@
           top: 10%;
           left: 20px;
         }
-        
+
         p {
           width: 30%;
           font: 16px/1.5 "arial";
@@ -58,9 +58,9 @@
           top: 40%;
           left: 20px;
         }
-  
+
         span {
-          font: bold italic 14px/1 'arial';
+          font: bold italic 14px/1 "arial";
           color: #333;
           position: absolute;
           bottom: 10%;
@@ -72,7 +72,8 @@
 }
 
 @media screen and (max-width: 1179px) {
-  #youtube{
+  #youtube {
+    padding-top: 122px;
     .inner {
       #vidGallery {
         article {
@@ -101,7 +102,7 @@
   }
 }
 @media screen and (max-width: 890px) {
-  #youtube{
+  #youtube {
     .inner {
       #vidGallery {
         article {
@@ -124,7 +125,7 @@
   }
 }
 @media screen and (max-width: 800px) {
-  #youtube{
+  #youtube {
     .inner {
       #vidGallery {
         article {
@@ -154,7 +155,7 @@
   }
 }
 @media screen and (max-width: 539px) {
-  #youtube{
+  #youtube {
     .inner {
       #vidGallery {
         article {

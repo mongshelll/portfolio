@@ -1,12 +1,12 @@
 /* @@@  skipNavi @@@ */
 var skip_a = $("#skipNavi a");
 
-skip_a.on("focusin", function(){
+skip_a.on("focusin", function () {
   $(this).css({
     top: 0,
   });
 });
-skip_a.on("focusout", function(){
+skip_a.on("focusout", function () {
   $(this).css({
     top: -30,
   });
@@ -26,20 +26,20 @@ var speed = 300;
 create_gnbBg();
 
 //gnb li에 마우스엔터, 포커스인 했을 때
-$gnb_li.on("mouseenter focusin", function(){
+$gnb_li.on("mouseenter focusin", function () {
   openSub(this);
 });
 
 //gnb li에 마우스리브, 포커스아웃 했을 때
-$gnb_li.on("mouseleave focusout", function(){
+$gnb_li.on("mouseleave focusout", function () {
   closeSub(this);
 });
 
-function openSub(el){
+function openSub(el) {
   // var gnbBg_wid = $(".gnbBg").width();
   var ht = $(el).find($sub).height();
   var wid = window.innerWidth; //화면 전체 넓이(스크롤바 17px 제외)
-  var subPos = (wid-1180+17) /2 
+  var subPos = (wid - 1180 + 17) / 2
   $(el).find($sub).css({
     // width: gnbBg_wid,
     left: -subPos
@@ -48,16 +48,16 @@ function openSub(el){
   // $(el).children(".sub").stop().slideDown(speed);
   $(el).children(".sub").stop().fadeIn(speed);
 
-    $(".gnbBg").css({
+  $(".gnbBg").css({
     height: ht
   });
 }
 
-function closeSub(el){
-    $(el).children(".sub").hide();
-    $(".gnbBg").css({
-      height: 0
-    });
+function closeSub(el) {
+  $(el).children(".sub").hide();
+  $(".gnbBg").css({
+    height: 0
+  });
 }
 
 function create_gnbBg() {
@@ -72,7 +72,7 @@ function create_gnbBg() {
       boxSizing: "border-box",
       boxShadow: "0px 10px 10px rgba(51, 51, 51, 0.08)",
       backgroundColor: "#fff",
-      transition:"0.2s",
+      transition: "0.2s",
       zIndex: 1
     })
   );
@@ -87,15 +87,15 @@ btnCall.on("click", function () {
   menuMo.toggleClass("on");
 });
 
-$(window).on("resize", function(){
+$(window).on("resize", function () {
   var wid = window.innerWidth;
-  if(wid>=1180){
+  if (wid >= 1180) {
     btnCall.removeClass("on");
     menuMo.removeClass("on");
   }
 });
 
-$depth2_tit.each(function(index, items){  
+$depth2_tit.each(function (index, items) {
   $(".header_lower .inner .fixed_menu").append(
     $("<li>").append(
       $("<a href='#'>").text(items.text)
@@ -122,7 +122,7 @@ var $article = $main_visual.find("article");
 var left_box = $main_visual.find(".left_box");
 var box_close = left_box.find(".left_boxBtn").find(".close");
 
-$article.on("click", function(e){
+$article.on("click", function (e) {
   e.preventDefault();
   $article.removeClass("on");
   left_box.removeClass("on");
@@ -146,10 +146,10 @@ $article.on("click", function(e){
   //     )
   //   )
   // )
-  
+
 });
 
-box_close.on("click", function(e){
+box_close.on("click", function (e) {
   e.preventDefault();
 
   left_box.removeClass("on");
@@ -172,7 +172,7 @@ box_close.on("click", function(e){
 
 /* @@@ TAB @@@ */
 
-$("#community .inner .btn a").on("click", function(e){
+$("#community .inner .btn a").on("click", function (e) {
   e.preventDefault();
 
   var target = $(this).attr("href");
@@ -187,7 +187,7 @@ $("#community .inner .btn a").on("click", function(e){
   var txt = $("#community .inner .btn a.on").text();
   var txt_ex = $("#community .inner .btn").children().hasClass("on");
 
-  if(txt_ex){
+  if (txt_ex) {
     $("#community .inner .site_map").children().eq(3).children().text(txt);
   }
 });
@@ -209,7 +209,7 @@ var faq_speed = 300;
 var enableClick = true;
 
 //버튼을 클릭했을 때
-$btns.on("click", function(e){
+$btns.on("click", function (e) {
   e.preventDefault(); //링크이동금지
 
   //기본으로 초기화
@@ -217,7 +217,7 @@ $btns.on("click", function(e){
     transform: "rotate(-180deg)"
   });
   //enableClick이 true
-  if(enableClick){
+  if (enableClick) {
     //함수를 실행하고
     activation(this);
     //enableClick을 false로 바꿔서 재클릭을 못하게 함
@@ -226,7 +226,7 @@ $btns.on("click", function(e){
 });
 
 //activation 함수정의
-function activation(self){
+function activation(self) {
   //$(this)- dt를 클릭했을때 on이 있는지 판별
   var isOn = $(self).hasClass("on");
 
@@ -235,22 +235,22 @@ function activation(self){
   $boxs.slideUp(faq_speed);
 
   //만약 활성화 되어있다면 
-  if(isOn){
+  if (isOn) {
     //버튼의 on 제거 - 비활성화, 버튼 다음의 dd도 감춤 - slideUp();
     $(self).removeClass("on");
 
-    $(self).next("dd").slideUp(faq_speed, function(){
+    $(self).next("dd").slideUp(faq_speed, function () {
       //동작이 끝나면 클릭이 가능하도록 enableClick을 true값으로 바꿈
       enableClick = true;
     });
-  }else{
+  } else {
     //만약 on이 없다면 (비활성화 상태)
     //버튼을 활성화 하며, 버튼 다음에 오는 dd도 활성화 - slideDown();
     $(self).addClass("on");
     $(self).find(".fa-chevron-up").css({
       transform: "rotate(0deg)"
     });
-    $(self).next("dd").slideDown(faq_speed, function(){
+    $(self).next("dd").slideDown(faq_speed, function () {
       enableClick = true;
     });
   }
@@ -260,7 +260,7 @@ function activation(self){
 
 /* @@@ join @@@ */
 
-$("input[type=submit").on("click", function(e){
+$("input[type=submit").on("click", function (e) {
   if (!isId("userid", 5)) e.preventDefault();
   if (!isPw("userpw1", "userpw2", 5)) e.preventDefault();
   if (!isname("user_name")) e.preventDefault();
@@ -307,7 +307,7 @@ function isPw(name1, name2, len) {
     } else {
       alert("비밀번호는 " + len + "자리 이상 입력하세요.");
     }
-    
+
     //pw에 숫자 포함여부 확인
     if (num.test(pw1)) {
       i++;
@@ -318,24 +318,24 @@ function isPw(name1, name2, len) {
     //pw에 문자 포함여부 확인
     if (eng.test(pw1)) {
       i++;
-    }else{
+    } else {
       alert("비밀번호에 문자를 추가하세요.");
     }
 
     //pw에 특수문자 포함여부 확인
     if (spc.test(pw1)) {
       i++;
-    }else{
+    } else {
       alert("비밀번호에 특수문자를 포함하세요.")
     }
 
     if (i === 4) {
       isConfirm = true;
       return isConfirm;
-    }else{
+    } else {
       return isConfirm;
     }
-  }else{
+  } else {
     alert("비밀번호를 동일하게 입력하세요.");
     return isConfirm;
   }
@@ -346,13 +346,13 @@ function isname(name) {
   var userName = $("[name=" + name + "]").val();
 
   if (userName == "") {
-      alert("이름을 입력하세요.");
-      return false;
+    alert("이름을 입력하세요.");
+    return false;
   }
 };
 
 //email 인증 함수 정의
-function isEmail(name){
+function isEmail(name) {
   var email1 = $("[name=" + name + "]").val();
 
   if (email1 == "") {
@@ -371,7 +371,7 @@ function isSelect(name) {
   var msg = $("select[name=" + name + "]").children("option").eq(0).text();
 
   if (sel == "") {
-    alert("이메일을 "+ msg);
+    alert("이메일을 " + msg);
     return false;
   } else {
     return true;

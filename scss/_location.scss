@@ -2,6 +2,7 @@
 @import "sub_layout";
 
 #location {
+  padding-top: 181px;
   .sub_visual {
     background: url(../img/loaction_banner.jpg) no-repeat center/cover;
     filter: saturate(0%);
@@ -48,7 +49,7 @@
         float: left;
         a {
           display: block;
-          width: calc( 1180px / 3);
+          width: calc(1180px / 3);
           height: 60px;
           background: #fff;
           font: bold 16px/60px "Nanum Gothic";
@@ -58,7 +59,6 @@
           transition: color 0.5s;
           border-bottom: 2px solid #bbb;
           box-sizing: border-box;
-
         }
         &:hover {
           a {
@@ -91,8 +91,8 @@
       box-sizing: border-box;
       border: 1px solid #ddd;
       margin-bottom: 100px;
-      >li {
-        border-bottom: 1px dotted rgba(0,0,0,0.2);
+      > li {
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
         padding-bottom: 40px;
         margin: 50px 0;
         &:last-of-type {
@@ -107,7 +107,9 @@
           }
           li {
             float: left;
-            .fa-subway, .fa-bus, .fa-car {
+            .fa-subway,
+            .fa-bus,
+            .fa-car {
               font-size: 60px;
               opacity: 0.3;
               margin: 0px 50px;
@@ -126,13 +128,13 @@
                 color: #fff;
               }
               &:nth-of-type(1) .subway_title {
-                background: #08308F;
+                background: #08308f;
               }
               &:nth-of-type(2) .subway_title {
-                background: #F08302;
+                background: #f08302;
               }
               &:nth-of-type(3) .subway_title {
-                background: #A14A9B;
+                background: #a14a9b;
               }
               &:nth-of-type(1) .bus_title {
                 background: #008000;
@@ -151,9 +153,10 @@
   }
 }
 
-@media screen and (max-width: 1179px){
+@media screen and (max-width: 1179px) {
   #location {
-    .inner {  
+    padding-top: 122px;
+    .inner {
       .traffic {
         right: 50px;
       }
@@ -171,16 +174,18 @@
     }
   }
 }
-@media screen and (max-width: 843px){
+@media screen and (max-width: 843px) {
   #location {
     .inner {
       .public_trans {
-        >li {  
+        > li {
           ul {
             li {
               float: none;
               text-align: center;
-              .fa-subway, .fa-bus, .fa-car {
+              .fa-subway,
+              .fa-bus,
+              .fa-car {
                 margin-bottom: 20px;
               }
               p {
@@ -197,14 +202,14 @@
     }
   }
 }
-@media screen and (max-width: 539px){
+@media screen and (max-width: 539px) {
   #location {
     .inner {
       h1 {
         margin-bottom: 100px;
       }
       .public_trans {
-        >li {  
+        > li {
           ul {
             li {
               p {
