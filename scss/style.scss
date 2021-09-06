@@ -1,7 +1,5 @@
 @charset 'utf-8';
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand&family=Raleway&family=Roboto&display=swap");
 
 /*
 font-family: 'EB Garamond', serif;
@@ -21,9 +19,9 @@ font-family: 'Raleway', sans-serif;
 @import "community";
 @import "location";
 
-body {
-  overflow-x: hidden;
-}
+// body {
+//   overflow-x: hidden;
+// }
 
 #skipNavi a {
   display: block;
@@ -372,24 +370,12 @@ body {
   height: calc(100vh - 122px);
   padding-top: 122px;
   position: relative;
+  overflow: hidden;
 
   .slide_bg {
     width: 200%;
     height: 100%;
     position: relative;
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: -15px;
-      width: 100%;
-      height: 30px;
-      background: linear-gradient(
-        rgb(255, 182, 130),
-        rgb(255, 255, 255)
-      ); //임시블러용
-    }
 
     article {
       width: 50%;
@@ -399,18 +385,18 @@ body {
       left: 0;
 
       &:nth-of-type(1) {
-        background: skyblue;
+        background: linear-gradient(skyblue, rgb(135, 206, 205));
       }
       &:nth-of-type(2) {
-        background: lightgreen;
+        background: linear-gradient(lightgreen, rgb(144, 238, 114));
+        left: auto;
+        left: 50%;
       }
       &:nth-of-type(3) {
         background: linear-gradient(lightpink, rgb(255, 182, 130));
       }
       &:nth-of-type(4) {
-        background: lightseagreen;
-        left: auto;
-        left: 50%;
+        background: linear-gradient(lightseagreen, rgb(32, 178, 130));
       }
     }
   }
