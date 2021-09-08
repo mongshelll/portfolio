@@ -111,10 +111,22 @@ var $main_visual = $("#main_visual");
 var $slide_bg = $main_visual.find(".slide_bg");
 var $inner_contents = $main_visual.find(".inner_contents");
 var $slide_pagination = $inner_contents.find(".slide_pagination");
+var $slide_pagination_btn = $slide_pagination.find("li");
 var $inner_slide = $inner_contents.find(".inner_slide");
 var $btn_arrows = $inner_contents.find(".btn_arrows");
 
+slide_pagination($slide_pagination_btn);
 
+function slide_pagination(el) {
+  el.on("click", function (e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass("on")) {
+      el.removeClass("on");
+      $(this).addClass("on");
+    };
+  });
+}
 
 /* --- main_visual end --- */
 
