@@ -145,15 +145,15 @@ function acti(self) {
   $slide_bg.removeClass("on");
   $slide_bg.eq(idx).addClass("on");
 
-  $slide_bg.eq(idx).animate({
-    width: "100%",
-    zIndex: 2
-  }, 0, function () {
-    $slide_bg.eq(idx - 1).animate({
-      width: "0%",
-      zIndex: 1
-    })
-  }, 1000)
+  // $slide_bg.eq(idx).animate({
+  //   width: "100%",
+  //   zIndex: 2
+  // }, 0, function () {
+  //   $slide_bg.eq(idx - 1).animate({
+  //     width: "0%",
+  //     zIndex: 1
+  //   })
+  // }, 1000)
 } ////// 내일 1번째 4번째 슬라이드 위치 겹쳐서 이전 슬라이드 방식으로 재구성 하기!!!
 
 $btn_prev.on("click", function () {

@@ -2146,10 +2146,11 @@ fieldset {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: width 1s 0.5s linear; }
-      #main_visual .slide_bg article:nth-of-type(1) {
+      transition: width 0s 0.5s linear; }
+      #main_visual .slide_bg article.on {
         width: 100%;
-        z-index: 2; }
+        z-index: 2;
+        transition: width 0.5s linear; }
       #main_visual .slide_bg article span {
         font-size: 50px; }
       #main_visual .slide_bg article:nth-of-type(1) {
