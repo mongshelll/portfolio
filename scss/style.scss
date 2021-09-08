@@ -413,21 +413,45 @@ font-family: 'Raleway', sans-serif;
     position: relative;
 
     article {
-      width: 100%;
+      width: 0%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: width 1s 0.5s linear;
+
+      &:nth-of-type(1) {
+        width: 100%;
+        z-index: 2;
+      }
+      // transition: width 1s 2s linear;
+
+      // article {
+      //   width: 0%;
+      //   height: 100%;
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   z-index: 1;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   transition: width 1s 2s linear;
+      //   &.on {
+      //     width: 100%;
+      //     z-index: 2;
+      //     transition: width 1s 0.5s linear;
+      //   }
 
       span {
         font-size: 50px;
       }
 
       &:nth-of-type(1) {
-        z-index: 4;
         background: linear-gradient(
           lightcoral,
           rgb(240, 128, 148),
@@ -436,26 +460,21 @@ font-family: 'Raleway', sans-serif;
       }
 
       &:nth-of-type(2) {
-        z-index: 3;
         background: linear-gradient(lightgreen, rgb(144, 238, 114));
       }
 
       &:nth-of-type(3) {
-        z-index: 2;
         background: linear-gradient(lightpink, rgb(255, 182, 130));
       }
 
       &:nth-of-type(4) {
-        z-index: 1;
         background: linear-gradient(lightseagreen, rgb(32, 178, 130));
-        left: auto;
-        left: 100%;
       }
     }
   }
 
   .inner_contents {
-    width: 80%;
+    width: 70%;
     height: 100%;
     position: absolute;
     z-index: 5;
@@ -463,7 +482,7 @@ font-family: 'Raleway', sans-serif;
 
     .slide_pagination {
       display: flex;
-      margin: 100px 0;
+      margin: 100px 0 50px;
 
       li {
         width: 80px;
@@ -478,6 +497,12 @@ font-family: 'Raleway', sans-serif;
           &::after {
             width: 100%;
             opacity: 1;
+            transition: width 0.2s linear;
+          }
+        }
+
+        &.play a {
+          &::after {
             transition: width 5s linear;
           }
         }
@@ -520,12 +545,13 @@ font-family: 'Raleway', sans-serif;
     .inner_slide {
       margin-left: 50px;
       position: relative;
+      background: red;
 
       > article {
         position: absolute;
         transform: translateX(50px);
         opacity: 0;
-        transition: 1s;
+        transition: 0.3s;
 
         > p {
           font: 50px/1.5 "EB Garamond", serif;

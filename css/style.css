@@ -2137,39 +2137,38 @@ fieldset {
     height: 100%;
     position: relative; }
     #main_visual .slide_bg article {
-      width: 100%;
+      width: 0%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      transition: width 1s 0.5s linear; }
+      #main_visual .slide_bg article:nth-of-type(1) {
+        width: 100%;
+        z-index: 2; }
       #main_visual .slide_bg article span {
         font-size: 50px; }
       #main_visual .slide_bg article:nth-of-type(1) {
-        z-index: 4;
         background: linear-gradient(lightcoral, #f08094, #f0801c); }
       #main_visual .slide_bg article:nth-of-type(2) {
-        z-index: 3;
         background: linear-gradient(lightgreen, #90ee72); }
       #main_visual .slide_bg article:nth-of-type(3) {
-        z-index: 2;
         background: linear-gradient(lightpink, #ffb682); }
       #main_visual .slide_bg article:nth-of-type(4) {
-        z-index: 1;
-        background: linear-gradient(lightseagreen, #20b282);
-        left: auto;
-        left: 100%; }
+        background: linear-gradient(lightseagreen, #20b282); }
   #main_visual .inner_contents {
-    width: 80%;
+    width: 70%;
     height: 100%;
     position: absolute;
     z-index: 5;
     border: 1px solid #000; }
     #main_visual .inner_contents .slide_pagination {
       display: flex;
-      margin: 100px 0; }
+      margin: 100px 0 50px; }
       #main_visual .inner_contents .slide_pagination li {
         width: 80px;
         height: 50px; }
@@ -2180,7 +2179,9 @@ fieldset {
           #main_visual .inner_contents .slide_pagination li.on a::after {
             width: 100%;
             opacity: 1;
-            transition: width 5s linear; }
+            transition: width 0.2s linear; }
+        #main_visual .inner_contents .slide_pagination li.play a::after {
+          transition: width 5s linear; }
         #main_visual .inner_contents .slide_pagination li a {
           font: 14px/1 "Quicksand", sans-serif;
           color: #fff;
@@ -2210,12 +2211,13 @@ fieldset {
             background: #fff; }
     #main_visual .inner_contents .inner_slide {
       margin-left: 50px;
-      position: relative; }
+      position: relative;
+      background: red; }
       #main_visual .inner_contents .inner_slide > article {
         position: absolute;
         transform: translateX(50px);
         opacity: 0;
-        transition: 1s; }
+        transition: 0.3s; }
         #main_visual .inner_contents .inner_slide > article > p {
           font: 50px/1.5 "EB Garamond", serif;
           color: #fff; }
