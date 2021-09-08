@@ -1,4 +1,4 @@
-/* @@@  skipNavi @@@ */
+/* ---  skipNavi --- */
 var skip_a = $("#skipNavi a");
 
 skip_a.on("focusin", function () {
@@ -12,9 +12,9 @@ skip_a.on("focusout", function () {
   });
 });
 
-/* @@@ skipNavi end @@@ */
+/* --- skipNavi end --- */
 
-/* @@@ GNB @@@ */
+/* --- GNB --- */
 var $header = $("#header");
 var $header_upper = $header.find(".header_upper");
 var $gnb = $header_upper.find("#gnb");
@@ -103,9 +103,9 @@ $depth2_tit.each(function (index, items) {
   )
 });
 
-/* @@@ GNB end @@@ */
+/* --- GNB end --- */
 
-/* @@@ main_visual @@@ */
+/* --- main_visual --- */
 
 var $main_visual = $("#main_visual");
 var $slide_bg = $main_visual.find(".slide_bg");
@@ -116,9 +116,9 @@ var $btn_arrows = $inner_contents.find(".btn_arrows");
 
 
 
-/* @@@ main_visual end @@@ */
+/* --- main_visual end --- */
 
-/* @@@ TAB @@@ */
+/* --- TAB --- */
 
 $("#community .inner .btn a").on("click", function (e) {
   e.preventDefault();
@@ -140,9 +140,9 @@ $("#community .inner .btn a").on("click", function (e) {
   }
 });
 
-/* @@@ TAB end @@@ */
+/* --- TAB end --- */
 
-/* @@@ FAQ @@@ */
+/* --- FAQ --- */
 /*
 1. dt를 클릭했을 때 해당 dd를 보여줌
 2. 해당하지 않는 dd는 숨김처리
@@ -203,10 +203,10 @@ function activation(self) {
     });
   }
 }
-/* @@@ FAQ end @@@ */
+/* --- FAQ end --- */
 
 
-/* @@@ join @@@ */
+/* --- join --- */
 
 $("input[type=submit").on("click", function (e) {
   if (!isId("userid", 5)) e.preventDefault();
@@ -326,4 +326,4 @@ function isSelect(name) {
   }
 }
 
-/* @@@ join end @@@ */
+/* --- join end --- */
