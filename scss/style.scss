@@ -440,11 +440,11 @@ font-family: 'Raleway', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: width 0s 0.5s linear;
+      transition: width 0s 0.8s linear;
       &.on {
         width: 100%;
         z-index: 2;
-        transition: width 0.5s linear;
+        transition: width 0.5s 0.3s linear;
       }
 
       span {
