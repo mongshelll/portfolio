@@ -2342,25 +2342,25 @@ fieldset {
       transition-delay: 0.2s; }
       #box_content1.on .inner .pic_box div:nth-of-type(1):hover {
         transform: translateY(10%) scale(1.05);
-        transition: 0.5s; }
+        transition-delay: 0s; }
     #box_content1.on .inner .pic_box div:nth-of-type(2) {
       transform: translateY(-10%);
       transition-delay: 0.4s; }
       #box_content1.on .inner .pic_box div:nth-of-type(2):hover {
         transform: translateY(-10%) scale(1.05);
-        transition: 0.5s; }
+        transition-delay: 0s; }
     #box_content1.on .inner .pic_box div:nth-of-type(3) {
       transform: translateY(10%);
       transition-delay: 0.6s; }
       #box_content1.on .inner .pic_box div:nth-of-type(3):hover {
         transform: translateY(10%) scale(1.05);
-        transition: 0.5s; }
+        transition-delay: 0s; }
     #box_content1.on .inner .pic_box div:nth-of-type(4) {
       transform: translateY(-10%);
       transition-delay: 0.8s; }
       #box_content1.on .inner .pic_box div:nth-of-type(4):hover {
         transform: translateY(-10%) scale(1.05);
-        transition: 0.5s; }
+        transition-delay: 0s; }
   #box_content1.on .inner .box_con1_tit {
     opacity: 1;
     transform: translateY(0%);
@@ -2376,7 +2376,6 @@ fieldset {
         width: 220px;
         height: 400px;
         position: relative;
-        background: #000;
         background-repeat: no-repeat;
         background-size: cover;
         filter: sepia(0.7);
