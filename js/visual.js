@@ -1,3 +1,107 @@
+/* --- scroll move ---  */
+
+const $navi_btns = $("#navi li");
+const $main_boxs = $("section");
+let posArr = []; //0, 937. 1874, 2811, 3748, 4685, 5622
+const enable = false;
+const baseline = -200;
+
+
+//처음 로딩시 해당박스의 세로 위치값을 구하는 함수 호출
+setPos();
+
+// console.log(posArr);
+
+//브라우저 리사이즈시 다시 세로 위치값 갱신
+$(window).on("resize", setPos);
+
+//스크롤시 해당버튼 활성화
+$(window).on("scroll", function () {
+  var scroll = $(this).scrollTop();//내가 스크롤 한 거리
+  navi_activation(scroll);
+});
+
+//버튼 클릭시 해당박스 위치로 자동으로 이동
+$navi_btns.on("click", function (e) {
+  e.preventDefault();
+
+  var i = $(this).index();
+  moveScroll(i);
+});
+
+//마우스휠을 위, 아래로 움직였을 때
+$main_boxs.on("mousewheel", function (e) {
+  // console.log(e.originalEvent.deltaY);
+  //-100은 마우스휠을 올렸을 때
+  //100은 마우스휠을 내렸을 때
+  e.preventDefault();
+
+  if (e.originalEvent.deltaY < 0) { //마우스 휠을 올린다면
+    if ($(this).index != 0) {//첫번째 박스가 아니라면
+      var i = $(this).index() - 3; //visual 이전에 skipNavi, header, navi가 있음으로 3가지 제외
+      moveScroll(i - 1); // i - 1 은 해당박스 전에 있는 박스의 세로 위치값
+    }
+    //첫번째 박스에서는 올라갈 필요없음
+    //첫번째 박스 = 0
+    //마지막 박스 = 변동가능 -> $main_boxs.length 이용
+    //length = 7, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
+  } else {//마우스 휠을 내린다면
+    if ($(this).index != $main_boxs.length - 1) {
+      var i = $(this).index() - 3;
+      moveScroll(i + 1); // i + 1 은 해당박스 다음에 있는 박스의 세로 위치값
+    }
+  }
+});
+
+
+//버튼 클릭이나 박스 스크롤시 해당 버튼이나 박스의 순번을 인수로 받아서 배열에 담긴
+//해당 요소의 세로 위치값으로 이동하는 함수 정의
+function moveScroll(index) {
+  $("html, body").stop().animate({ //.stop() 큐가 쌓이면 이전꺼 무시 마지막만 실행
+    scrollTop: posArr[index]
+  }, 500);
+}
+
+//현재 스크롤 위치값을 인수로 받아서 스크롤값과 박스의 위치를 비교해서 
+//해당하는 버튼만 활성화 하는 함수정의
+function navi_activation(scroll) {
+  for (var i = 0; i < $main_boxs.length; i++) {
+    if (scroll >= posArr[i] + baseline) { //baseline 추가해서 미리 적용하기
+      $navi_btns.children("a").removeClass("on");
+      $navi_btns.eq(i).children("a").addClass("on");
+      // $main_boxs.removeClass("on");
+      $main_boxs.eq(i).addClass("on");
+    }
+  }
+}
+
+//posArr 배열에 각 박스의 세로 위치값 저장 함수 정의
+function setPos() {
+  posArr = []; // 초기화값, 리사이즈시 해당 배열을 비워 새로운 값 4개만 받게 함 
+  for (var i = 0; i < $main_boxs.length; i++) {
+    posArr.push($main_boxs.eq(i).offset().top);
+  }
+  // console.log(posArr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- scroll move End ---  */
+
+/* ---  main visual --- */
+
+
 const menu = ["01", "02", "03", "04"];
 
 const swiper = new Swiper("#main_visual", {
@@ -18,7 +122,7 @@ const swiper = new Swiper("#main_visual", {
       return `<span class="${className}">${menu[index]}</span>`
     }
   },
-  speed: 400,
+  speed: 1000,
   simulateTouch: false, //drag false
   // grabCursor: true,
   effect: "creative",
@@ -43,7 +147,8 @@ next.addEventListener("click", activation);
 prev.addEventListener("click", activation);
 // window.addEventListener("mousewheel", activation);
 
-swiper.on("slideChangeTransitionEnd", activation); //swiper 애니메이션 후 작동
+swiper.on("slideChangeTransitionStart", activation); //swiper 애니메이션 시작시 작동
+// swiper.on("slideChangeTransitionEnd", activation); //swiper 애니메이션 후 작동
 
 for (let el of navi) {
   el.addEventListener("click", e => { //navi의 el(span)클릭시
@@ -51,7 +156,7 @@ for (let el of navi) {
     //활성화된 span
     const isOn = e.currentTarget.classList.contains("swiper-pagination-bullet-active");
     if (isOn) return;
-    swiper.on("slideChangeTransitionEnd", activation); //비활성화 span 클릭시 함수 시작
+    swiper.on("slideChangeTransitionStart", activation); //비활성화 span 클릭시 함수 시작
   })
 }
 
@@ -59,15 +164,10 @@ function activation() {
   let item = document.querySelector(".swiper-slide-active");
   let i = item.getAttribute("data-swiper-slide-index");
 
-  // console.log(i);
-  // setTimeout(function () {
-  //   for (let el of inner_slide) {
-  //     el.classList.remove("on");
-  //   }
-  //   inner_slide[i].classList.add("on");
-  // }, 100)
   for (let el of inner_slide) {
     el.classList.remove("on");
   }
   inner_slide[i].classList.add("on");
 }
+
+/* ---  main visual End--- */
