@@ -2470,12 +2470,143 @@ fieldset {
   height: 100vh;
   padding-top: 222px;
   box-sizing: border-box;
-  background: #eee; }
+  background: #eee;
+  overflow: hidden; }
   #slider_content .inner {
     width: 1180px;
     height: 500px;
     background: #ccc;
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center;
+    position: relative; }
+    #slider_content .inner h1 {
+      font: bold 30px/1 "Nanum Myeongjo"; }
+    #slider_content .inner .wrap {
+      height: 100%;
+      display: flex; }
+      #slider_content .inner .wrap .left {
+        width: 50%;
+        position: relative; }
+        #slider_content .inner .wrap .left .brand_bg {
+          width: 200%;
+          height: 50vh;
+          position: absolute;
+          top: 50px;
+          left: -80%; }
+          #slider_content .inner .wrap .left .brand_bg:nth-of-type(1) {
+            background: #757575; }
+          #slider_content .inner .wrap .left .brand_bg:nth-of-type(2) {
+            background: #757575; }
+          #slider_content .inner .wrap .left .brand_bg:nth-of-type(3) {
+            background: #757575; }
+          #slider_content .inner .wrap .left .brand_bg:nth-of-type(4) {
+            background: #757575; }
+          #slider_content .inner .wrap .left .brand_bg:nth-of-type(5) {
+            background: #757575; }
+        #slider_content .inner .wrap .left .brand_tit {
+          transform: translateY(200px); }
+          #slider_content .inner .wrap .left .brand_tit p {
+            font: 20px/1 "arial"; }
+        #slider_content .inner .wrap .left .btn_arrows {
+          position: absolute;
+          right: 10%;
+          bottom: 10%; }
+          #slider_content .inner .wrap .left .btn_arrows ul {
+            display: flex; }
+            #slider_content .inner .wrap .left .btn_arrows ul li {
+              display: flex;
+              width: 40px;
+              height: 40px; }
+              #slider_content .inner .wrap .left .btn_arrows ul li + li {
+                margin-left: 10px; }
+              #slider_content .inner .wrap .left .btn_arrows ul li a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                font-size: 20px;
+                color: #fff;
+                position: relative;
+                transition: 0.05s; }
+                #slider_content .inner .wrap .left .btn_arrows ul li a:hover {
+                  color: #fff; }
+                  #slider_content .inner .wrap .left .btn_arrows ul li a:hover span {
+                    opacity: 1; }
+                    #slider_content .inner .wrap .left .btn_arrows ul li a:hover span:nth-of-type(1) {
+                      width: 100%;
+                      height: 2px;
+                      transition-delay: 0.2s; }
+                    #slider_content .inner .wrap .left .btn_arrows ul li a:hover span:nth-of-type(2) {
+                      width: 2px;
+                      height: 100%;
+                      transition-delay: 0.1s; }
+                    #slider_content .inner .wrap .left .btn_arrows ul li a:hover span:nth-of-type(3) {
+                      width: 100%;
+                      height: 2px;
+                      transition-delay: 0s; }
+                    #slider_content .inner .wrap .left .btn_arrows ul li a:hover span:nth-of-type(4) {
+                      width: 2px;
+                      height: 100%;
+                      transition-delay: 0.3s; }
+                #slider_content .inner .wrap .left .btn_arrows ul li a span {
+                  position: absolute;
+                  display: block;
+                  background: #fff;
+                  transition: 0.15s;
+                  transition-timing-function: linear;
+                  opacity: 0; }
+                  #slider_content .inner .wrap .left .btn_arrows ul li a span:nth-of-type(1) {
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 2px;
+                    transition-delay: 0.1s; }
+                  #slider_content .inner .wrap .left .btn_arrows ul li a span:nth-of-type(2) {
+                    bottom: 0;
+                    right: 0;
+                    width: 2px;
+                    height: 0;
+                    transition-delay: 0.2s; }
+                  #slider_content .inner .wrap .left .btn_arrows ul li a span:nth-of-type(3) {
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    transition-delay: 0.3s; }
+                  #slider_content .inner .wrap .left .btn_arrows ul li a span:nth-of-type(4) {
+                    top: 0;
+                    left: 0;
+                    width: 2px;
+                    height: 0;
+                    transition-delay: 0s; }
+      #slider_content .inner .wrap .right {
+        width: 50%;
+        position: relative; }
+        #slider_content .inner .wrap .right .slide_wrap {
+          width: 500%;
+          height: calc(50vh + 100px);
+          position: relative;
+          overflow: hidden; }
+          #slider_content .inner .wrap .right .slide_wrap .brand_slide {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            top: 100px;
+            left: 0; }
+            #slider_content .inner .wrap .right .slide_wrap .brand_slide article {
+              height: 50vh;
+              margin-right: 40px; }
+              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="1"] {
+                background: #494949; }
+              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="2"] {
+                background: #000; }
+              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="3"] {
+                background: #000; }
+              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="4"] {
+                background: #000; }
+              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="5"] {
+                background: #000; }
 
 #box_content2 {
   width: 100%;

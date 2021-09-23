@@ -132,12 +132,18 @@ const navi = document.querySelectorAll(".swiper-pagination span");
 
 next.addEventListener("click", activation);
 prev.addEventListener("click", activation);
-// window.addEventListener("mousewheel", activation);
+// window.addEventListener("mousewheel", activation); //마우스 휠 적용
 
 swiper.on("slideChangeTransitionStart", activation); //swiper 애니메이션 시작시 작동
 // swiper.on("slideChangeTransitionEnd", activation); //swiper 애니메이션 후 작동
 
 for (let el of navi) {
+  // el.addEventListener("click", function (e) {
+  //   const isOn = e.currentTarget.classList.contains("swiper-pagination-bullet-active");
+  //   if (isOn) return;
+  //   swiper.on("slideChangeTransitionStart", activation);
+  // });
+
   el.addEventListener("click", e => { //navi의 el(span)클릭시
     //특정클래스 확인하기 classList.contains()
     //활성화된 span
@@ -172,3 +178,82 @@ setTimeout(function () {
 }, 2000)
 
 /* --- visual2 hover 조정 End --- */
+
+
+/* --- slider_content --- */
+
+const $left = $(".wrap .left");
+const $brand_bg = $left.find(".brand_bg");
+const $brand_bg_boxs = $brand_bg.find("article");
+const $right = $(".wrap .right");
+const $brand_slide = $right.find(".brand_slide");
+const $brand_slide_boxs = $brand_slide.find("article");
+let len = $brand_slide_boxs.length;
+
+const $brand_prev = $left.find(".btn_prev");
+const $brand_next = $left.find(".btn_next");
+
+init($brand_slide);
+
+function init(el) {
+  el.css({
+    marginLeft: -100 / len + "%"
+  });
+  el.find("article").css({
+    width: 100 / len + "%"
+  });
+  el.find("article").last().prependTo(el);
+}
+
+function brand_prev() {
+
+}
+function brand_next() {
+
+}
+
+// $next.on("click", function(e){
+//   e.preventDefault();
+
+//   if(enableClick){
+//     next($slider);
+//     next($slider2);
+//     next($txtSlider);
+//     enableClick = false;
+//   }
+// })
+
+// $prev.on("click", function(e){
+//   e.preventDefault();
+//   if(enableClick){
+//     prev($slider);
+//     prev($slider2);
+//     prev($txtSlider);
+//     enableClick = false;
+//   }
+// })
+
+// function next(el){
+//   el.animate({
+//     marginLeft: "-200%"
+//   },speed, function(){
+//     el.css({
+//       marginLeft: "-100%"
+//     });
+//     el.find("li").first().appendTo(el);
+//     enableClick = true;
+//   });
+// }
+
+// function prev(el){
+//   el.animate({
+//     marginLeft: "0%"
+//   }, speed, function(){
+//     el.css({
+//       marginLeft: "-100%"
+//     });
+//     el.find("li").last().prependTo(el);
+//     enableClick = true;
+//   });
+// }
+/* --- slider_content End --- */
