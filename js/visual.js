@@ -69,7 +69,7 @@ function navi_activation(scroll) {
     if (scroll >= posArr[i] + baseline) { //baseline 추가해서 미리 적용하기
       $navi_btns.children("a").removeClass("on");
       $navi_btns.eq(i).children("a").addClass("on");
-      // $main_boxs.removeClass("on");
+      $main_boxs.removeClass("on");
       $main_boxs.eq(i).addClass("on");
     }
   }
@@ -192,7 +192,8 @@ let len = $brand_slide_boxs.length;
 
 const $brand_prev = $left.find(".btn_prev");
 const $brand_next = $left.find(".btn_next");
-
+const tits = document.querySelectorAll(".brand_inner_con li");
+const bgs = document.querySelectorAll(".brand_bg article");
 init($brand_slide);
 
 
@@ -200,6 +201,8 @@ $brand_prev.on("click", function (e) {
   e.preventDefault();
   if (enableClick) {
     brand_prev($brand_slide);
+    brand_activation(bgs);
+    brand_activation(tits);
     enableClick = false;
   };
 });
@@ -208,6 +211,8 @@ $brand_next.on("click", function (e) {
   e.preventDefault();
   if (enableClick) {
     brand_next($brand_slide);
+    brand_activation(bgs);
+    brand_activation(tits);
     enableClick = false;
   };
 });
@@ -224,9 +229,11 @@ function init(el) {
 };
 
 function brand_prev(el) {
+  el.children().removeClass("on");
+  el.children().eq(0).addClass("on");
   el.stop().animate({
     marginLeft: "0%"
-  }, 500, function () {
+  }, 300, function () {
     el.css({
       marginLeft: "-20%"
     });
@@ -236,9 +243,11 @@ function brand_prev(el) {
 };
 
 function brand_next(el) {
+  el.children().removeClass("on");
+  el.children().eq(2).addClass("on");
   el.stop().animate({
     marginLeft: "-40%"
-  }, 500, function () {
+  }, 300, function () {
     el.css({
       marginLeft: "-20%"
     });
@@ -246,5 +255,15 @@ function brand_next(el) {
     enableClick = true;
   });
 };
+
+function brand_activation(acti) {
+  let acti_terget = document.querySelector(".brand_slide article.on");
+  let i = acti_terget.getAttribute("data-index");
+
+  for (let el of acti) {
+    el.classList.remove("on");
+  }
+  acti[i].classList.add("on");
+}
 
 /* --- slider_content End --- */
