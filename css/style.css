@@ -2593,20 +2593,23 @@ fieldset {
             display: flex;
             position: absolute;
             top: 100px;
-            left: 0; }
+            left: 0;
+            margin-left: -20%; }
             #slider_content .inner .wrap .right .slide_wrap .brand_slide article {
+              width: 20%;
               height: 50vh;
-              margin-right: 40px; }
+              margin-right: 40px;
+              transition: 0.5s; }
               #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="1"] {
                 background: #494949; }
               #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="2"] {
                 background: #000; }
               #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="3"] {
-                background: #000; }
+                background: red; }
               #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="4"] {
-                background: #000; }
+                background: yellowgreen; }
               #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="5"] {
-                background: #000; }
+                background: cadetblue; }
 
 #box_content2 {
   width: 100%;

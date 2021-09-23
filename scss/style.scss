@@ -1025,12 +1025,13 @@ font-family: 'Raleway', sans-serif;
             position: absolute;
             top: 100px;
             left: 0;
-            // margin-left: calc(-100% / 5);
+            margin-left: -20%;
 
             article {
-              // width: 25%;
+              width: 20%;
               height: 50vh;
               margin-right: 40px;
+              transition: 0.5s;
 
               &[data-index="1"] {
                 background: #494949;
@@ -1039,13 +1040,13 @@ font-family: 'Raleway', sans-serif;
                 background: #000;
               }
               &[data-index="3"] {
-                background: #000;
+                background: red;
               }
               &[data-index="4"] {
-                background: #000;
+                background: yellowgreen;
               }
               &[data-index="5"] {
-                background: #000;
+                background: cadetblue;
               }
             }
           }
