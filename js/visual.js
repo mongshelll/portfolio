@@ -169,13 +169,20 @@ function activation() {
 
 const $box_content1 = $("#box_content1");
 const $pic_boxs = $box_content1.find(".pic_box div");
+hasOn($box_content1);
+function hasOn(self) {
+  const isOn = $(self).hasClass("on");
+
+  if (!isOn) {
+    setTimeout(function () {
+      $pic_boxs.css({
+        transitionDelay: "0s"
+      })
+    }, 2000);
+  }
+}
 
 
-setTimeout(function () {
-  $pic_boxs.css({
-    transitionDelay: "0s"
-  })
-}, 2000)
 
 /* --- visual2 hover 조정 End --- */
 
