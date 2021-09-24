@@ -2621,31 +2621,31 @@ fieldset {
         left: 200px;
         opacity: 0;
         transition: 1s 0.8s; }
-        #slider_content .inner .wrap .right .slide_wrap {
+        #slider_content .inner .wrap .right .brand_slide_wrap {
           width: 500%;
           height: calc(50vh + 100px);
           position: relative;
           overflow: hidden; }
-          #slider_content .inner .wrap .right .slide_wrap .brand_slide {
+          #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide {
             width: 100%;
             display: flex;
             position: absolute;
             top: 100px;
             left: 0;
             margin-left: -20%; }
-            #slider_content .inner .wrap .right .slide_wrap .brand_slide article {
+            #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article {
               width: 20%;
               height: 50vh;
               margin-right: 40px; }
-              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="0"] {
+              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="0"] {
                 background: #006978; }
-              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="1"] {
+              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="1"] {
                 background: #000000; }
-              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="2"] {
+              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="2"] {
                 background: #bb4d00; }
-              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="3"] {
+              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="3"] {
                 background: #7c8500; }
-              #slider_content .inner .wrap .right .slide_wrap .brand_slide article[data-index="4"] {
+              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="4"] {
                 background: #00600f; }
 
 #box_content2 {
@@ -2710,7 +2710,13 @@ fieldset {
     width: 1180px;
     height: 200px;
     background: #ccc;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: flex; }
+    #box_content3 .inner .box_con3_tit {
+      width: 30%; }
+    #box_content3 .inner .box_con3_slide_wrap {
+      width: 70%;
+      display: flex; }
 
 #footer {
   width: 100%;

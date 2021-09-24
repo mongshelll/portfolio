@@ -1066,7 +1066,7 @@ font-family: 'Raleway', sans-serif;
         opacity: 0;
         transition: 1s 0.8s;
 
-        .slide_wrap {
+        .brand_slide_wrap {
           width: 500%;
           height: calc(50vh + 100px);
           position: relative;
@@ -1176,7 +1176,6 @@ font-family: 'Raleway', sans-serif;
 
 #box_content3 {
   width: 100%;
-  // height: 100vh;
   height: calc(100vh - 354px);
   padding-top: 222px;
   box-sizing: border-box;
@@ -1187,6 +1186,16 @@ font-family: 'Raleway', sans-serif;
     height: 200px;
     background: #ccc;
     margin: 0 auto;
+    display: flex;
+
+    .box_con3_tit {
+      width: 30%;
+    }
+
+    .box_con3_slide_wrap {
+      width: 70%;
+      display: flex;
+    }
   }
 }
 
