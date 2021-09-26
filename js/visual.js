@@ -125,7 +125,7 @@ const swiper = new Swiper("#main_visual", {
 });
 
 //Dom Caching
-const inner_slide = document.querySelectorAll(".inner_slide article");
+const inner_tit_slide = document.querySelectorAll(".inner_tit_slide article");
 const prev = document.querySelector(".swiper-button-prev");
 const next = document.querySelector(".swiper-button-next");
 const navi = document.querySelectorAll(".swiper-pagination span");
@@ -157,10 +157,10 @@ function activation() {
   let item = document.querySelector(".swiper-slide-active");
   let i = item.getAttribute("data-swiper-slide-index");
 
-  for (let el of inner_slide) {
+  for (let el of inner_tit_slide) {
     el.classList.remove("on");
   }
-  inner_slide[i].classList.add("on");
+  inner_tit_slide[i].classList.add("on");
 }
 
 /* ---  main visual End--- */

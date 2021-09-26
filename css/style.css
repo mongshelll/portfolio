@@ -2128,7 +2128,7 @@ fieldset {
 #navi {
   position: fixed;
   top: 50%;
-  right: 50px;
+  right: 30px;
   transform: translateY(-50%);
   z-index: 1; }
   #navi li {
@@ -2163,11 +2163,14 @@ fieldset {
       align-items: center;
       position: absolute;
       position: relative;
-      top: 0; }
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
       #main_visual .swiper-wrapper .swiper-slide span {
         font-size: 50px; }
       #main_visual .swiper-wrapper .swiper-slide:nth-of-type(5), #main_visual .swiper-wrapper .swiper-slide:nth-of-type(9) {
-        background: linear-gradient(lightcoral, #f08094, #f0801c); }
+        background-image: url("../img/main_slider_pic01.jpg"); }
       #main_visual .swiper-wrapper .swiper-slide:nth-of-type(6) {
         background: linear-gradient(green, #90ee54); }
       #main_visual .swiper-wrapper .swiper-slide:nth-of-type(7) {
@@ -2220,7 +2223,7 @@ fieldset {
         left: 0;
         bottom: 0;
         background: #fff; }
-  #main_visual .inner_slide {
+  #main_visual .inner_tit_slide {
     width: 70%;
     margin-left: 50px;
     position: absolute;
@@ -2228,20 +2231,40 @@ fieldset {
     left: 15%;
     z-index: 1;
     pointer-events: none; }
-    #main_visual .inner_slide > article {
+    #main_visual .inner_tit_slide > article {
       position: absolute;
       top: 0;
       left: 0;
       transform: translateX(50px);
       opacity: 0;
       transition: 0.3s; }
-      #main_visual .inner_slide > article.on {
+      #main_visual .inner_tit_slide > article.on {
         transform: translateX(0);
         opacity: 1;
         transition: 1s; }
-      #main_visual .inner_slide > article > p {
+      #main_visual .inner_tit_slide > article > p {
         font: 50px/1.5 "EB Garamond", serif;
         color: #fff; }
+  #main_visual .inner_pic_slide {
+    width: 40vw;
+    height: 35vw;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-30%);
+    z-index: 1; }
+    #main_visual .inner_pic_slide .slide_pic {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0; }
+      #main_visual .inner_pic_slide .slide_pic:nth-of-type(1) {
+        background-image: url("../img/main_slider_pic01_s.jpg"); }
+      #main_visual .inner_pic_slide .slide_pic.on {
+        opacity: 1; }
   #main_visual .swiper-button-prev {
     width: 40px;
     height: 40px;
