@@ -190,8 +190,6 @@ function hasOn(self) {
   }
 }
 
-
-
 /* --- visual2 hover 조정 End --- */
 
 
@@ -209,8 +207,12 @@ const $brand_prev = $left.find(".btn_prev");
 const $brand_next = $left.find(".btn_next");
 const tits = document.querySelectorAll(".brand_inner_con li");
 const bgs = document.querySelectorAll(".brand_bg article");
-init($brand_slide);
+const page_count = document.querySelector(".current_num");
+console.log(page_count);
 
+init($brand_slide);
+// console.log(page_count.innerText);
+// page_count.innerHTML = "2";
 
 $brand_prev.on("click", function (e) {
   e.preventDefault();
@@ -218,6 +220,7 @@ $brand_prev.on("click", function (e) {
     brand_prev($brand_slide);
     brand_activation(bgs);
     brand_activation(tits);
+    count_num()
     enableClick = false;
   };
 });
@@ -228,10 +231,10 @@ $brand_next.on("click", function (e) {
     brand_next($brand_slide);
     brand_activation(bgs);
     brand_activation(tits);
+    count_num()
     enableClick = false;
   };
 });
-
 
 function init(el) {
   el.css({
@@ -280,5 +283,13 @@ function brand_activation(acti) {
   }
   acti[i].classList.add("on");
 }
+
+function count_num() {
+  let acti_terget = document.querySelector(".brand_slide article.on");
+  let acti_index = acti_terget.getAttribute("data-index");
+
+  page_count.innerHTML = ++acti_index;
+}
+
 
 /* --- slider_content End --- */
