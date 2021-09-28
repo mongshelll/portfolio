@@ -126,6 +126,7 @@ const swiper = new Swiper("#main_visual", {
 
 //Dom Caching
 const inner_tit_slide = document.querySelectorAll(".inner_tit_slide article");
+const inner_pic_slide = document.querySelectorAll(".inner_pic_slide article");
 const prev = document.querySelector(".swiper-button-prev");
 const next = document.querySelector(".swiper-button-next");
 const navi = document.querySelectorAll(".swiper-pagination span");
@@ -161,7 +162,14 @@ function activation() {
     el.classList.remove("on");
   }
   inner_tit_slide[i].classList.add("on");
+
+  for (let el of inner_pic_slide) {
+    el.classList.remove("on");
+  }
+  inner_pic_slide[i].classList.add("on");
 }
+
+
 
 /* ---  main visual End--- */
 
