@@ -2392,7 +2392,7 @@ fieldset {
   #box_content1.on .inner .box_con1_tit {
     opacity: 1;
     transform: translateY(0%);
-    transition: 1s 1s; }
+    transition: 1s 0.8s; }
   #box_content1 .inner {
     width: 1180px;
     margin: 0 auto; }
@@ -2527,7 +2527,7 @@ fieldset {
         position: relative;
         left: -200px;
         opacity: 0;
-        transition: 1s 0.5s; }
+        transition: 1s 0.3s; }
         #slider_content .inner .wrap .left .brand_bg {
           width: 200%;
           height: 50vh;
@@ -2656,7 +2656,7 @@ fieldset {
         position: relative;
         left: 200px;
         opacity: 0;
-        transition: 1s 0.8s; }
+        transition: 1s 0.5s; }
         #slider_content .inner .wrap .right .brand_slide_wrap {
           width: 500%;
           height: calc(50vh + 100px);
