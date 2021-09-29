@@ -2738,7 +2738,7 @@ fieldset {
 
 #box_content3 {
   width: 100%;
-  height: calc(100vh - 354px);
+  height: calc(100vh - 363px);
   padding-top: 222px;
   box-sizing: border-box;
   background: #eee; }
@@ -2747,13 +2747,22 @@ fieldset {
     height: 200px;
     background: #ccc;
     margin: 0 auto;
-    display: flex; }
+    display: flex;
+    position: relative;
+    overflow: hidden; }
     #box_content3 .inner .box_con3_tit {
       width: 30%; }
     #box_content3 .inner .box_con3_slide_wrap {
-      width: 70%;
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 30%;
       display: flex;
-      overflow: hidden; }
+      justify-content: space-between; }
+      #box_content3 .inner .box_con3_slide_wrap .con3_slide {
+        width: 10%;
+        background: red; }
 
 #footer {
   width: 100%;
@@ -2805,7 +2814,7 @@ fieldset {
             #footer .inner .upper .fam_site_sns .sns li:hover a {
               color: #222; }
   #footer .lower p {
-    font: 12px/1.3 "Nanum Gothic";
+    font: 12px/1.5 "Nanum Gothic";
     color: #232323;
     margin-bottom: 10px; }
 

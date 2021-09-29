@@ -2,9 +2,11 @@
 
 const $navi_btns = $("#navi li");
 const $main_boxs = $("section");
-let posArr = []; //0, 937. 1874, 2811, 3748, 4685, 5622
+const $footer = $("footer");
+const $main_last_box = $main_boxs.last();
+let posArr = []; //0, 937, 1874, 2811, 3748, 4685, 5622
 const enable = false;
-const baseline = -200;
+const baseline = -300;
 
 
 //처음 로딩시 해당박스의 세로 위치값을 구하는 함수 호출
@@ -31,11 +33,10 @@ $navi_btns.on("click", function (e) {
 
 //마우스휠을 위, 아래로 움직였을 때
 $main_boxs.on("mousewheel", function (e) {
-  // console.log(e.originalEvent.deltaY);
+  console.log(e.originalEvent.deltaY);
   //-100은 마우스휠을 올렸을 때
   //100은 마우스휠을 내렸을 때
   e.preventDefault();
-
   if (e.originalEvent.deltaY < 0) { //마우스 휠을 올린다면
     if ($(this).index != 0) {//첫번째 박스가 아니라면
       var i = $(this).index() - 3; //visual 이전에 skipNavi, header, navi가 있음으로 3가지 제외
@@ -53,6 +54,21 @@ $main_boxs.on("mousewheel", function (e) {
   }
 });
 
+//마지막 section에서 mousewheel 내렸을때 동작하기
+$main_last_box.on("mousewheel", function (e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY > 0) {
+    moveScroll($main_boxs.length - 1);
+  }
+});
+
+//footer에서 mousewheel 올렸을때 동작하기
+$footer.on("mousewheel", function (e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY < 0) {
+    moveScroll($main_boxs.length - 2);
+  }
+});
 
 //버튼 클릭이나 박스 스크롤시 해당 버튼이나 박스의 순번을 인수로 받아서 배열에 담긴
 //해당 요소의 세로 위치값으로 이동하는 함수 정의
@@ -169,8 +185,6 @@ function activation() {
   inner_pic_slide[i].classList.add("on");
 }
 
-
-
 /* ---  main visual End--- */
 
 /* --- visual2 hover 조정 --- */
@@ -208,11 +222,8 @@ const $brand_next = $left.find(".btn_next");
 const tits = document.querySelectorAll(".brand_inner_con li");
 const bgs = document.querySelectorAll(".brand_bg article");
 const page_count = document.querySelector(".current_num");
-console.log(page_count);
 
 init($brand_slide);
-// console.log(page_count.innerText);
-// page_count.innerHTML = "2";
 
 $brand_prev.on("click", function (e) {
   e.preventDefault();
