@@ -33,7 +33,7 @@ $navi_btns.on("click", function (e) {
 
 //마우스휠을 위, 아래로 움직였을 때
 $main_boxs.on("mousewheel", function (e) {
-  console.log(e.originalEvent.deltaY);
+  // console.log(e.originalEvent.deltaY);
   //-100은 마우스휠을 올렸을 때
   //100은 마우스휠을 내렸을 때
   e.preventDefault();
@@ -304,3 +304,32 @@ function count_num() {
 
 
 /* --- slider_content End --- */
+
+
+
+
+/* --- box_content3 slide --- */
+const $box_con3_slide_wrap = $(".box_con3_slide_wrap");
+const $box_con3_pagination = $(".box_con3_pagination");
+const $box_con3_btns = $box_con3_pagination.find("li");
+
+
+$box_con3_btns.on("click", function (e) {
+  e.preventDefault();
+
+  let i = $(this).index();
+  move_slide(i);
+
+  for (let el of $box_con3_btns) {
+    el.classList.remove("on");
+  }
+  $box_con3_btns[i].classList.add("on");
+});
+
+function move_slide(index) {
+  $box_con3_slide_wrap.css({
+    transform: "translateX(" + -25 * index + "%)"
+  });
+}
+
+/* --- box_content3 slide End --- */
