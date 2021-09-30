@@ -2877,28 +2877,20 @@ fieldset {
     #main_visual .inner {
       width: 100%; }
 
-  #box_content1 {
-    padding: 100px 0; }
-    #box_content1 .inner {
-      width: 100%; }
+  #box_content1 .inner {
+    width: 100%; }
 
-  #txt_content {
-    padding: 100px 0; }
-    #txt_content .inner {
-      width: 100%; }
+  #txt_content .inner {
+    width: 100%; }
 
   #banner .inner {
     padding-left: 20px; }
 
-  #box_content3 {
-    padding: 100px 0; }
-    #box_content3 .inner {
-      width: 100%; }
+  #box_content3 .inner {
+    width: 100%; }
 
-  #slider_content {
-    padding: 100px 0; }
-    #slider_content .inner {
-      width: 100%; }
+  #slider_content .inner {
+    width: 100%; }
 
   #footer {
     padding: 50px 40px;
