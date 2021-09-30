@@ -2399,7 +2399,7 @@ fieldset {
     #box_content1 .inner .pic_box {
       margin-bottom: 100px;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-around; }
       #box_content1 .inner .pic_box div {
         width: 220px;
         height: 400px;
