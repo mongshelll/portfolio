@@ -2684,17 +2684,6 @@ fieldset {
               #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="4"] {
                 background: #00600f; }
 
-#box_content2 {
-  width: 100%;
-  height: 100vh;
-  padding-top: 222px;
-  box-sizing: border-box; }
-  #box_content2 .inner {
-    width: 1180px;
-    height: 500px;
-    background: #ccc;
-    margin: 0 auto; }
-
 #banner {
   width: 100%;
   height: 100vh; }
@@ -2754,7 +2743,10 @@ fieldset {
       padding: 20px;
       box-sizing: border-box; }
     #box_content3 .inner .box_con3_slide {
-      width: 1900px;
+      width: 160%;
+      height: 200px;
+      padding: 5px;
+      box-sizing: border-box;
       position: absolute;
       top: 0;
       left: 20%;
@@ -2765,10 +2757,11 @@ fieldset {
         justify-content: space-evenly;
         transition: 1s; }
         #box_content3 .inner .box_con3_slide .box_con3_slide_wrap .con3_slide {
-          width: 220px;
-          background: red;
+          width: 11%;
+          background: #fff;
           padding: 20px;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); }
           #box_content3 .inner .box_con3_slide .box_con3_slide_wrap .con3_slide p {
             font: 18px/1.2 "arial";
             color: #222; }
@@ -2778,18 +2771,18 @@ fieldset {
       width: 70px;
       position: absolute;
       right: 200px;
-      bottom: 100px;
+      bottom: 3vw;
       display: flex;
       justify-content: space-between; }
       #box_content3 .inner .box_con3_pagination li a {
         display: block;
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         background: #ccc;
         border-radius: 50%;
         position: relative; }
       #box_content3 .inner .box_con3_pagination li.on a {
-        background: #000; }
+        background: #222; }
         #box_content3 .inner .box_con3_pagination li.on a::after {
           display: block;
           content: "";
@@ -2800,7 +2793,7 @@ fieldset {
           left: 50%;
           transform: translate(-50%, -50%);
           background: transparent;
-          border: 1px solid #000;
+          border: 1px solid #222;
           border-radius: 50%; }
 
 #footer {
@@ -2887,11 +2880,6 @@ fieldset {
   #box_content1 {
     padding: 100px 0; }
     #box_content1 .inner {
-      width: 100%; }
-
-  #box_content2 {
-    padding: 100px 0; }
-    #box_content2 .inner {
       width: 100%; }
 
   #txt_content {

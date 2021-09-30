@@ -4,7 +4,7 @@ const $navi_btns = $("#navi li");
 const $main_boxs = $("section");
 const $footer = $("footer");
 const $main_last_box = $main_boxs.last();
-let posArr = []; //0, 937, 1874, 2811, 3748, 4685, 5622
+let posArr = [];
 const enable = false;
 const baseline = -300;
 
@@ -45,7 +45,7 @@ $main_boxs.on("mousewheel", function (e) {
     //첫번째 박스에서는 올라갈 필요없음
     //첫번째 박스 = 0
     //마지막 박스 = 변동가능 -> $main_boxs.length 이용
-    //length = 7, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
+    //length = 6, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
   } else {//마우스 휠을 내린다면
     if ($(this).index != $main_boxs.length - 1) {
       var i = $(this).index() - 3;
