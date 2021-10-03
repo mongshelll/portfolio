@@ -85,7 +85,7 @@ function navi_activation(scroll) {
     if (scroll >= posArr[i] + baseline) { //baseline 추가해서 미리 적용하기
       $navi_btns.children("a").removeClass("on");
       $navi_btns.eq(i).children("a").addClass("on");
-      $main_boxs.removeClass("on");
+      // $main_boxs.removeClass("on");
       $main_boxs.eq(i).addClass("on");
     }
   }
@@ -186,25 +186,6 @@ function activation() {
 }
 
 /* ---  main visual End--- */
-
-/* --- visual2 hover 조정 --- */
-
-const $box_content1 = $("#box_content1");
-const $pic_boxs = $box_content1.find(".pic_box div");
-hasOn($box_content1);
-function hasOn(self) {
-  const isOn = $(self).hasClass("on");
-
-  if (!isOn) {
-    setTimeout(function () {
-      $pic_boxs.css({
-        transitionDelay: "0s"
-      })
-    }, 2000);
-  }
-}
-
-/* --- visual2 hover 조정 End --- */
 
 
 /* --- slider_content --- */

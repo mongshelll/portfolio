@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Quicksand&family=Raleway&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Open+Sans&family=Quicksand&family=Raleway&family=Roboto&display=swap");
 /*
 font-family: 'EB Garamond', serif;
 font-family: 'Nanum Gothic', sans-serif;
@@ -7,6 +7,7 @@ font-family: 'Nanum Myeongjo', serif;
 font-family: 'Quicksand', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans', sans-serif;
 */
 * {
   margin: 0;
@@ -2348,51 +2349,143 @@ fieldset {
   #main_visual .swiper-button-prev::after,
   #main_visual .swiper-button-next::after {
     transform: scale(0.5); }
+  #main_visual .scroll_info {
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    z-index: 1; }
+    #main_visual .scroll_info .scroll_info_txt {
+      display: block;
+      font: 14px/1 "Open Sans";
+      color: #fff;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px; }
+    #main_visual .scroll_info .line {
+      display: block;
+      width: 1px;
+      height: 86px;
+      position: relative;
+      margin-bottom: 30px; }
+      #main_visual .scroll_info .line::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: -4px;
+        bottom: 0;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(45deg); }
+      #main_visual .scroll_info .line::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        animation: scroll_move 2s infinite; }
+
+#txt_content {
+  width: 100%;
+  height: 100vh;
+  padding-top: 222px;
+  box-sizing: border-box; }
+  #txt_content.on .inner {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 1s 0.2s; }
+    #txt_content.on .inner h1 {
+      transform: translateY(0);
+      opacity: 1;
+      transition: 1s 0.6s; }
+    #txt_content.on .inner p {
+      transform: translateY(0);
+      opacity: 1;
+      transition: 1s 0.8s; }
+  #txt_content .inner {
+    width: 1180px;
+    padding: 8vw;
+    box-sizing: border-box;
+    background: #f6f6f6;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.9); }
+    #txt_content .inner > h1 {
+      font: bold 30px/1 "Nanum Myeongjo";
+      color: #222;
+      margin-bottom: 5vw;
+      transform: translateY(20px);
+      opacity: 0; }
+    #txt_content .inner > p {
+      font: 20px/1.8 "Open Sans";
+      color: #222;
+      transform: translateY(20px);
+      opacity: 0; }
+    #txt_content .inner div {
+      width: 50px;
+      height: 50px;
+      position: absolute; }
+      #txt_content .inner div:nth-of-type(1) {
+        top: 0;
+        left: 0;
+        border-top: 4px solid orange;
+        border-left: 4px solid orange; }
+      #txt_content .inner div:nth-of-type(2) {
+        top: 0;
+        right: 0;
+        border-top: 4px solid orange;
+        border-right: 4px solid orange; }
+      #txt_content .inner div:nth-of-type(3) {
+        left: 0;
+        bottom: 0;
+        border-left: 4px solid orange;
+        border-bottom: 4px solid orange; }
+      #txt_content .inner div:nth-of-type(4) {
+        right: 0;
+        bottom: 0;
+        border-right: 4px solid orange;
+        border-bottom: 4px solid orange; }
 
 #box_content1 {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
   box-sizing: border-box;
-  background: #ccc; }
+  background: #f6f6f6; }
   #box_content1.on .inner .pic_box div {
-    opacity: 1;
-    transition: 1s; }
+    opacity: 1; }
     #box_content1.on .inner .pic_box div:hover {
       filter: sepia(0);
-      transition: 0.5s; }
+      transform: scale(1.05); }
       #box_content1.on .inner .pic_box div:hover::after {
-        color: #fff;
+        color: #aaa;
         opacity: 0.8;
-        transition: 0.5s; }
+        transition: color 0.5s; }
     #box_content1.on .inner .pic_box div:nth-of-type(1) {
-      transform: translateY(10%);
-      transition-delay: 0.2s; }
-      #box_content1.on .inner .pic_box div:nth-of-type(1):hover {
-        transform: translateY(10%) scale(1.05);
-        transition-delay: 0s; }
+      top: 50px;
+      transition: top 1s 0.2s, opacity 1s 0.2s, transform 0.5s; }
     #box_content1.on .inner .pic_box div:nth-of-type(2) {
-      transform: translateY(-10%);
-      transition-delay: 0.4s; }
-      #box_content1.on .inner .pic_box div:nth-of-type(2):hover {
-        transform: translateY(-10%) scale(1.05);
-        transition-delay: 0s; }
+      top: 0px;
+      transition: top 1s 0.4s, opacity 1s 0.4s, transform 0.5s; }
     #box_content1.on .inner .pic_box div:nth-of-type(3) {
-      transform: translateY(10%);
-      transition-delay: 0.6s; }
-      #box_content1.on .inner .pic_box div:nth-of-type(3):hover {
-        transform: translateY(10%) scale(1.05);
-        transition-delay: 0s; }
+      top: 50px;
+      transition: top 1s 0.6s, opacity 1s 0.6s, transform 0.5s; }
     #box_content1.on .inner .pic_box div:nth-of-type(4) {
-      transform: translateY(-10%);
-      transition-delay: 0.8s; }
-      #box_content1.on .inner .pic_box div:nth-of-type(4):hover {
-        transform: translateY(-10%) scale(1.05);
-        transition-delay: 0s; }
+      top: 0px;
+      transition: top 1s 0.8s, opacity 1s 0.8s, transform 0.5s; }
   #box_content1.on .inner .box_con1_tit {
     opacity: 1;
     transform: translateY(0%);
-    transition: 1s 0.8s; }
+    transition: 1s 1s; }
   #box_content1 .inner {
     width: 1180px;
     margin: 0 auto; }
@@ -2407,12 +2500,11 @@ fieldset {
         background-repeat: no-repeat;
         background-size: cover;
         filter: sepia(0.7);
-        opacity: 0;
-        transition: 1s; }
+        opacity: 0; }
         #box_content1 .inner .pic_box div:nth-of-type(1) {
           background-image: url(../img/boxCont_pic01.jpg);
           background-position: 36% 50%;
-          transform: translateY(30%); }
+          top: 100px; }
           #box_content1 .inner .pic_box div:nth-of-type(1)::after {
             content: "L";
             display: block;
@@ -2422,12 +2514,12 @@ fieldset {
             transform: translateX(-50%);
             font-weight: bold;
             font-size: 70px;
-            color: #333;
+            color: #222;
             opacity: 0.7; }
         #box_content1 .inner .pic_box div:nth-of-type(2) {
           background-image: url(../img/boxCont_pic02.jpg);
           background-position: 50% 50%;
-          transform: translateY(10%); }
+          top: 50px; }
           #box_content1 .inner .pic_box div:nth-of-type(2)::after {
             content: "O";
             display: block;
@@ -2437,12 +2529,12 @@ fieldset {
             transform: translateX(-50%);
             font-weight: bold;
             font-size: 70px;
-            color: #333;
+            color: #222;
             opacity: 0.7; }
         #box_content1 .inner .pic_box div:nth-of-type(3) {
           background-image: url(../img/boxCont_pic03.jpg);
           background-position: 50% 50%;
-          transform: translateY(30%); }
+          top: 100px; }
           #box_content1 .inner .pic_box div:nth-of-type(3)::after {
             content: "G";
             display: block;
@@ -2452,12 +2544,12 @@ fieldset {
             transform: translateX(-50%);
             font-weight: bold;
             font-size: 70px;
-            color: #333;
+            color: #222;
             opacity: 0.7; }
         #box_content1 .inner .pic_box div:nth-of-type(4) {
           background-image: url(../img/boxCont_pic04.jpg);
           background-position: 55% 50%;
-          transform: translateY(10%); }
+          top: 50px; }
           #box_content1 .inner .pic_box div:nth-of-type(4)::after {
             content: "O";
             display: block;
@@ -2467,7 +2559,7 @@ fieldset {
             transform: translateX(-50%);
             font-weight: bold;
             font-size: 70px;
-            color: #333;
+            color: #222;
             opacity: 0.7; }
     #box_content1 .inner .box_con1_tit {
       display: flex;
@@ -2493,11 +2585,42 @@ fieldset {
         width: 50vw;
         font: 18px/1.2 "Quicksand"; }
 
+#banner {
+  width: 100%;
+  height: 100vh; }
+  #banner #wrap {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    top: 222px;
+    background: url("../img/banner.jpg") no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; }
+    #banner #wrap::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5); }
+    #banner #wrap .inner {
+      width: 1180px;
+      position: relative;
+      padding-top: 40px;
+      box-sizing: border-box; }
+      #banner #wrap .inner h1 {
+        font: bold 34px/1.5 "arial";
+        color: #fff; }
+
 #slider_content {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
   box-sizing: border-box;
+  background: #f6f6f6;
   overflow: hidden;
   transition: 1s; }
   #slider_content.on .inner h1 {
@@ -2684,55 +2807,22 @@ fieldset {
               #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="4"] {
                 background: #00600f; }
 
-#banner {
-  width: 100%;
-  height: 100vh; }
-  #banner #wrap {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    top: 222px;
-    background: url("../img/banner.jpg") no-repeat fixed;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; }
-    #banner #wrap::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.5); }
-    #banner #wrap .inner {
-      width: 1180px;
-      position: relative;
-      padding-top: 40px;
-      box-sizing: border-box; }
-      #banner #wrap .inner h1 {
-        font: bold 34px/1.5 "arial";
-        color: #fff; }
-
-#txt_content {
-  width: 100%;
-  height: 100vh;
-  padding-top: 222px;
-  box-sizing: border-box; }
-  #txt_content .inner {
-    width: 1180px;
-    height: 500px;
-    background: #ccc;
-    margin: 0 auto; }
-    #txt_content .inner h1 {
-      font: bold 30px/1 "Nanum Myeongjo"; }
-
 #box_content3 {
   width: 100%;
   height: calc(100vh - 363px);
   padding-top: 222px;
-  box-sizing: border-box;
-  background: #eee; }
+  box-sizing: border-box; }
+  #box_content3.on .inner .box_con3_tit {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: 1s 0.2s; }
+  #box_content3.on .inner .box_con3_slide {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: 1s 0.4s; }
+  #box_content3.on .inner .box_con3_pagination {
+    opacity: 1;
+    transition: 1s 0.8s; }
   #box_content3 .inner {
     width: 1180px;
     height: 100%;
@@ -2743,7 +2833,9 @@ fieldset {
     #box_content3 .inner .box_con3_tit {
       width: 20%;
       padding: 20px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      transform: translateX(-20%);
+      opacity: 0; }
     #box_content3 .inner .box_con3_slide {
       width: 160%;
       height: 200px;
@@ -2752,12 +2844,14 @@ fieldset {
       position: absolute;
       top: 0;
       left: 20%;
-      overflow: hidden; }
+      overflow: hidden;
+      transform: translateY(-20%);
+      opacity: 0; }
       #box_content3 .inner .box_con3_slide .box_con3_slide_wrap {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
-        transition: 1s; }
+        transition: 0.5s ease-in; }
         #box_content3 .inner .box_con3_slide .box_con3_slide_wrap .con3_slide {
           width: 11%;
           background: #fff;
@@ -2772,10 +2866,12 @@ fieldset {
     #box_content3 .inner .box_con3_pagination {
       width: 70px;
       position: absolute;
-      right: 200px;
-      bottom: 3vw;
+      right: 20vw;
+      bottom: 5vw;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      opacity: 0;
+      transition: opacity 1s 0.6s; }
       #box_content3 .inner .box_con3_pagination li a {
         display: block;
         width: 12px;
@@ -2852,6 +2948,16 @@ fieldset {
     color: #232323;
     margin-bottom: 10px; }
 
+@keyframes scroll_move {
+  0% {
+    top: 0%;
+    height: 0%; }
+  50% {
+    top: 0%;
+    height: 100%; }
+  100% {
+    top: 100%;
+    height: 0%; } }
 @media screen and (max-width: 1179px) {
   #header .header_upper > .inner {
     width: 100%;
