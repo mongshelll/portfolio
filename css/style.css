@@ -2403,7 +2403,7 @@ fieldset {
   #about_brand.on .inner {
     opacity: 1;
     transform: scale(1);
-    transition: transform 1s 0.2s; }
+    transition: 1s 0.2s; }
     #about_brand.on .inner h1 {
       transform: translateY(0);
       opacity: 1;

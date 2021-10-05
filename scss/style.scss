@@ -752,7 +752,7 @@ font-family: "Open Sans", sans-serif;
   &.on .inner {
     opacity: 1;
     transform: scale(1);
-    transition: transform 1s 0.2s;
+    transition: 1s 0.2s;
 
     h1 {
       transform: translateY(0);
