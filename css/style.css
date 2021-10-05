@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Open+Sans&family=Quicksand&family=Raleway&family=Roboto&display=swap");
 /*
-font-family: 'EB Garamond', serif;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Nanum Myeongjo', serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Open Sans', sans-serif;
+font-family: "EB Garamond", serif;
+font-family: "Nanum Gothic", sans-serif;
+font-family: "Nanum Myeongjo", serif;
+font-family: "Quicksand", sans-serif;
+font-family: 'Roboto", sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Open Sans", sans-serif;
 */
 * {
   margin: 0;
@@ -618,6 +618,10 @@ fieldset {
         background-image: url(../img/member05.jpg); }
       #department .inner .division .wrap .con:nth-of-type(6) .pic {
         background-image: url(../img/member06.jpg); }
+      #department .inner .division .wrap .con:nth-of-type(7) .pic {
+        background-image: url(../img/member07.jpg); }
+      #department .inner .division .wrap .con:nth-of-type(8) .pic {
+        background-image: url(../img/member08.jpg); }
   #department .inner .division_deco2 {
     width: 100%; }
     #department .inner .division_deco2::after {
@@ -2064,7 +2068,7 @@ fieldset {
             #header .header_upper > .inner .util .lang li:last-of-type::after {
               display: none; }
             #header .header_upper > .inner .util .lang li a {
-              font: 12px/1 "arial";
+              font: 12px/1 "Open Sans";
               color: #888; }
             #header .header_upper > .inner .util .lang li.on a {
               color: #222; }
@@ -2158,14 +2162,11 @@ fieldset {
     #main_visual > .swiper-wrapper > .swiper-slide {
       width: 100%;
       height: 100%;
-      display: flex;
       justify-content: center;
       align-items: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; }
-      #main_visual > .swiper-wrapper > .swiper-slide span {
-        font-size: 50px; }
       #main_visual > .swiper-wrapper > .swiper-slide[data-swiper-slide-index="0"] {
         background-image: url("../img/main_slider_pic01.jpg"); }
       #main_visual > .swiper-wrapper > .swiper-slide[data-swiper-slide-index="1"] {
@@ -2222,9 +2223,10 @@ fieldset {
         background: #fff; }
   #main_visual .inner_tit_slide {
     width: 70%;
+    height: 300px;
     margin-left: 50px;
     position: absolute;
-    top: 300px;
+    top: 350px;
     left: 15%;
     z-index: 1;
     pointer-events: none; }
@@ -2240,7 +2242,7 @@ fieldset {
         opacity: 1;
         transition: 1s; }
       #main_visual .inner_tit_slide > article > p {
-        font: 50px/1.5 "EB Garamond", serif;
+        font: 45px/1.5 "EB Garamond", serif;
         color: #fff; }
   #main_visual .inner_pic_slide {
     width: 40vw;
@@ -2386,26 +2388,26 @@ fieldset {
         top: 0;
         left: 0;
         background: #fff;
-        animation: scroll_move 2s infinite; }
+        animation: scroll_move 2s ease-in-out infinite; }
 
-#txt_content {
+#about_brand {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
   box-sizing: border-box; }
-  #txt_content.on .inner {
+  #about_brand.on .inner {
     opacity: 1;
     transform: scale(1);
     transition: transform 1s 0.2s; }
-    #txt_content.on .inner h1 {
+    #about_brand.on .inner h1 {
       transform: translateY(0);
       opacity: 1;
       transition: 1s 0.6s; }
-    #txt_content.on .inner p {
+    #about_brand.on .inner p {
       transform: translateY(0);
       opacity: 1;
       transition: 1s 0.8s; }
-  #txt_content .inner {
+  #about_brand .inner {
     width: 1180px;
     padding: 8vw;
     box-sizing: border-box;
@@ -2419,81 +2421,81 @@ fieldset {
     text-align: center;
     opacity: 0;
     transform: scale(0.9); }
-    #txt_content .inner > h1 {
+    #about_brand .inner > h1 {
       font: bold 30px/1 "Nanum Myeongjo";
       color: #222;
       margin-bottom: 5vw;
       transform: translateY(20px);
       opacity: 0; }
-    #txt_content .inner > p {
+    #about_brand .inner > p {
       font: 20px/1.8 "Open Sans";
       color: #222;
       transform: translateY(20px);
       opacity: 0; }
-    #txt_content .inner div {
+    #about_brand .inner div {
       width: 50px;
       height: 50px;
       position: absolute; }
-      #txt_content .inner div:nth-of-type(1) {
+      #about_brand .inner div:nth-of-type(1) {
         top: 0;
         left: 0;
         border-top: 4px solid orange;
         border-left: 4px solid orange; }
-      #txt_content .inner div:nth-of-type(2) {
+      #about_brand .inner div:nth-of-type(2) {
         top: 0;
         right: 0;
         border-top: 4px solid orange;
         border-right: 4px solid orange; }
-      #txt_content .inner div:nth-of-type(3) {
+      #about_brand .inner div:nth-of-type(3) {
         left: 0;
         bottom: 0;
         border-left: 4px solid orange;
         border-bottom: 4px solid orange; }
-      #txt_content .inner div:nth-of-type(4) {
+      #about_brand .inner div:nth-of-type(4) {
         right: 0;
         bottom: 0;
         border-right: 4px solid orange;
         border-bottom: 4px solid orange; }
 
-#box_content1 {
+#about {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
   box-sizing: border-box;
   background: #f6f6f6; }
-  #box_content1.on .inner .pic_box div {
+  #about.on .inner .about_pic_box div {
     opacity: 1; }
-    #box_content1.on .inner .pic_box div:hover {
+    #about.on .inner .about_pic_box div:hover {
       filter: sepia(0);
       transform: scale(1.05); }
-      #box_content1.on .inner .pic_box div:hover::after {
+      #about.on .inner .about_pic_box div:hover::after {
         color: #aaa;
         opacity: 0.8;
         transition: color 0.5s; }
-    #box_content1.on .inner .pic_box div:nth-of-type(1) {
+    #about.on .inner .about_pic_box div:nth-of-type(1) {
       top: 50px;
       transition: top 1s 0.2s, opacity 1s 0.2s, transform 0.5s; }
-    #box_content1.on .inner .pic_box div:nth-of-type(2) {
+    #about.on .inner .about_pic_box div:nth-of-type(2) {
       top: 0px;
       transition: top 1s 0.4s, opacity 1s 0.4s, transform 0.5s; }
-    #box_content1.on .inner .pic_box div:nth-of-type(3) {
+    #about.on .inner .about_pic_box div:nth-of-type(3) {
       top: 50px;
       transition: top 1s 0.6s, opacity 1s 0.6s, transform 0.5s; }
-    #box_content1.on .inner .pic_box div:nth-of-type(4) {
+    #about.on .inner .about_pic_box div:nth-of-type(4) {
       top: 0px;
       transition: top 1s 0.8s, opacity 1s 0.8s, transform 0.5s; }
-  #box_content1.on .inner .box_con1_tit {
+  #about.on .inner .about_tit {
     opacity: 1;
     transform: translateY(0%);
     transition: 1s 1s; }
-  #box_content1 .inner {
+  #about .inner {
     width: 1180px;
     margin: 0 auto; }
-    #box_content1 .inner .pic_box {
+    #about .inner .about_pic_box {
       margin-bottom: 100px;
       display: flex;
       justify-content: space-around; }
-      #box_content1 .inner .pic_box div {
+      #about .inner .about_pic_box div {
         width: 220px;
         height: 400px;
         position: relative;
@@ -2501,11 +2503,11 @@ fieldset {
         background-size: cover;
         filter: sepia(0.7);
         opacity: 0; }
-        #box_content1 .inner .pic_box div:nth-of-type(1) {
+        #about .inner .about_pic_box div:nth-of-type(1) {
           background-image: url(../img/boxCont_pic01.jpg);
           background-position: 36% 50%;
           top: 100px; }
-          #box_content1 .inner .pic_box div:nth-of-type(1)::after {
+          #about .inner .about_pic_box div:nth-of-type(1)::after {
             content: "L";
             display: block;
             position: absolute;
@@ -2516,11 +2518,11 @@ fieldset {
             font-size: 70px;
             color: #222;
             opacity: 0.7; }
-        #box_content1 .inner .pic_box div:nth-of-type(2) {
+        #about .inner .about_pic_box div:nth-of-type(2) {
           background-image: url(../img/boxCont_pic02.jpg);
           background-position: 50% 50%;
           top: 50px; }
-          #box_content1 .inner .pic_box div:nth-of-type(2)::after {
+          #about .inner .about_pic_box div:nth-of-type(2)::after {
             content: "O";
             display: block;
             position: absolute;
@@ -2531,11 +2533,11 @@ fieldset {
             font-size: 70px;
             color: #222;
             opacity: 0.7; }
-        #box_content1 .inner .pic_box div:nth-of-type(3) {
+        #about .inner .about_pic_box div:nth-of-type(3) {
           background-image: url(../img/boxCont_pic03.jpg);
           background-position: 50% 50%;
           top: 100px; }
-          #box_content1 .inner .pic_box div:nth-of-type(3)::after {
+          #about .inner .about_pic_box div:nth-of-type(3)::after {
             content: "G";
             display: block;
             position: absolute;
@@ -2546,11 +2548,11 @@ fieldset {
             font-size: 70px;
             color: #222;
             opacity: 0.7; }
-        #box_content1 .inner .pic_box div:nth-of-type(4) {
+        #about .inner .about_pic_box div:nth-of-type(4) {
           background-image: url(../img/boxCont_pic04.jpg);
           background-position: 55% 50%;
           top: 50px; }
-          #box_content1 .inner .pic_box div:nth-of-type(4)::after {
+          #about .inner .about_pic_box div:nth-of-type(4)::after {
             content: "O";
             display: block;
             position: absolute;
@@ -2561,7 +2563,7 @@ fieldset {
             font-size: 70px;
             color: #222;
             opacity: 0.7; }
-    #box_content1 .inner .box_con1_tit {
+    #about .inner .about_tit {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -2569,19 +2571,11 @@ fieldset {
       text-align: center;
       opacity: 0;
       transform: translateY(30%);
-      transition: 0.5s;
-      /*
-      font-family: 'EB Garamond', serif;
-      font-family: 'Nanum Gothic', sans-serif;
-      font-family: 'Nanum Myeongjo', serif;
-      font-family: 'Quicksand', sans-serif;
-      font-family: 'Roboto', sans-serif;
-      font-family: 'Raleway', sans-serif;
-      */ }
-      #box_content1 .inner .box_con1_tit h1 {
+      transition: 0.5s; }
+      #about .inner .about_tit h1 {
         margin-bottom: 10px;
-        font: bold 30px/1 "Nanum Myeongjo"; }
-      #box_content1 .inner .box_con1_tit p {
+        font: 32px/1 "EB Garamond"; }
+      #about .inner .about_tit p {
         width: 50vw;
         font: 18px/1.2 "Quicksand"; }
 
@@ -2612,10 +2606,10 @@ fieldset {
       padding-top: 40px;
       box-sizing: border-box; }
       #banner #wrap .inner h1 {
-        font: bold 34px/1.5 "arial";
+        font: bold 34px/1.5 "Open Sans";
         color: #fff; }
 
-#slider_content {
+#event_pg {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
@@ -2623,97 +2617,98 @@ fieldset {
   background: #f6f6f6;
   overflow: hidden;
   transition: 1s; }
-  #slider_content.on .inner h1 {
+  #event_pg.on .inner h1 {
     transform: translateY(0px);
     opacity: 1; }
-  #slider_content.on .inner .wrap .left {
+  #event_pg.on .inner .wrap .left {
     left: 0px;
     opacity: 1; }
-  #slider_content.on .inner .wrap .right {
+  #event_pg.on .inner .wrap .right {
     left: 0px;
     opacity: 1; }
-  #slider_content .inner {
+  #event_pg .inner {
     width: 1180px;
     margin: 0 auto;
     text-align: center;
     position: relative; }
-    #slider_content .inner h1 {
-      font: bold 30px/1 "Nanum Myeongjo";
+    #event_pg .inner h1 {
+      font: 60px/1 "EB Garamond";
       opacity: 0;
+      letter-spacing: 2px;
       transform: translateY(20px);
       transition: 1s; }
-    #slider_content .inner .wrap {
+    #event_pg .inner .wrap {
       height: 100%;
       display: flex; }
-      #slider_content .inner .wrap .left {
+      #event_pg .inner .wrap .left {
         width: 50%;
         position: relative;
         left: -200px;
         opacity: 0;
         transition: 1s 0.3s; }
-        #slider_content .inner .wrap .left .brand_bg {
+        #event_pg .inner .wrap .left .event_bg {
           width: 200%;
           height: 50vh;
           position: absolute;
           top: 50px;
           left: -80%; }
-          #slider_content .inner .wrap .left .brand_bg article {
+          #event_pg .inner .wrap .left .event_bg article {
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
             display: none; }
-            #slider_content .inner .wrap .left .brand_bg article.on {
+            #event_pg .inner .wrap .left .event_bg article.on {
               display: block; }
-            #slider_content .inner .wrap .left .brand_bg article:nth-of-type(1) {
+            #event_pg .inner .wrap .left .event_bg article:nth-of-type(1) {
               background: #0097a7; }
-            #slider_content .inner .wrap .left .brand_bg article:nth-of-type(2) {
+            #event_pg .inner .wrap .left .event_bg article:nth-of-type(2) {
               background: #212121; }
-            #slider_content .inner .wrap .left .brand_bg article:nth-of-type(3) {
+            #event_pg .inner .wrap .left .event_bg article:nth-of-type(3) {
               background: #f57c00; }
-            #slider_content .inner .wrap .left .brand_bg article:nth-of-type(4) {
+            #event_pg .inner .wrap .left .event_bg article:nth-of-type(4) {
               background: #afb42b; }
-            #slider_content .inner .wrap .left .brand_bg article:nth-of-type(5) {
+            #event_pg .inner .wrap .left .event_bg article:nth-of-type(5) {
               background: #388e3c; }
-        #slider_content .inner .wrap .left .brand_tit {
+        #event_pg .inner .wrap .left .event_tit {
           margin-top: 180px;
           position: relative; }
-          #slider_content .inner .wrap .left .brand_tit .brand_inner_con li {
+          #event_pg .inner .wrap .left .event_tit .event_inner_con li {
             margin-left: 50px;
             text-align: left;
             display: none; }
-            #slider_content .inner .wrap .left .brand_tit .brand_inner_con li p {
-              font: 40px/1.3 "arial";
+            #event_pg .inner .wrap .left .event_tit .event_inner_con li p {
+              font: 40px/1.3 "Open Sans";
               margin-bottom: 50px; }
-            #slider_content .inner .wrap .left .brand_tit .brand_inner_con li a {
-              font: bold 20px/1 "arial"; }
-            #slider_content .inner .wrap .left .brand_tit .brand_inner_con li.on {
+            #event_pg .inner .wrap .left .event_tit .event_inner_con li a {
+              font: bold 20px/1 "Open Sans"; }
+            #event_pg .inner .wrap .left .event_tit .event_inner_con li.on {
               display: block; }
-        #slider_content .inner .wrap .left .brand_navi {
+        #event_pg .inner .wrap .left .event_navi {
           display: flex;
           position: absolute;
           right: 10%;
           bottom: 15%;
           height: 40px;
           align-items: center; }
-          #slider_content .inner .wrap .left .brand_navi .count_txt {
+          #event_pg .inner .wrap .left .event_navi .count_txt {
             margin-right: 40px;
             font: bold 16px/1 "atial";
             color: #fff; }
-            #slider_content .inner .wrap .left .brand_navi .count_txt span {
+            #event_pg .inner .wrap .left .event_navi .count_txt span {
               opacity: 0.5; }
-              #slider_content .inner .wrap .left .brand_navi .count_txt span.current_num {
+              #event_pg .inner .wrap .left .event_navi .count_txt span.current_num {
                 opacity: 1; }
-          #slider_content .inner .wrap .left .brand_navi .btn_arrows ul {
+          #event_pg .inner .wrap .left .event_navi .btn_arrows ul {
             display: flex; }
-            #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li {
+            #event_pg .inner .wrap .left .event_navi .btn_arrows ul li {
               display: flex;
               width: 40px;
               height: 40px; }
-              #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li + li {
+              #event_pg .inner .wrap .left .event_navi .btn_arrows ul li + li {
                 margin-left: 10px; }
-              #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a {
+              #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -2723,122 +2718,127 @@ fieldset {
                 color: #fff;
                 position: relative;
                 transition: 0.05s; }
-                #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a:hover {
+                #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a:hover {
                   color: #fff; }
-                  #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a:hover span {
+                  #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a:hover span {
                     opacity: 1; }
-                    #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a:hover span:nth-of-type(1) {
+                    #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a:hover span:nth-of-type(1) {
                       width: 100%;
                       height: 2px;
                       transition-delay: 0.2s; }
-                    #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a:hover span:nth-of-type(2) {
+                    #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a:hover span:nth-of-type(2) {
                       width: 2px;
                       height: 100%;
                       transition-delay: 0.1s; }
-                    #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a:hover span:nth-of-type(3) {
+                    #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a:hover span:nth-of-type(3) {
                       width: 100%;
                       height: 2px;
                       transition-delay: 0s; }
-                    #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a:hover span:nth-of-type(4) {
+                    #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a:hover span:nth-of-type(4) {
                       width: 2px;
                       height: 100%;
                       transition-delay: 0.3s; }
-                #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a span {
+                #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a span {
                   position: absolute;
                   display: block;
                   background: #fff;
                   transition: 0.15s;
                   transition-timing-function: linear;
                   opacity: 0; }
-                  #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a span:nth-of-type(1) {
+                  #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a span:nth-of-type(1) {
                     top: 0;
                     right: 0;
                     width: 0;
                     height: 2px;
                     transition-delay: 0.1s; }
-                  #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a span:nth-of-type(2) {
+                  #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a span:nth-of-type(2) {
                     bottom: 0;
                     right: 0;
                     width: 2px;
                     height: 0;
                     transition-delay: 0.2s; }
-                  #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a span:nth-of-type(3) {
+                  #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a span:nth-of-type(3) {
                     left: 0;
                     bottom: 0;
                     width: 0;
                     height: 2px;
                     transition-delay: 0.3s; }
-                  #slider_content .inner .wrap .left .brand_navi .btn_arrows ul li a span:nth-of-type(4) {
+                  #event_pg .inner .wrap .left .event_navi .btn_arrows ul li a span:nth-of-type(4) {
                     top: 0;
                     left: 0;
                     width: 2px;
                     height: 0;
                     transition-delay: 0s; }
-      #slider_content .inner .wrap .right {
+      #event_pg .inner .wrap .right {
         width: 50%;
         position: relative;
         left: 200px;
         opacity: 0;
         transition: 1s 0.5s; }
-        #slider_content .inner .wrap .right .brand_slide_wrap {
+        #event_pg .inner .wrap .right .event_slide_wrap {
           width: 500%;
           height: calc(50vh + 100px);
           position: relative;
           overflow: hidden; }
-          #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide {
+          #event_pg .inner .wrap .right .event_slide_wrap .event_slide {
             width: 100%;
             display: flex;
             position: absolute;
             top: 100px;
             left: 0;
             margin-left: -20%; }
-            #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article {
+            #event_pg .inner .wrap .right .event_slide_wrap .event_slide article {
               width: 20%;
               height: 50vh;
               margin-right: 40px; }
-              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="0"] {
+              #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="0"] {
                 background: #006978; }
-              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="1"] {
+              #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="1"] {
                 background: #000000; }
-              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="2"] {
+              #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="2"] {
                 background: #bb4d00; }
-              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="3"] {
+              #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="3"] {
                 background: #7c8500; }
-              #slider_content .inner .wrap .right .brand_slide_wrap .brand_slide article[data-index="4"] {
+              #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="4"] {
                 background: #00600f; }
 
-#box_content3 {
+#teams {
   width: 100%;
   height: calc(100vh - 363px);
   padding-top: 222px;
   box-sizing: border-box; }
-  #box_content3.on .inner .box_con3_tit {
+  #teams.on .inner .teams_tit {
     transform: translateX(0%);
     opacity: 1;
     transition: 1s 0.2s; }
-  #box_content3.on .inner .box_con3_slide {
+  #teams.on .inner .teams_slide {
     transform: translateY(0%);
     opacity: 1;
     transition: 1s 0.4s; }
-  #box_content3.on .inner .box_con3_pagination {
+  #teams.on .inner .teams_pagination {
     opacity: 1;
     transition: 1s 0.8s; }
-  #box_content3 .inner {
+  #teams .inner {
     width: 1180px;
     height: 100%;
     margin: 0 auto;
     display: flex;
     position: relative;
     overflow: hidden; }
-    #box_content3 .inner .box_con3_tit {
+    #teams .inner .teams_tit {
       width: 20%;
       padding: 20px;
       box-sizing: border-box;
       transform: translateX(-20%);
       opacity: 0; }
-    #box_content3 .inner .box_con3_slide {
-      width: 160%;
-      height: 200px;
+      #teams .inner .teams_tit > h1 {
+        font: bold 24px/1.3 "Open Sans";
+        margin-bottom: 20px; }
+      #teams .inner .teams_tit > p {
+        font: 14px/1.4 "Open Sans";
+        color: #666; }
+    #teams .inner .teams_slide {
+      width: 185%;
       padding: 5px;
       box-sizing: border-box;
       position: absolute;
@@ -2847,41 +2847,79 @@ fieldset {
       overflow: hidden;
       transform: translateY(-20%);
       opacity: 0; }
-      #box_content3 .inner .box_con3_slide .box_con3_slide_wrap {
+      #teams .inner .teams_slide .teams_slide_wrap {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
         transition: 0.5s ease-in; }
-        #box_content3 .inner .box_con3_slide .box_con3_slide_wrap .con3_slide {
+        #teams .inner .teams_slide .teams_slide_wrap .team_con_slide {
           width: 11%;
           background: #fff;
-          padding: 20px;
+          padding: 40px 20px 20px;
           box-sizing: border-box;
-          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); }
-          #box_content3 .inner .box_con3_slide .box_con3_slide_wrap .con3_slide p {
-            font: 18px/1.2 "arial";
-            color: #222; }
-          #box_content3 .inner .box_con3_slide .box_con3_slide_wrap .con3_slide a {
-            font: 20px "arial"; }
-    #box_content3 .inner .box_con3_pagination {
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column; }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:hover {
+            background: #f6f6f6; }
+            #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:hover .profile .profile_pic {
+              filter: grayscale(0); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(1) .profile .profile_pic {
+            background-image: url(../img/member01.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(2) .profile .profile_pic {
+            background-image: url(../img/member02.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(3) .profile .profile_pic {
+            background-image: url(../img/member03.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(4) .profile .profile_pic {
+            background-image: url(../img/member04.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(5) .profile .profile_pic {
+            background-image: url(../img/member05.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(6) .profile .profile_pic {
+            background-image: url(../img/member06.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(7) .profile .profile_pic {
+            background-image: url(../img/member07.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide:nth-of-type(8) .profile .profile_pic {
+            background-image: url(../img/member08.jpg); }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide .profile_txt {
+            font: 14px/1.4 "Open Sans";
+            color: #666;
+            margin-bottom: 20px;
+            height: 60%; }
+          #teams .inner .teams_slide .teams_slide_wrap .team_con_slide .profile {
+            display: flex;
+            align-items: center; }
+            #teams .inner .teams_slide .teams_slide_wrap .team_con_slide .profile .profile_pic {
+              width: 40px;
+              height: 40px;
+              background-repeat: no-repeat;
+              background-position: 50% 10%;
+              background-size: cover;
+              border-radius: 50%;
+              filter: grayscale(1);
+              margin-right: 1vw; }
+            #teams .inner .teams_slide .teams_slide_wrap .team_con_slide .profile .profile_name {
+              width: 60%;
+              font: bold 14px/1.4 "Open Sans";
+              color: #222; }
+    #teams .inner .teams_pagination {
       width: 70px;
       position: absolute;
       right: 20vw;
-      bottom: 5vw;
+      bottom: 2vw;
       display: flex;
       justify-content: space-between;
       opacity: 0;
       transition: opacity 1s 0.6s; }
-      #box_content3 .inner .box_con3_pagination li a {
+      #teams .inner .teams_pagination li a {
         display: block;
         width: 12px;
         height: 12px;
         background: #ccc;
         border-radius: 50%;
         position: relative; }
-      #box_content3 .inner .box_con3_pagination li.on a {
+      #teams .inner .teams_pagination li.on a {
         background: #222; }
-        #box_content3 .inner .box_con3_pagination li.on a::after {
+        #teams .inner .teams_pagination li.on a::after {
           display: block;
           content: "";
           width: 20px;
@@ -2985,19 +3023,19 @@ fieldset {
     #main_visual .inner {
       width: 100%; }
 
-  #box_content1 .inner {
+  #about .inner {
     width: 100%; }
 
-  #txt_content .inner {
+  #about_brand .inner {
     width: 100%; }
 
   #banner .inner {
     padding-left: 20px; }
 
-  #box_content3 .inner {
+  #teams .inner {
     width: 100%; }
 
-  #slider_content .inner {
+  #event_pg .inner {
     width: 100%; }
 
   #footer {

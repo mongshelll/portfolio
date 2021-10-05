@@ -188,41 +188,41 @@ function activation() {
 /* ---  main visual End--- */
 
 
-/* --- slider_content --- */
+/* --- event_slider_content --- */
 
 const $left = $(".wrap .left");
-const $brand_bg = $left.find(".brand_bg");
-const $brand_bg_boxs = $brand_bg.find("article");
+const $event_bg = $left.find(".event_bg");
+const $event_bg_boxs = $event_bg.find("article");
 const $right = $(".wrap .right");
-const $brand_slide = $right.find(".brand_slide");
-const $brand_slide_boxs = $brand_slide.find("article");
-let len = $brand_slide_boxs.length;
+const $event_slide = $right.find(".event_slide");
+const $event_slide_boxs = $event_slide.find("article");
+let len = $event_slide_boxs.length;
 
-const $brand_prev = $left.find(".btn_prev");
-const $brand_next = $left.find(".btn_next");
-const tits = document.querySelectorAll(".brand_inner_con li");
-const bgs = document.querySelectorAll(".brand_bg article");
+const $event_prev = $left.find(".btn_prev");
+const $event_next = $left.find(".btn_next");
+const tits = document.querySelectorAll(".event_inner_con li");
+const bgs = document.querySelectorAll(".event_bg article");
 const page_count = document.querySelector(".current_num");
 
-init($brand_slide);
+init($event_slide);
 
-$brand_prev.on("click", function (e) {
+$event_prev.on("click", function (e) {
   e.preventDefault();
   if (enableClick) {
-    brand_prev($brand_slide);
-    brand_activation(bgs);
-    brand_activation(tits);
+    event_prev($event_slide);
+    event_activation(bgs);
+    event_activation(tits);
     count_num()
     enableClick = false;
   };
 });
 
-$brand_next.on("click", function (e) {
+$event_next.on("click", function (e) {
   e.preventDefault();
   if (enableClick) {
-    brand_next($brand_slide);
-    brand_activation(bgs);
-    brand_activation(tits);
+    event_next($event_slide);
+    event_activation(bgs);
+    event_activation(tits);
     count_num()
     enableClick = false;
   };
@@ -238,7 +238,7 @@ function init(el) {
   el.find("article").last().prependTo(el);
 };
 
-function brand_prev(el) {
+function event_prev(el) {
   el.children().removeClass("on");
   el.children().eq(0).addClass("on");
   el.stop().animate({
@@ -252,7 +252,7 @@ function brand_prev(el) {
   });
 };
 
-function brand_next(el) {
+function event_next(el) {
   el.children().removeClass("on");
   el.children().eq(2).addClass("on");
   el.stop().animate({
@@ -266,8 +266,8 @@ function brand_next(el) {
   });
 };
 
-function brand_activation(acti) {
-  let acti_terget = document.querySelector(".brand_slide article.on");
+function event_activation(acti) {
+  let acti_terget = document.querySelector(".event_slide article.on");
   let i = acti_terget.getAttribute("data-index");
 
   for (let el of acti) {
@@ -277,40 +277,40 @@ function brand_activation(acti) {
 }
 
 function count_num() {
-  let acti_terget = document.querySelector(".brand_slide article.on");
+  let acti_terget = document.querySelector(".event_slide article.on");
   let acti_index = acti_terget.getAttribute("data-index");
 
   page_count.innerHTML = ++acti_index;
 }
 
 
-/* --- slider_content End --- */
+/* --- event_slider_content End --- */
 
 
 
 
-/* --- box_content3 slide --- */
-const $box_con3_slide_wrap = $(".box_con3_slide_wrap");
-const $box_con3_pagination = $(".box_con3_pagination");
-const $box_con3_btns = $box_con3_pagination.find("li");
+/* --- teams slide --- */
+const $teams_slide_wrap = $(".teams_slide_wrap");
+const $teams_pagination = $(".teams_pagination");
+const $teams_btns = $teams_pagination.find("li");
 
 
-$box_con3_btns.on("click", function (e) {
+$teams_btns.on("click", function (e) {
   e.preventDefault();
 
   let i = $(this).index();
   move_slide(i);
 
-  for (let el of $box_con3_btns) {
+  for (let el of $teams_btns) {
     el.classList.remove("on");
   }
-  $box_con3_btns[i].classList.add("on");
+  $teams_btns[i].classList.add("on");
 });
 
 function move_slide(index) {
-  $box_con3_slide_wrap.css({
-    transform: "translateX(" + -25 * index + "%)"
+  $teams_slide_wrap.css({
+    transform: "translateX(" + -28 * index + "%)"
   });
 }
 
-/* --- box_content3 slide End --- */
+/* --- teams slide End --- */

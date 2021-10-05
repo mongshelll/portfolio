@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Open+Sans&family=Quicksand&family=Raleway&family=Roboto&display=swap");
 
 /*
-font-family: 'EB Garamond', serif;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Nanum Myeongjo', serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Open Sans', sans-serif;
+font-family: "EB Garamond", serif;
+font-family: "Nanum Gothic", sans-serif;
+font-family: "Nanum Myeongjo", serif;
+font-family: "Quicksand", sans-serif;
+font-family: 'Roboto", sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Open Sans", sans-serif;
 */
 
 @import "reset";
@@ -303,7 +303,7 @@ font-family: 'Open Sans', sans-serif;
             }
 
             a {
-              font: 12px/1 "arial";
+              font: 12px/1 "Open Sans";
               color: #888;
             }
 
@@ -441,15 +441,11 @@ font-family: 'Open Sans', sans-serif;
     > .swiper-slide {
       width: 100%;
       height: 100%;
-      display: flex;
       justify-content: center;
       align-items: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      span {
-        font-size: 50px;
-      }
 
       &[data-swiper-slide-index="0"] {
         background-image: url("../img/main_slider_pic01.jpg");
@@ -527,9 +523,10 @@ font-family: 'Open Sans', sans-serif;
 
   .inner_tit_slide {
     width: 70%;
+    height: 300px;
     margin-left: 50px;
     position: absolute;
-    top: 300px;
+    top: 350px;
     left: 15%;
     z-index: 1;
     pointer-events: none;
@@ -548,7 +545,7 @@ font-family: 'Open Sans', sans-serif;
         transition: 1s;
       }
       > p {
-        font: 50px/1.5 "EB Garamond", serif;
+        font: 45px/1.5 "EB Garamond", serif;
         color: #fff;
       }
     }
@@ -740,13 +737,13 @@ font-family: 'Open Sans', sans-serif;
         top: 0;
         left: 0;
         background: #fff;
-        animation: scroll_move 2s infinite;
+        animation: scroll_move 2s ease-in-out infinite;
       }
     }
   }
 }
 
-#txt_content {
+#about_brand {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
@@ -831,7 +828,7 @@ font-family: 'Open Sans', sans-serif;
   }
 }
 
-#box_content1 {
+#about {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
@@ -840,7 +837,7 @@ font-family: 'Open Sans', sans-serif;
 
   &.on {
     .inner {
-      .pic_box {
+      .about_pic_box {
         div {
           opacity: 1;
           // transition: top 1s, opacity 1s;
@@ -874,7 +871,7 @@ font-family: 'Open Sans', sans-serif;
           }
         }
       }
-      .box_con1_tit {
+      .about_tit {
         opacity: 1;
         transform: translateY(0%);
         transition: 1s 1s;
@@ -886,7 +883,7 @@ font-family: 'Open Sans', sans-serif;
     width: 1180px;
     margin: 0 auto;
 
-    .pic_box {
+    .about_pic_box {
       margin-bottom: 100px;
       display: flex;
       justify-content: space-around;
@@ -974,7 +971,7 @@ font-family: 'Open Sans', sans-serif;
         }
       }
     }
-    .box_con1_tit {
+    .about_tit {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -985,16 +982,8 @@ font-family: 'Open Sans', sans-serif;
       transition: 0.5s;
       h1 {
         margin-bottom: 10px;
-        font: bold 30px/1 "Nanum Myeongjo";
+        font: 32px/1 "EB Garamond";
       }
-      /*
-      font-family: 'EB Garamond', serif;
-      font-family: 'Nanum Gothic', sans-serif;
-      font-family: 'Nanum Myeongjo', serif;
-      font-family: 'Quicksand', sans-serif;
-      font-family: 'Roboto', sans-serif;
-      font-family: 'Raleway', sans-serif;
-      */
       p {
         width: 50vw;
         font: 18px/1.2 "Quicksand";
@@ -1034,14 +1023,14 @@ font-family: 'Open Sans', sans-serif;
       box-sizing: border-box;
 
       h1 {
-        font: bold 34px/1.5 "arial";
+        font: bold 34px/1.5 "Open Sans";
         color: #fff;
       }
     }
   }
 }
 
-#slider_content {
+#event_pg {
   width: 100%;
   height: 100vh;
   padding-top: 222px;
@@ -1077,8 +1066,9 @@ font-family: 'Open Sans', sans-serif;
     position: relative;
 
     h1 {
-      font: bold 30px/1 "Nanum Myeongjo";
+      font: 60px/1 "EB Garamond";
       opacity: 0;
+      letter-spacing: 2px;
       transform: translateY(20px);
       transition: 1s;
     }
@@ -1094,7 +1084,7 @@ font-family: 'Open Sans', sans-serif;
         opacity: 0;
         transition: 1s 0.3s;
 
-        .brand_bg {
+        .event_bg {
           width: 200%;
           height: 50vh;
           position: absolute;
@@ -1130,20 +1120,20 @@ font-family: 'Open Sans', sans-serif;
           }
         }
 
-        .brand_tit {
+        .event_tit {
           margin-top: 180px;
           position: relative;
-          .brand_inner_con {
+          .event_inner_con {
             li {
               margin-left: 50px;
               text-align: left;
               display: none;
               p {
-                font: 40px/1.3 "arial";
+                font: 40px/1.3 "Open Sans";
                 margin-bottom: 50px;
               }
               a {
-                font: bold 20px/1 "arial";
+                font: bold 20px/1 "Open Sans";
               }
               &.on {
                 display: block;
@@ -1151,7 +1141,7 @@ font-family: 'Open Sans', sans-serif;
             }
           }
         }
-        .brand_navi {
+        .event_navi {
           display: flex;
           position: absolute;
           right: 10%;
@@ -1278,13 +1268,13 @@ font-family: 'Open Sans', sans-serif;
         opacity: 0;
         transition: 1s 0.5s;
 
-        .brand_slide_wrap {
+        .event_slide_wrap {
           width: 500%;
           height: calc(50vh + 100px);
           position: relative;
           overflow: hidden;
 
-          .brand_slide {
+          .event_slide {
             width: 100%;
             display: flex;
             position: absolute;
@@ -1320,26 +1310,26 @@ font-family: 'Open Sans', sans-serif;
   }
 }
 
-#box_content3 {
+#teams {
   width: 100%;
   height: calc(100vh - 363px);
   padding-top: 222px;
   box-sizing: border-box;
 
   &.on .inner {
-    .box_con3_tit {
+    .teams_tit {
       transform: translateX(0%);
       opacity: 1;
       transition: 1s 0.2s;
     }
 
-    .box_con3_slide {
+    .teams_slide {
       transform: translateY(0%);
       opacity: 1;
       transition: 1s 0.4s;
     }
 
-    .box_con3_pagination {
+    .teams_pagination {
       opacity: 1;
       transition: 1s 0.8s;
     }
@@ -1353,16 +1343,24 @@ font-family: 'Open Sans', sans-serif;
     position: relative;
     overflow: hidden;
 
-    .box_con3_tit {
+    .teams_tit {
       width: 20%;
       padding: 20px;
       box-sizing: border-box;
       transform: translateX(-20%);
       opacity: 0;
+
+      > h1 {
+        font: bold 24px/1.3 "Open Sans";
+        margin-bottom: 20px;
+      }
+      > p {
+        font: 14px/1.4 "Open Sans";
+        color: #666;
+      }
     }
-    .box_con3_slide {
-      width: 160%;
-      height: 200px;
+    .teams_slide {
+      width: 185%;
       padding: 5px;
       box-sizing: border-box;
       position: absolute;
@@ -1372,35 +1370,89 @@ font-family: 'Open Sans', sans-serif;
       transform: translateY(-20%);
       opacity: 0;
 
-      .box_con3_slide_wrap {
+      .teams_slide_wrap {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
         transition: 0.5s ease-in;
 
-        .con3_slide {
+        .team_con_slide {
           width: 11%;
           background: #fff;
-          padding: 20px;
+          padding: 40px 20px 20px;
           box-sizing: border-box;
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
 
-          p {
-            font: 18px/1.2 "arial";
-            color: #222;
+          &:hover {
+            background: #f6f6f6;
+            .profile {
+              .profile_pic {
+                filter: grayscale(0);
+              }
+            }
           }
-          a {
-            font: 20px "arial";
+
+          &:nth-of-type(1) .profile .profile_pic {
+            background-image: url(../img/member01.jpg);
+          }
+          &:nth-of-type(2) .profile .profile_pic {
+            background-image: url(../img/member02.jpg);
+          }
+          &:nth-of-type(3) .profile .profile_pic {
+            background-image: url(../img/member03.jpg);
+          }
+          &:nth-of-type(4) .profile .profile_pic {
+            background-image: url(../img/member04.jpg);
+          }
+          &:nth-of-type(5) .profile .profile_pic {
+            background-image: url(../img/member05.jpg);
+          }
+          &:nth-of-type(6) .profile .profile_pic {
+            background-image: url(../img/member06.jpg);
+          }
+          &:nth-of-type(7) .profile .profile_pic {
+            background-image: url(../img/member07.jpg);
+          }
+          &:nth-of-type(8) .profile .profile_pic {
+            background-image: url(../img/member08.jpg);
+          }
+
+          .profile_txt {
+            font: 14px/1.4 "Open Sans";
+            color: #666;
+            margin-bottom: 20px;
+            height: 60%;
+          }
+          .profile {
+            display: flex;
+            align-items: center;
+            .profile_pic {
+              width: 40px;
+              height: 40px;
+              background-repeat: no-repeat;
+              background-position: 50% 10%;
+              background-size: cover;
+              border-radius: 50%;
+              filter: grayscale(1);
+              margin-right: 1vw;
+            }
+            .profile_name {
+              width: 60%;
+              font: bold 14px/1.4 "Open Sans";
+              color: #222;
+            }
           }
         }
       }
     }
 
-    .box_con3_pagination {
+    .teams_pagination {
       width: 70px;
       position: absolute;
       right: 20vw;
-      bottom: 5vw;
+      bottom: 2vw;
       display: flex;
       justify-content: space-between;
       opacity: 0;
@@ -1584,13 +1636,13 @@ font-family: 'Open Sans', sans-serif;
     }
   }
 
-  #box_content1 {
+  #about {
     .inner {
       width: 100%;
     }
   }
 
-  #txt_content {
+  #about_brand {
     .inner {
       width: 100%;
     }
@@ -1602,13 +1654,13 @@ font-family: 'Open Sans', sans-serif;
     }
   }
 
-  #box_content3 {
+  #teams {
     .inner {
       width: 100%;
     }
   }
 
-  #slider_content {
+  #event_pg {
     .inner {
       width: 100%;
     }
