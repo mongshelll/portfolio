@@ -1603,7 +1603,7 @@ fieldset {
         transform: translate(40px, 50%); }
     #community .inner #faq .cs_info {
       padding: 50px 50px; } }
-@media screen and (max-width: 662px) {
+@media screen and (max-width: 700px) {
   #community .inner #f_board table thead tr th:nth-of-type(1) {
     width: 10%; }
   #community .inner #f_board table thead tr th:nth-of-type(2) {
@@ -1638,6 +1638,8 @@ fieldset {
     margin-bottom: 5px; }
   #community .inner #faq .recom .search {
     width: 100%; }
+  #community .inner #faq .faq dt a .q_txt {
+    width: 60%; }
   #community .inner #faq .cs_info ul li:nth-of-type(1), #community .inner #faq .cs_info ul li:nth-of-type(2) {
     margin-right: auto; } }
 @media screen and (max-width: 539px) {
@@ -1759,15 +1761,17 @@ fieldset {
           background: #555;
           color: #fff; }
     #location .inner .branch {
+      width: 100%;
       float: left;
       position: absolute;
-      top: 104px;
+      top: 84px;
       left: 0; }
       #location .inner .branch li {
-        float: left; }
+        float: left;
+        width: calc(100% / 3); }
         #location .inner .branch li a {
           display: block;
-          width: calc(1180px / 3);
+          width: 100%;
           height: 60px;
           background: #fff;
           font: bold 16px/60px "Nanum Gothic";
@@ -1847,9 +1851,10 @@ fieldset {
     #location .inner .traffic {
       right: 50px; }
     #location .inner .branch {
+      width: calc(100% - 80px);
       left: 40px; }
-      #location .inner .branch li a {
-        width: calc((100vw - 97px) / 3); }
+      #location .inner .branch li {
+        width: calc((100vw - 80px - 17px) / 3); }
     #location .inner h2 {
       margin-bottom: 50px; } }
 @media screen and (max-width: 843px) {
@@ -1892,7 +1897,7 @@ fieldset {
   background: #fff;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 2; }
   #header .header_upper {
     width: 100%;
     position: relative;

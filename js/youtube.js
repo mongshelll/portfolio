@@ -123,7 +123,7 @@
             display: "none",
             padding: 100,
             boxSizing: "border-box",
-            zIndex: 1
+            zIndex: 2
           })
           .append(
             $("<img src='img/youtube_loading.gif'>")

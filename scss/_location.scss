@@ -41,15 +41,17 @@
       }
     }
     .branch {
+      width: 100%;
       float: left;
       position: absolute;
-      top: 104px;
+      top: 84px;
       left: 0;
       li {
         float: left;
+        width: calc(100% / 3);
         a {
           display: block;
-          width: calc(1180px / 3);
+          width: 100%;
           height: 60px;
           background: #fff;
           font: bold 16px/60px "Nanum Gothic";
@@ -161,11 +163,10 @@
         right: 50px;
       }
       .branch {
+        width: calc(100% - 80px);
         left: 40px;
         li {
-          a {
-            width: calc((100vw - 97px) / 3);
-          }
+          width: calc((100vw - 80px - 17px) / 3); //17px 스크롤바 넓이
         }
       }
       h2 {

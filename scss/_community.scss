@@ -504,7 +504,7 @@
   }
 }
 
-@media screen and (max-width: 662px) {
+@media screen and (max-width: 700px) {
   #community {
     .inner {
       #f_board {
@@ -593,6 +593,15 @@
           }
           .search {
             width: 100%;
+          }
+        }
+        .faq {
+          dt {
+            a {
+              .q_txt {
+                width: 60%;
+              }
+            }
           }
         }
         .cs_info {
