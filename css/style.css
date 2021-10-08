@@ -2818,17 +2818,20 @@ fieldset {
             #event_pg .inner .wrap .right .event_slide_wrap .event_slide article {
               width: 20%;
               height: 50vh;
-              margin-right: 40px; }
+              margin-right: 40px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center; }
               #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="0"] {
-                background: #006978; }
+                background-image: url("../img/event_01.jpg"); }
               #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="1"] {
-                background: #000000; }
+                background-image: url("../img/event_02.jpg"); }
               #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="2"] {
-                background: #bb4d00; }
+                background-image: url("../img/event_03.jpg"); }
               #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="3"] {
-                background: #7c8500; }
+                background-image: url("../img/event_04.jpg"); }
               #event_pg .inner .wrap .right .event_slide_wrap .event_slide article[data-index="4"] {
-                background: #00600f; }
+                background-image: url("../img/event_05.jpg"); }
 
 #teams {
   width: 100%;

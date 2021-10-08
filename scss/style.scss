@@ -1302,21 +1302,24 @@ font-family: "Open Sans", sans-serif;
               width: 20%;
               height: 50vh;
               margin-right: 40px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
 
               &[data-index="0"] {
-                background: #006978;
+                background-image: url("../img/event_01.jpg");
               }
               &[data-index="1"] {
-                background: #000000;
+                background-image: url("../img/event_02.jpg");
               }
               &[data-index="2"] {
-                background: #bb4d00;
+                background-image: url("../img/event_03.jpg");
               }
               &[data-index="3"] {
-                background: #7c8500;
+                background-image: url("../img/event_04.jpg");
               }
               &[data-index="4"] {
-                background: #00600f;
+                background-image: url("../img/event_05.jpg");
               }
             }
           }
