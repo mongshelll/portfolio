@@ -2271,11 +2271,11 @@ fieldset {
       #main_visual .inner_pic_slide .slide_pic:nth-of-type(1) {
         background-image: url("../img/main_slider_pic01_s.jpg"); }
       #main_visual .inner_pic_slide .slide_pic:nth-of-type(2) {
-        background-color: green; }
+        background-image: url("../img/main_slider_pic02_s.jpg"); }
       #main_visual .inner_pic_slide .slide_pic:nth-of-type(3) {
-        background-color: pink; }
+        background-image: url("../img/main_slider_pic03_s.jpg"); }
       #main_visual .inner_pic_slide .slide_pic:nth-of-type(4) {
-        background-color: lightseagreen; }
+        background-image: url("../img/main_slider_pic04_s.jpg"); }
       #main_visual .inner_pic_slide .slide_pic.on {
         opacity: 1; }
   #main_visual .swiper-button-prev {

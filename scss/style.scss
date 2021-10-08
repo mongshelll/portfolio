@@ -588,13 +588,13 @@ font-family: "Open Sans", sans-serif;
         background-image: url("../img/main_slider_pic01_s.jpg");
       }
       &:nth-of-type(2) {
-        background-color: green;
+        background-image: url("../img/main_slider_pic02_s.jpg");
       }
       &:nth-of-type(3) {
-        background-color: pink;
+        background-image: url("../img/main_slider_pic03_s.jpg");
       }
       &:nth-of-type(4) {
-        background-color: lightseagreen;
+        background-image: url("../img/main_slider_pic04_s.jpg");
       }
 
       &.on {
