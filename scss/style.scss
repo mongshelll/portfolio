@@ -1109,16 +1109,17 @@ font-family: "Open Sans", sans-serif;
         }
 
         .event_tit {
-          margin-top: 180px;
+          margin-top: 200px;
           position: relative;
           .event_inner_con {
+            padding: 0 20px;
             li {
-              margin-left: 50px;
               text-align: left;
               display: none;
               p {
-                font: 40px/1.3 "Open Sans";
-                margin-bottom: 50px;
+                font: 34px/1.3 "Open Sans";
+                color: #fff;
+                margin-bottom: 100px;
               }
               a {
                 text-align: center;
