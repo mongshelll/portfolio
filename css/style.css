@@ -3197,17 +3197,17 @@ fieldset {
           height: 30vh; }
 
   #team {
-    height: 1300px;
+    height: 100%;
     padding-top: 172px;
-    margin-bottom: 100px; }
+    padding-bottom: 100px; }
     #team .inner {
-      flex-direction: column; }
+      flex-direction: column;
+      overflow: visible; }
       #team .inner .team_tit {
         width: 100%; }
       #team .inner .team_slide {
         width: 100%;
-        top: 160px;
-        left: 0; }
+        position: static; }
         #team .inner .team_slide .team_slide_wrap {
           width: 100%;
           flex-wrap: wrap; }

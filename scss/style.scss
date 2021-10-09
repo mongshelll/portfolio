@@ -1922,18 +1922,20 @@ font-family: "Open Sans", sans-serif;
   }
 
   #team {
-    height: 1300px;
+    height: 100%;
+    // height: 1300px;
     padding-top: 172px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     .inner {
       flex-direction: column;
+      overflow: visible;
       .team_tit {
         width: 100%;
       }
       .team_slide {
         width: 100%;
-        top: 160px;
-        left: 0;
+        position: static;
+
         .team_slide_wrap {
           width: 100%;
           flex-wrap: wrap;
