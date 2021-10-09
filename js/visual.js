@@ -31,48 +31,48 @@ $navi_btns.on("click", function (e) {
   moveScroll(i);
 });
 
-// var max_width = window.innerWidth;
-// console.log(max_width);
+var max_width = window.innerWidth;
+console.log(max_width);
 
-
-//마우스휠을 위, 아래로 움직였을 때
-$main_boxs.on("mousewheel", function (e) {
-  // console.log(e.originalEvent.deltaY);
-  //-100은 마우스휠을 올렸을 때
-  //100은 마우스휠을 내렸을 때
-  e.preventDefault();
-  if (e.originalEvent.deltaY < 0) { //마우스 휠을 올린다면
-    if ($(this).index != 0) {//첫번째 박스가 아니라면
-      var i = $(this).index() - 3; //visual 이전에 skipNavi, header, navi가 있음으로 3가지 제외
-      moveScroll(i - 1); // i - 1 은 해당박스 전에 있는 박스의 세로 위치값
+if (max_width > 539) {
+  $main_boxs.on("mousewheel", function (e) {
+    // console.log(e.originalEvent.deltaY);
+    //-100은 마우스휠을 올렸을 때
+    //100은 마우스휠을 내렸을 때
+    e.preventDefault();
+    if (e.originalEvent.deltaY < 0) { //마우스 휠을 올린다면
+      if ($(this).index != 0) {//첫번째 박스가 아니라면
+        var i = $(this).index() - 3; //visual 이전에 skipNavi, header, navi가 있음으로 3가지 제외
+        moveScroll(i - 1); // i - 1 은 해당박스 전에 있는 박스의 세로 위치값
+      }
+      //첫번째 박스에서는 올라갈 필요없음
+      //첫번째 박스 = 0
+      //마지막 박스 = 변동가능 -> $main_boxs.length 이용
+      //length = 6, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
+    } else {//마우스 휠을 내린다면
+      if ($(this).index != $main_boxs.length - 1) {
+        var i = $(this).index() - 3;
+        moveScroll(i + 1); // i + 1 은 해당박스 다음에 있는 박스의 세로 위치값
+      }
     }
-    //첫번째 박스에서는 올라갈 필요없음
-    //첫번째 박스 = 0
-    //마지막 박스 = 변동가능 -> $main_boxs.length 이용
-    //length = 6, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
-  } else {//마우스 휠을 내린다면
-    if ($(this).index != $main_boxs.length - 1) {
-      var i = $(this).index() - 3;
-      moveScroll(i + 1); // i + 1 은 해당박스 다음에 있는 박스의 세로 위치값
+  });
+
+  //마지막 section에서 mousewheel 내렸을때 동작하기
+  $main_last_box.on("mousewheel", function (e) {
+    e.preventDefault();
+    if (e.originalEvent.deltaY > 0) {
+      moveScroll($main_boxs.length - 1);
     }
-  }
-});
+  });
 
-//마지막 section에서 mousewheel 내렸을때 동작하기
-$main_last_box.on("mousewheel", function (e) {
-  e.preventDefault();
-  if (e.originalEvent.deltaY > 0) {
-    moveScroll($main_boxs.length - 1);
-  }
-});
-
-//footer에서 mousewheel 올렸을때 동작하기
-$footer.on("mousewheel", function (e) {
-  e.preventDefault();
-  if (e.originalEvent.deltaY < 0) {
-    moveScroll($main_boxs.length - 2);
-  }
-});
+  //footer에서 mousewheel 올렸을때 동작하기
+  $footer.on("mousewheel", function (e) {
+    e.preventDefault();
+    if (e.originalEvent.deltaY < 0) {
+      moveScroll($main_boxs.length - 2);
+    }
+  });
+}
 
 //버튼 클릭이나 박스 스크롤시 해당 버튼이나 박스의 순번을 인수로 받아서 배열에 담긴
 //해당 요소의 세로 위치값으로 이동하는 함수 정의
