@@ -1332,7 +1332,8 @@ font-family: "Open Sans", sans-serif;
 #team {
   width: 100%;
   height: calc(100vh - 363px);
-  padding-top: 222px;
+  // padding-top: 222px;
+  padding-top: 12vw;
   box-sizing: border-box;
 
   &.on .inner {
@@ -1471,7 +1472,7 @@ font-family: "Open Sans", sans-serif;
       width: 70px;
       position: absolute;
       right: 20vw;
-      bottom: 2vw;
+      bottom: 3vw;
       display: flex;
       justify-content: space-between;
       opacity: 0;
@@ -1688,13 +1689,14 @@ font-family: "Open Sans", sans-serif;
     }
   }
 
-  #team {
+  #event_pg {
     .inner {
       width: 100%;
     }
   }
 
-  #event_pg {
+  #team {
+    padding-top: 20vw;
     .inner {
       width: 100%;
     }
@@ -1923,7 +1925,6 @@ font-family: "Open Sans", sans-serif;
 
   #team {
     height: 100%;
-    // height: 1300px;
     padding-top: 172px;
     padding-bottom: 100px;
     .inner {

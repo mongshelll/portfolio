@@ -2841,7 +2841,7 @@ fieldset {
 #team {
   width: 100%;
   height: calc(100vh - 363px);
-  padding-top: 222px;
+  padding-top: 12vw;
   box-sizing: border-box; }
   #team.on .inner .team_tit {
     transform: translateX(0%);
@@ -2941,7 +2941,7 @@ fieldset {
       width: 70px;
       position: absolute;
       right: 20vw;
-      bottom: 2vw;
+      bottom: 3vw;
       display: flex;
       justify-content: space-between;
       opacity: 0;
@@ -3074,11 +3074,13 @@ fieldset {
   #banner .inner {
     padding-left: 20px; }
 
-  #team .inner {
-    width: 100%; }
-
   #event_pg .inner {
     width: 100%; }
+
+  #team {
+    padding-top: 20vw; }
+    #team .inner {
+      width: 100%; }
 
   #footer {
     padding: 50px 40px;

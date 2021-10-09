@@ -62,6 +62,7 @@ if (max_width > 539) {
     e.preventDefault();
     if (e.originalEvent.deltaY > 0) {
       moveScroll($main_boxs.length - 1);
+      moveScroll2();
     }
   });
 
@@ -79,6 +80,12 @@ if (max_width > 539) {
 function moveScroll(index) {
   $("html, body").stop().animate({ //.stop() 큐가 쌓이면 이전꺼 무시 마지막만 실행
     scrollTop: posArr[index]
+  }, 500);
+}
+
+function moveScroll2() {
+  $("html, body").stop().animate({
+    scrollTop: $footer.offset().top
   }, 500);
 }
 
