@@ -47,7 +47,7 @@
     });
 
     //타이틀 클릭시 다시 초기화면 보이기
-    $(".logo").on("click", function(){
+    $(".logo").on("click", function () {
       this.gallery.removeClass("on");
       $(".loading").addClass("on");
       this.getList({
@@ -173,28 +173,28 @@
       $gallery.children("ul").append(
         $("<li class='item'>").append(
           $("<div class='inner'>")
-          .append(
-            $("<a>").attr({
-              href: "https://live.staticflickr.com/" + data.server + "/" + data.id + "_" + data.secret + "_b.jpg"
-            }).append(
-              $("<img>").attr({
-                src: "https://live.staticflickr.com/" + data.server + "/" + data.id + "_" + data.secret + "_w.jpg",
-                onerror: "javascript:this.parentNode.parentNode.parentNode.style='display:none;'"
-              })
-            )
-          )
-          .append(
-            $("<p>").text(text)
-          )
-          .append(
-            $("<div class='profile'>")
             .append(
-              $("<img>").attr({
-                src: "https://www.flickr.com/buddyicons/" + data.owner + ".jpg"
-              }),
-              $("<span>").text(data.owner)
+              $("<a>").attr({
+                href: "https://live.staticflickr.com/" + data.server + "/" + data.id + "_" + data.secret + "_b.jpg"
+              }).append(
+                $("<img>").attr({
+                  src: "https://live.staticflickr.com/" + data.server + "/" + data.id + "_" + data.secret + "_w.jpg",
+                  onerror: "javascript:this.parentNode.parentNode.parentNode.style='display:none;'"
+                })
+              )
             )
-          )
+            .append(
+              $("<p>").text(text)
+            )
+            .append(
+              $("<div class='profile'>")
+                .append(
+                  $("<img>").attr({
+                    src: "https://www.flickr.com/buddyicons/" + data.owner + ".jpg"
+                  }),
+                  $("<span>").text(data.owner)
+                )
+            )
         )
       )
     }.bind(this));
@@ -251,32 +251,32 @@
   Flickr.prototype.createPop = function (imgSrc) {
     $("body").append(
       $("<aside class='pop'>")
-      .css({
-        width: '100%',
-        height: "100%",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: 10,
-        boxSizing: "border-box",
-        padding: "3vw",
-        background: "rgba(0,0,0,0.9)",
-        display: "none"
-      })
-      .append(
-        $("<img>").attr("src", imgSrc).css({
-          width: "100%",
+        .css({
+          width: '100%',
           height: "100%",
-          objectFit: "contain"
-        }),
-        $("<span>").text("close").css({
-          cursor: "pointer",
-          color: "#fff",
-          position: "absolute",
-          top: 20,
-          right: 20
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: 10,
+          boxSizing: "border-box",
+          padding: "3vw",
+          background: "rgba(0,0,0,0.9)",
+          display: "none"
         })
-      ).fadeIn()
+        .append(
+          $("<img>").attr("src", imgSrc).css({
+            width: "100%",
+            height: "100%",
+            objectFit: "contain"
+          }),
+          $("<span>").text("close").css({
+            cursor: "pointer",
+            color: "#fff",
+            position: "absolute",
+            top: 20,
+            right: 20
+          })
+        ).fadeIn()
     )
   }
 })(jQuery);

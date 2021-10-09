@@ -31,6 +31,10 @@ $navi_btns.on("click", function (e) {
   moveScroll(i);
 });
 
+// var max_width = window.innerWidth;
+// console.log(max_width);
+
+
 //마우스휠을 위, 아래로 움직였을 때
 $main_boxs.on("mousewheel", function (e) {
   // console.log(e.originalEvent.deltaY);
@@ -289,28 +293,28 @@ function count_num() {
 
 
 
-/* --- teams slide --- */
-const $teams_slide_wrap = $(".teams_slide_wrap");
-const $teams_pagination = $(".teams_pagination");
-const $teams_btns = $teams_pagination.find("li");
+/* --- team slide --- */
+const $team_slide_wrap = $(".team_slide_wrap");
+const $team_pagination = $(".team_pagination");
+const $team_btns = $team_pagination.find("li");
 
 
-$teams_btns.on("click", function (e) {
+$team_btns.on("click", function (e) {
   e.preventDefault();
 
   let i = $(this).index();
   move_slide(i);
 
-  for (let el of $teams_btns) {
+  for (let el of $team_btns) {
     el.classList.remove("on");
   }
-  $teams_btns[i].classList.add("on");
+  $team_btns[i].classList.add("on");
 });
 
 function move_slide(index) {
-  $teams_slide_wrap.css({
+  $team_slide_wrap.css({
     transform: "translateX(" + -28 * index + "%)"
   });
 }
 
-/* --- teams slide End --- */
+/* --- team slide End --- */
