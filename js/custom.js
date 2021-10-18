@@ -82,7 +82,8 @@ function create_gnbBg() {
 var btnCall = $header_upper.find(".btnCall");
 var menuMo = $header_upper.find("#menu_mo");
 
-btnCall.on("click", function () {
+btnCall.on("click", function (e) {
+  e.preventDefault();
   btnCall.toggleClass("on");
   menuMo.toggleClass("on");
 });
