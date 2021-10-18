@@ -3064,12 +3064,14 @@ fieldset {
   #about_brand .inner {
     width: 100%; }
 
-  #about .inner {
-    width: 100%; }
-    #about .inner .about_tit h1 {
-      margin-bottom: 20px; }
-    #about .inner .about_tit p {
-      width: 60vw; }
+  #about {
+    overflow: hidden; }
+    #about .inner {
+      width: 100%; }
+      #about .inner .about_tit h1 {
+        margin-bottom: 20px; }
+      #about .inner .about_tit p {
+        width: 60vw; }
 
   #banner .inner {
     padding-left: 20px; }
