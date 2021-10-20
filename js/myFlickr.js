@@ -55,7 +55,6 @@
       });
     }.bind(this));
 
-
     //"#search"
     var btn = $(this.search.selector).children("button");
 
