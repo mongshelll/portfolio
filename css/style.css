@@ -849,7 +849,7 @@ fieldset {
     .content .inner h1 {
       margin-bottom: 50px; } }
 .loading {
-  position: fixed;
+  position: absolute;
   top: 70%;
   left: 50%;
   width: 80px;
