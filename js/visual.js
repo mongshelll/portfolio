@@ -32,7 +32,7 @@ $navi_btns.on("click", function (e) {
 });
 
 var max_width = window.innerWidth;
-console.log(max_width);
+// console.log(max_width);
 
 if (max_width > 539) {
   $main_boxs.on("mousewheel", function (e) {
