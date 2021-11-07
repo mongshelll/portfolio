@@ -285,11 +285,6 @@ function isEmail(name) {
   if (email1 == "") {
     alert("이메일을 입력하세요.");
     return false;
-  } else {
-    if (userId.length < len) {
-      alert("최소 " + len + "글자 이상 입력하세요.");
-      return false;
-    }
   }
 }
 
