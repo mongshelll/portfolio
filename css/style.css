@@ -1480,6 +1480,8 @@ fieldset {
             float: right;
             transform: rotate(-180deg);
             transition: 0.3s; }
+        #community .inner #faq .faq dt.on a .fa-chevron-up {
+          transform: rotate(0deg); }
       #community .inner #faq .faq dd {
         width: 100%;
         padding: 30px;

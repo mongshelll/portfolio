@@ -127,7 +127,6 @@ $("#community .inner .btn a").on("click", function (e) {
     $("#community .inner .site_map").children().eq(3).children().text(txt);
   }
 });
-
 /* --- TAB end --- */
 
 /* --- FAQ --- */
@@ -148,10 +147,6 @@ var enableClick = true;
 $btns.on("click", function (e) {
   e.preventDefault(); //링크이동금지
 
-  //기본으로 초기화
-  $btns.find(".fa-chevron-up").css({
-    transform: "rotate(-180deg)"
-  });
   //enableClick이 true
   if (enableClick) {
     //함수를 실행하고
@@ -174,7 +169,6 @@ function activation(self) {
   if (isOn) {
     //버튼의 on 제거 - 비활성화, 버튼 다음의 dd도 감춤 - slideUp();
     $(self).removeClass("on");
-
     $(self).next("dd").slideUp(faq_speed, function () {
       //동작이 끝나면 클릭이 가능하도록 enableClick을 true값으로 바꿈
       enableClick = true;
@@ -183,9 +177,6 @@ function activation(self) {
     //만약 on이 없다면 (비활성화 상태)
     //버튼을 활성화 하며, 버튼 다음에 오는 dd도 활성화 - slideDown();
     $(self).addClass("on");
-    $(self).find(".fa-chevron-up").css({
-      transform: "rotate(0deg)"
-    });
     $(self).next("dd").slideDown(faq_speed, function () {
       enableClick = true;
     });

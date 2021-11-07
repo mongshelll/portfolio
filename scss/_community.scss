@@ -303,6 +303,13 @@
               transition: 0.3s;
             }
           }
+          &.on {
+            a {
+              .fa-chevron-up {
+                transform: rotate(0deg);
+              }
+            }
+          }
         }
         dd {
           width: 100%;
