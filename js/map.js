@@ -6,8 +6,8 @@ var branch_btns = document.querySelectorAll(".branch li"); //지점보기 버튼
 //2. 카카오맵 api에서 클릭으로 마커표시 샘플코드 (위의 위치값 적용)
 //3. 해당 위치에서 우리가 원하는 위치를 정밀하게 마커로 찍어서 표시 (위도, 경도값)구함
 var options = {
-  center: new kakao.maps.LatLng(37.57275218803956, 126.97573001877021),
-  level: 3
+	center: new kakao.maps.LatLng(37.57275218803956, 126.97573001877021),
+	level: 3
 };
 
 //카카오맵 인스턴스 생성 및 기능 활성화
@@ -17,99 +17,99 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 //각각의 본점, 지점의 이름, 위도, 경도, 마커이미지, 마커 수정 위치값, 매칭되는 버튼을 등록
 var markerOptions = [{
-  title: "본점",
-  latlng: new kakao.maps.LatLng(37.57275218803956, 126.97573001877021),
-  imgSrc: 'img/marker.png',
-  imgSize: new kakao.maps.Size(40, 65),
-  imgPos: {
-    offset: new kakao.maps.Point(20, 65)  //이미지 위치 기준점 (기본 top: 0,left: 0)
-  },
-  button: branch_btns[0]
+	title: "본점",
+	latlng: new kakao.maps.LatLng(37.57275218803956, 126.97573001877021),
+	imgSrc: 'img/marker.png',
+	imgSize: new kakao.maps.Size(40, 65),
+	imgPos: {
+		offset: new kakao.maps.Point(20, 65)  //이미지 위치 기준점 (기본 top: 0,left: 0)
+	},
+	button: branch_btns[0]
 },
 {
-  title: "지점1",
-  latlng: new kakao.maps.LatLng(37.507301759552675, 126.75455238897419),
-  imgSrc: 'img/marker.png',
-  imgSize: new kakao.maps.Size(40, 65),
-  imgPos: {
-    offset: new kakao.maps.Point(20, 65)
-  },
-  button: branch_btns[1]
+	title: "지점1",
+	latlng: new kakao.maps.LatLng(37.507301759552675, 126.75455238897419),
+	imgSrc: 'img/marker.png',
+	imgSize: new kakao.maps.Size(40, 65),
+	imgPos: {
+		offset: new kakao.maps.Point(20, 65)
+	},
+	button: branch_btns[1]
 },
 {
-  title: "지점2",
-  latlng: new kakao.maps.LatLng(37.50199902516107, 127.00474989072569),
-  imgSrc: 'img/marker.png',
-  imgSize: new kakao.maps.Size(40, 65),
-  imgPos: {
-    offset: new kakao.maps.Point(20, 65)
-  },
-  button: branch_btns[2]
+	title: "지점2",
+	latlng: new kakao.maps.LatLng(37.50199902516107, 127.00474989072569),
+	imgSrc: 'img/marker.png',
+	imgSize: new kakao.maps.Size(40, 65),
+	imgPos: {
+		offset: new kakao.maps.Point(20, 65)
+	},
+	button: branch_btns[2]
 }
 ];
 
 //마커옵션의 갯수만큼 반복을 돌며 지점 보기 버튼 이벤트 연결
 for (var i = 0; i < markerOptions.length; i++) {
-  new kakao.maps.Marker({
-    map: map,
-    position: markerOptions[i].latlng,
-    title: markerOptions[i].title,
-    image: new kakao.maps.MarkerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos)
-  });
+	new kakao.maps.Marker({
+		map: map,
+		position: markerOptions[i].latlng,
+		title: markerOptions[i].title,
+		image: new kakao.maps.MarkerImage(markerOptions[i].imgSrc, markerOptions[i].imgSize, markerOptions[i].imgPos)
+	});
 
-  (function (index) {
-    markerOptions[index].button.onclick = function (e) {
-      e.preventDefault();
+	(function (index) {
+		markerOptions[index].button.onclick = function (e) {
+			e.preventDefault();
 
-      for (var k = 0; k < markerOptions.length; k++) {
-        markerOptions[k].button.classList.remove("on");
-      }
-      markerOptions[index].button.classList.add("on");
-      moveTo(markerOptions[index].latlng);
-    }
-  })(i);
+			for (var k = 0; k < markerOptions.length; k++) {
+				markerOptions[k].button.classList.remove("on");
+			}
+			markerOptions[index].button.classList.add("on");
+			moveTo(markerOptions[index].latlng);
+		}
+	})(i);
 }
 
 window.onresize = function () {
-  var active_btn = document.querySelector(".branch li.on"); //지점버튼의 활성화 선택자명
-  var active_index = active_btn.getAttribute("data-index"); //해당 버튼의 data-index속성값
-  // console.log(active_index);
-  map.setCenter(markerOptions[active_index].latlng);
+	var active_btn = document.querySelector(".branch li.on"); //지점버튼의 활성화 선택자명
+	var active_index = active_btn.getAttribute("data-index"); //해당 버튼의 data-index속성값
+	// console.log(active_index);
+	map.setCenter(markerOptions[active_index].latlng);
 }
 
 function moveTo(target) {
-  var moveLatLon = target;
-  map.setCenter(moveLatLon);
+	var moveLatLon = target;
+	map.setCenter(moveLatLon);
 }
 
 var t_on = document.querySelectorAll(".traffic li")[0]; //트레픽 보기 버튼 선택자
 var t_off = document.querySelectorAll(".traffic li")[1]; //트레픽 숨기기 버튼 선택자
 
 t_on.addEventListener("click", function (e) {
-  e.preventDefault();
+	e.preventDefault();
 
-  map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-  map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-  t_on.classList.add("on");
-  t_off.classList.remove("on");
+	map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+	map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+	t_on.classList.add("on");
+	t_off.classList.remove("on");
 });
 t_off.addEventListener("click", function (e) {
-  e.preventDefault();
-  map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-  t_on.classList.remove("on");
-  t_off.classList.add("on");
+	e.preventDefault();
+	map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+	t_on.classList.remove("on");
+	t_off.classList.add("on");
 });
 
 //지도 드래그 기능 함수
 setDraggable(true);
 function setDraggable(draggable) {
-  // 마우스 드래그로 지도 이동 가능여부를 설정합니다
-  map.setDraggable(draggable);
+	// 마우스 드래그로 지도 이동 가능여부를 설정합니다
+	map.setDraggable(draggable);
 }
 
 //지도 줌 기능 함수
 setZoomable(true); //false  페이지에 스크롤 있을경우 false
 function setZoomable(zoomable) {
-  // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
-  map.setZoomable(zoomable);
+	// 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+	map.setZoomable(zoomable);
 }

@@ -2,157 +2,157 @@
 @import "sub_layout";
 
 #header {
-  .header_upper {
-    > .inner {
-      .login_btn {
-        li {
-          &.on > a {
-            font-weight: bold;
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-  .header_lower {
-    // display: none;
-  }
+	.header_upper {
+		> .inner {
+			.login_btn {
+				li {
+					&.on > a {
+						font-weight: bold;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	.header_lower {
+		// display: none;
+	}
 }
 
 #login {
-  padding-top: 122px;
-  .sub_visual {
-    background: url(../img/login_banner.jpg) no-repeat 0px 9% / cover;
-    filter: saturate(0%);
-  }
-  .inner {
-    padding: 50px 0;
-    .site_map {
-      position: absolute;
-      top: -80px;
-      right: 20px;
-    }
-    .login_form {
-      width: 40%;
-      margin: 0 auto;
+	padding-top: 122px;
+	.sub_visual {
+		background: url(../img/login_banner.jpg) no-repeat 0px 9% / cover;
+		filter: saturate(0%);
+	}
+	.inner {
+		padding: 50px 0;
+		.site_map {
+			position: absolute;
+			top: -80px;
+			right: 20px;
+		}
+		.login_form {
+			width: 40%;
+			margin: 0 auto;
 
-      .user_id {
-        #user_id {
-          width: 100%;
-          height: 40px;
-          padding: 10px;
-          box-sizing: border-box;
-          font: 14px/1 "Nanum Gothic", sans-serif;
-          margin-bottom: 10px;
-          border: 1px solid #aaa;
-        }
-      }
-      .user_pw {
-        #user_pw {
-          width: 100%;
-          height: 40px;
-          padding: 10px;
-          box-sizing: border-box;
-          font: 14px/1 "Nanum Gothic", sans-serif;
-          margin-bottom: 20px;
-          border: 1px solid #aaa;
-        }
-      }
-    }
+			.user_id {
+				#user_id {
+					width: 100%;
+					height: 40px;
+					padding: 10px;
+					box-sizing: border-box;
+					font: 14px/1 "Nanum Gothic", sans-serif;
+					margin-bottom: 10px;
+					border: 1px solid #aaa;
+				}
+			}
+			.user_pw {
+				#user_pw {
+					width: 100%;
+					height: 40px;
+					padding: 10px;
+					box-sizing: border-box;
+					font: 14px/1 "Nanum Gothic", sans-serif;
+					margin-bottom: 20px;
+					border: 1px solid #aaa;
+				}
+			}
+		}
 
-    input[type="submit"] {
-      width: 100%;
-      height: 40px;
-      background: #ddd;
-      border: 1px solid #eee;
-      font: 14px/40px "Nanum Gothic", sans-serif;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: 0.5s;
+		input[type="submit"] {
+			width: 100%;
+			height: 40px;
+			background: #ddd;
+			border: 1px solid #eee;
+			font: 14px/40px "Nanum Gothic", sans-serif;
+			cursor: pointer;
+			margin-bottom: 20px;
+			transition: 0.5s;
 
-      &:hover {
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        transform: scale(1.02);
-      }
-    }
+			&:hover {
+				background: rgba(0, 0, 0, 0.7);
+				color: #fff;
+				transform: scale(1.02);
+			}
+		}
 
-    .login_info {
-      width: 100%;
-      li {
-        width: 31%;
-        text-align: center;
-        display: inline-block;
-        a {
-          font: 14px/1 "Nanum Gothic", sans-serif;
-          color: #222;
-        }
-      }
-    }
-  }
+		.login_info {
+			width: 100%;
+			li {
+				width: 31%;
+				text-align: center;
+				display: inline-block;
+				a {
+					font: 14px/1 "Nanum Gothic", sans-serif;
+					color: #222;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1179px) {
-  #header {
-    .header_upper {
-      .inner {
-        .login_btn {
-          // display: none;
-        }
-      }
-    }
-  }
-  #login {
-    .inner {
-      .site_map {
-        position: absolute;
-        top: 0px;
-        left: 20px;
-      }
-      h1 {
-        padding-top: 20px;
-        margin-bottom: 60px;
-      }
-    }
-  }
+	#header {
+		.header_upper {
+			.inner {
+				.login_btn {
+					// display: none;
+				}
+			}
+		}
+	}
+	#login {
+		.inner {
+			.site_map {
+				position: absolute;
+				top: 0px;
+				left: 20px;
+			}
+			h1 {
+				padding-top: 20px;
+				margin-bottom: 60px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 780px) {
-  #login {
-    .inner {
-      .login_info {
-        li {
-          a {
-            font-size: 12px;
-          }
-        }
-      }
-    }
-  }
+	#login {
+		.inner {
+			.login_info {
+				li {
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
 }
 @media screen and (max-width: 652px) {
-  #login {
-    .inner {
-      .login_info {
-        li {
-          a {
-            font-size: 11px;
-          }
-        }
-      }
-    }
-  }
+	#login {
+		.inner {
+			.login_info {
+				li {
+					a {
+						font-size: 11px;
+					}
+				}
+			}
+		}
+	}
 }
 @media screen and (max-width: 605px) {
-  #login {
-    .inner {
-      .login_info {
-        li {
-          display: block;
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
+	#login {
+		.inner {
+			.login_info {
+				li {
+					display: block;
+					width: 100%;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
 }
