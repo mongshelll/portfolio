@@ -17,8 +17,8 @@ $(window).on("load", function(){
 	if( window.innerWidth >= 540 ) {
 		// $("body").addClass("mm");
 		enable = true;
-		console.log(window.innerWidth);
-		console.log(enable);
+		// console.log(window.innerWidth);
+		// console.log(enable);
 	}
 	wheelMotion();
 });
@@ -97,7 +97,7 @@ function wheelMotion(){
 }
 
 function setWidth(max_width) {
-	console.log(max_width);
+	// console.log(max_width);
 
 	if (max_width <= 540) {
 		// $("body").removeClass("mm");
