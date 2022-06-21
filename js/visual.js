@@ -13,24 +13,26 @@ const baseline = -300;
 setPos();
 
 // console.log(posArr);
+$(window).on("load", function(){
+	if( window.innerWidth >= 540 ) {
+		// $("body").addClass("mm");
+		enable = true;
+		console.log(window.innerWidth);
+		console.log(enable);
+	}
+	wheelMotion();
+});
+
 
 //브라우저 리사이즈시 다시 세로 위치값 갱신
 $(window).on("resize", setPos);
 
-
+//브라우저 리사이즈시 가로값 갱신
 $(window).on("resize", function() {
-	var max_width = window.innerWidth;
-
-	console.log(max_width);
-	if (max_width <= 540) {
-		enable = false;
-		wheelMotion();
-	} else if (max_width > 540){
-		enable = true;
-		wheelMotion();
-	}
-	console.log(enable);
+	let max_width = window.innerWidth;
+	setWidth(max_width);
 });
+
 
 //스크롤시 해당버튼 활성화
 $(window).on("scroll", function () {
@@ -46,45 +48,66 @@ $navi_btns.on("click", function (e) {
 	moveScroll(i);
 });
 
+
+//mousewheel motion
 function wheelMotion(){
-	$main_boxs.on("mousewheel", function (e) {
-		// console.log(e.originalEvent.deltaY);
-		//-100은 마우스휠을 올렸을 때
-		//100은 마우스휠을 내렸을 때
-		e.preventDefault();
-		if (e.originalEvent.deltaY < 0) { //마우스 휠을 올린다면
-			if ($(this).index != 0) {//첫번째 박스가 아니라면
-				var i = $(this).index() - 3; //visual 이전에 skipNavi, header, navi가 있음으로 3가지 제외
-				moveScroll(i - 1); // i - 1 은 해당박스 전에 있는 박스의 세로 위치값
+	// if( $("body").hasClass("mm") ) {
+	if( enable == true ) {
+		$main_boxs.on("mousewheel", function (e) {
+			// console.log(e.originalEvent.deltaY);
+			//-100은 마우스휠을 올렸을 때
+			//100은 마우스휠을 내렸을 때
+			e.preventDefault();
+			if (e.originalEvent.deltaY < 0) { //마우스 휠을 올린다면
+				if ($(this).index != 0) {//첫번째 박스가 아니라면
+					var i = $(this).index() - 3; //visual 이전에 skipNavi, header, navi가 있음으로 3가지 제외
+					moveScroll(i - 1); // i - 1 은 해당박스 전에 있는 박스의 세로 위치값
+				}
+				//첫번째 박스에서는 올라갈 필요없음
+				//첫번째 박스 = 0
+				//마지막 박스 = 변동가능 -> $main_boxs.length 이용
+				//length = 6, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
+			} else {//마우스 휠을 내린다면
+				if ($(this).index != $main_boxs.length - 1) {
+					var i = $(this).index() - 3;
+					moveScroll(i + 1); // i + 1 은 해당박스 다음에 있는 박스의 세로 위치값
+				}
 			}
-			//첫번째 박스에서는 올라갈 필요없음
-			//첫번째 박스 = 0
-			//마지막 박스 = 변동가능 -> $main_boxs.length 이용
-			//length = 6, 이용 할 값은 index(0부터 시작) 그러므로 length에서 -1을 함
-		} else {//마우스 휠을 내린다면
-			if ($(this).index != $main_boxs.length - 1) {
-				var i = $(this).index() - 3;
-				moveScroll(i + 1); // i + 1 은 해당박스 다음에 있는 박스의 세로 위치값
+		});
+
+		//마지막 section에서 mousewheel 내렸을때 동작하기
+		$main_last_box.on("mousewheel", function (e) {
+			e.preventDefault();
+			if (e.originalEvent.deltaY > 0) {
+				moveScroll($main_boxs.length - 1);
+				moveScroll2();
 			}
-		}
-	});
+		});
 
-	//마지막 section에서 mousewheel 내렸을때 동작하기
-	$main_last_box.on("mousewheel", function (e) {
-		e.preventDefault();
-		if (e.originalEvent.deltaY > 0) {
-			moveScroll($main_boxs.length - 1);
-			moveScroll2();
-		}
-	});
+		//footer에서 mousewheel 올렸을때 동작하기
+		$footer.on("mousewheel", function (e) {
+			e.preventDefault();
+			if (e.originalEvent.deltaY < 0) {
+				moveScroll($main_boxs.length - 2);
+			}
+		});
+	} else {
+		$main_boxs.off("mousewheel");
+	}
+}
 
-	//footer에서 mousewheel 올렸을때 동작하기
-	$footer.on("mousewheel", function (e) {
-		e.preventDefault();
-		if (e.originalEvent.deltaY < 0) {
-			moveScroll($main_boxs.length - 2);
-		}
-	});
+function setWidth(max_width) {
+	console.log(max_width);
+
+	if (max_width <= 540) {
+		// $("body").removeClass("mm");
+		enable = false;
+		wheelMotion();
+	} else {
+		// $("body").addClass("mm");
+		enable = true;
+		wheelMotion();
+	}
 }
 
 // if (max_width > 539) {
