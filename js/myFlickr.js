@@ -2,7 +2,9 @@
 // var url_interest = "https://www.flickr.com/services/rest/?method=flickr.interestingness.getList";
 var url_user = "https://www.flickr.com/services/rest/?method=flickr.people.getPhotos";
 var url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
-var key = "3b218370762e7a7645e6e7ccbac826b2";
+// var key = "3b218370762e7a7645e6e7ccbac826b2";
+var key = "0cc7e752bdb6b7332b7859258dcb593f";
+//Secret: c9328e4d4e2bd045
 var num = 15;
 var $gallery = "#flickr_gallery";
 var searchBtn = $("#search button");
