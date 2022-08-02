@@ -358,7 +358,7 @@ fieldset { border: none; }
   .content .inner .site_map { display: none; }
   .content .inner h1 { margin-bottom: 50px; } }
 
-.loading { position: absolute; top: 70%; left: 50%; width: 80px; height: 80px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: 1s; transition: 1s; opacity: 0; }
+.loading { z-index: 10; position: absolute; top: 80%; left: 50%; width: 80px; height: 80px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); -webkit-transition: 1s; transition: 1s; opacity: 0; }
 
 .loading.on { opacity: 1; }
 
